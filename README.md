@@ -1,4 +1,4 @@
-cqrtest
+CQRTEST
 =======
 
-Contest Linux logging program
+Contest Linux logging program for hamradio operators. 
