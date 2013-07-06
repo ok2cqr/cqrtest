@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=CQRTEST
+Comment=Contest logging program for hamradio operators
+Exec=cqrtest
+Terminal=false
+Type=Application
+Icon=cqrtest.png
+Categories=Utility;Database;HamRadio
+

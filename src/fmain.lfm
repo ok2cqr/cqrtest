@@ -1,0 +1,155 @@
+object frmMain: TfrmMain
+  Left = 494
+  Height = 101
+  Top = 254
+  Width = 503
+  Caption = 'CQRTEST'
+  ClientHeight = 82
+  ClientWidth = 503
+  Menu = mnuMain
+  LCLVersion = '0.9.30.2'
+  object StatusBar1: TStatusBar
+    Left = 0
+    Height = 19
+    Top = 63
+    Width = 503
+    Panels = <>
+  end
+  object ActionList1: TActionList
+    left = 112
+    top = 8
+    object acClose: TAction
+      Category = 'File'
+      Caption = 'Close'
+      OnExecute = acCloseExecute
+      ShortCut = 16465
+    end
+    object acOpenLog: TAction
+      Category = 'File'
+      Caption = 'Open or create new log'
+      OnExecute = acOpenLogExecute
+    end
+    object acGlobalSettings: TAction
+      Category = 'File'
+      Caption = 'Global settings'
+      OnExecute = acGlobalSettingsExecute
+    end
+    object acContestSettings: TAction
+      Category = 'File'
+      Caption = 'Contest setings'
+      OnExecute = acContestSettingsExecute
+    end
+    object acNewQSOWindow1: TAction
+      Category = 'Radio1'
+      Caption = 'New QSO window'
+      OnExecute = acNewQSOWindow1Execute
+    end
+    object acNewQSOWindow2: TAction
+      Category = 'Radio2'
+      Caption = 'New QSO window'
+      OnExecute = acNewQSOWindow2Execute
+    end
+    object acBandMapVFOA1: TAction
+      Category = 'Radio1'
+      Caption = 'Band map VFO A'
+      OnExecute = acBandMapVFOA1Execute
+    end
+    object acBandMapVFOA2: TAction
+      Category = 'Radio2'
+      Caption = 'Bandmap VFOA'
+      OnExecute = acBandMapVFOA2Execute
+    end
+    object acBandMapVFOB2: TAction
+      Category = 'Radio2'
+      Caption = 'Bandmap VFO B'
+      OnExecute = acBandMapVFOB2Execute
+    end
+    object acBandMapVFOB1: TAction
+      Category = 'Radio1'
+      Caption = 'Band map VFO B'
+      OnExecute = acBandMapVFOB1Execute
+    end
+    object acQSOList: TAction
+      Category = 'Window'
+      Caption = 'QSO list'
+      OnExecute = acQSOListExecute
+    end
+    object acScore: TAction
+      Category = 'Window'
+      Caption = 'Score'
+      OnExecute = acScoreExecute
+    end
+    object acGrayLine: TAction
+      Category = 'Window'
+      Caption = 'Gray line'
+      OnExecute = acGrayLineExecute
+    end
+  end
+  object mnuMain: TMainMenu
+    left = 64
+    top = 8
+    object MenuItem1: TMenuItem
+      Caption = 'File'
+      object MenuItem9: TMenuItem
+        Action = acOpenLog
+      end
+      object MenuItem8: TMenuItem
+        Caption = '-'
+      end
+      object MenuItem6: TMenuItem
+        Action = acGlobalSettings
+      end
+      object MenuItem7: TMenuItem
+        Action = acContestSettings
+      end
+      object MenuItem5: TMenuItem
+        Caption = '-'
+      end
+      object MenuItem2: TMenuItem
+        Action = acClose
+      end
+    end
+    object mnuRado1: TMenuItem
+      Caption = 'Radio 1'
+      object MenuItem10: TMenuItem
+        Action = acNewQSOWindow1
+      end
+      object MenuItem11: TMenuItem
+        Action = acBandMapVFOA1
+      end
+      object MenuItem12: TMenuItem
+        Action = acBandMapVFOB1
+      end
+    end
+    object mnuRadio2: TMenuItem
+      Caption = 'Radio 2'
+      object MenuItem13: TMenuItem
+        Action = acNewQSOWindow2
+      end
+      object MenuItem14: TMenuItem
+        Action = acBandMapVFOA2
+        Caption = 'Band map VFO A'
+      end
+      object MenuItem15: TMenuItem
+        Action = acBandMapVFOB2
+        Caption = 'Band map VFO B'
+      end
+    end
+    object MenuItem3: TMenuItem
+      Caption = 'Window'
+      object MenuItem16: TMenuItem
+        Action = acQSOList
+      end
+      object MenuItem17: TMenuItem
+        Action = acGrayLine
+      end
+      object MenuItem18: TMenuItem
+        Action = acScore
+      end
+    end
+    object MenuItem4: TMenuItem
+      Caption = 'About'
+      RightJustify = True
+    end
+  end
+end
