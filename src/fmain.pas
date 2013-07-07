@@ -6,13 +6,13 @@ interface
 
 uses
   Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, ActnList,
-  Menus, ComCtrls, StdCtrls;
+  Menus, ComCtrls, fCommonLocal;
 
 type
 
   { TfrmMain }
 
-  TfrmMain = class(TForm)
+  TfrmMain = class(TfrmCommonLocal)
     acClose: TAction;
     acOpenLog: TAction;
     acGlobalSettings: TAction;
@@ -62,8 +62,8 @@ type
     procedure acOpenLogExecute(Sender: TObject);
     procedure acQSOListExecute(Sender: TObject);
     procedure acScoreExecute(Sender: TObject);
+    procedure FormDestroy(Sender: TObject);
   private
-    { private declarations }
   public
     { public declarations }
   end; 
@@ -74,6 +74,8 @@ var
 implementation
 
 {$R *.lfm}
+
+uses uCfgStorage;
 
 { TfrmMain }
 
@@ -140,6 +142,12 @@ end;
 procedure TfrmMain.acScoreExecute(Sender: TObject);
 begin
   ShowMessage('Not implemented, yet')
+end;
+
+procedure TfrmMain.FormDestroy(Sender: TObject);
+begin
+  FreeAndNil(iniLocal);
+  FreeAndNil(iniGlobal)
 end;
 
 end.

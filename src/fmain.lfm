@@ -1,4 +1,4 @@
-object frmMain: TfrmMain
+inherited frmMain: TfrmMain
   Left = 494
   Height = 101
   Top = 254
@@ -7,15 +7,15 @@ object frmMain: TfrmMain
   ClientHeight = 82
   ClientWidth = 503
   Menu = mnuMain
-  LCLVersion = '0.9.30.2'
-  object StatusBar1: TStatusBar
+  OnDestroy = FormDestroy
+  object StatusBar1: TStatusBar[0]
     Left = 0
     Height = 19
     Top = 63
     Width = 503
     Panels = <>
   end
-  object ActionList1: TActionList
+  object ActionList1: TActionList[1]
     left = 112
     top = 8
     object acClose: TAction
@@ -85,7 +85,7 @@ object frmMain: TfrmMain
       OnExecute = acGrayLineExecute
     end
   end
-  object mnuMain: TMainMenu
+  object mnuMain: TMainMenu[2]
     left = 64
     top = 8
     object MenuItem1: TMenuItem
