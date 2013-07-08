@@ -31,6 +31,7 @@ type
     procedure DeleteKey(const Section, Ident: String);
     procedure SaveToDisk;
     function  SectionExists(Section : String) : Boolean;
+    function  ValueExists(const Section, Ident: string): Boolean;
   end;
 
 var
@@ -174,6 +175,18 @@ begin
     LeaveCriticalsection(crit)
   end
 end;
+
+function TcfgStorage.ValueExists(const Section, Ident: string): Boolean;
+begin
+  Result := False;
+  EnterCriticalsection(crit);
+  try
+    Result := ini.ValueExists(Section,Ident)
+  finally
+    LeaveCriticalsection(crit)
+  end  
+end;
+
 
 destructor TcfgStorage.Destroy;
 begin
