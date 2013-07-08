@@ -21,7 +21,9 @@ type
     fAppHomeDir : String;
     MysqlProcess : TProcess;
 
-    function GetMysqldPath : String;
+    function  GetMysqldPath : String;
+
+    procedure PrepareMysqlConfigFile;
   public
     MainCon : TMysql55Connection;
     property AppHomeDir : String read fAppHomeDir write fAppHomeDir;
@@ -44,6 +46,7 @@ var
   mysqld : String;
 begin
   mysqld := GetMysqldPath;
+  PrepareMysqlConfigFile;
   MySQLProcess := TProcess.Create(nil);
   MySQLProcess.CommandLine := mysqld+' --defaults-file='+fAppHomeDir+'database/'+'my.cnf'+
                               ' --default-storage-engine=InnoDB --datadir='+fAppHomeDir+'database/'+
@@ -51,6 +54,21 @@ begin
                               ' --skip-grant-tables --port=65000 --key_buffer_size=32M'+
                               ' --key_buffer_size=4096K';
   MySQLProcess.Execute
+end;
+
+
+procedure TdmData.PrepareMysqlConfigFile;
+var
+  f : TextFile;
+begin
+  if not FileExistsUTF8(fAppHomeDir+'database'+DirectorySeparator+'my.cnf') then
+  begin
+    AssignFile(f,fAppHomeDir+'database'+DirectorySeparator+'my.cnf');
+    Rewrite(f);
+    Writeln(f,'[mysqld]');
+    Writeln(f,'performance_schema = Off');
+    CloseFile(f)
+  end
 end;
 
 function TdmData.GetMysqldPath : String;
