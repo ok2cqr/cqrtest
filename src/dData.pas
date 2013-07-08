@@ -5,10 +5,14 @@ unit dData;
 interface
 
 uses
-  Classes, SysUtils, FileUtil;
+  Classes, SysUtils, sqldb, FileUtil;
 
 type
+
+  { TdmData }
+
   TdmData = class(TDataModule)
+    qLogList: TSQLQuery;
   private
     { private declarations }
   public

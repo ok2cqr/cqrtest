@@ -63,6 +63,7 @@ type
     procedure acQSOListExecute(Sender: TObject);
     procedure acScoreExecute(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
+    procedure FormShow(Sender: TObject);
   private
   public
     { public declarations }
@@ -75,7 +76,7 @@ implementation
 
 {$R *.lfm}
 
-uses uCfgStorage;
+uses uCfgStorage, fDBConnect;
 
 { TfrmMain }
 
@@ -131,7 +132,7 @@ end;
 
 procedure TfrmMain.acOpenLogExecute(Sender: TObject);
 begin
-  ShowMessage('Not implemented, yet')
+  //
 end;
 
 procedure TfrmMain.acQSOListExecute(Sender: TObject);
@@ -148,6 +149,19 @@ procedure TfrmMain.FormDestroy(Sender: TObject);
 begin
   FreeAndNil(iniLocal);
   FreeAndNil(iniGlobal)
+end;
+
+procedure TfrmMain.FormShow(Sender: TObject);
+begin
+  inherited;
+  with TfrmDBConnect.Create(self) do
+  try
+    ShowModal;
+    if ModalResult <> mrOK then
+      Application.Terminate
+  finally
+    Free
+  end
 end;
 
 end.

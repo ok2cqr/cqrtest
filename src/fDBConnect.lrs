@@ -1,0 +1,79 @@
+{ This is an automatically generated lazarus resource file }
+
+LazarusResources.Add('TfrmDBConnect','FORMDATA',[
+  'TPF0'#241#13'TfrmDBConnect'#12'frmDBConnect'#4'Left'#3#243#1#6'Height'#3'('#2
+  +#3'Top'#3#194#0#5'Width'#3'q'#1#7'Caption'#6#19'Database connection'#12'Clie'
+  +'ntHeight'#3'('#2#11'ClientWidth'#3'q'#1#7'OnClose'#7#9'FormClose'#8'OnCreat'
+  +'e'#7#10'FormCreate'#6'OnShow'#7#8'FormShow'#0#242#2#0#9'TGroupBox'#8'grbLog'
+  +'in'#4'Left'#2#0#6'Height'#3#192#0#3'Top'#2#0#5'Width'#3'q'#1#5'Align'#7#5'a'
+  +'lTop'#7'Caption'#6#14' MySQL server '#12'ClientHeight'#3#161#0#11'ClientWid'
+  +'th'#3'm'#1#8'TabOrder'#2#0#7'Visible'#8#0#5'TEdit'#9'edtServer'#4'Left'#2#14
+  +#6'Height'#2#21#3'Top'#2#25#5'Width'#3#168#0#8'TabOrder'#2#0#4'Text'#6#9'loc'
+  +'alhost'#0#0#6'TLabel'#6'Label1'#4'Left'#2#14#6'Height'#2#16#3'Top'#2#9#5'Wi'
+  +'dth'#2'I'#7'Caption'#6#12'Server name:'#11'ParentColor'#8#0#0#6'TLabel'#6'L'
+  +'abel2'#4'Left'#3#218#0#6'Height'#2#16#3'Top'#2#9#5'Width'#2#29#7'Caption'#6
+  +#5'Port:'#11'ParentColor'#8#0#0#5'TEdit'#7'edtPort'#4'Left'#3#218#0#6'Height'
+  +#2#21#3'Top'#2#25#5'Width'#2'P'#8'TabOrder'#2#1#4'Text'#6#4'3306'#0#0#6'TLab'
+  +'el'#6'Label3'#4'Left'#2#14#6'Height'#2#16#3'Top'#2'='#5'Width'#2'@'#7'Capti'
+  +'on'#6#10'User name:'#11'ParentColor'#8#0#0#5'TEdit'#7'edtUser'#4'Left'#2#14
+  +#6'Height'#2#21#3'Top'#2'O'#5'Width'#3#168#0#8'TabOrder'#2#2#0#0#6'TLabel'#6
+  +'Label4'#4'Left'#3#218#0#6'Height'#2#16#3'Top'#2'='#5'Width'#2'9'#7'Caption'
+  +#6#9'Password:'#11'ParentColor'#8#0#0#5'TEdit'#7'edtPass'#4'Left'#3#218#0#6
+  +'Height'#2#21#3'Top'#2'O'#5'Width'#3#132#0#8'EchoMode'#7#10'emPassword'#12'P'
+  +'asswordChar'#6#1'*'#8'TabOrder'#2#3#0#0#9'TCheckBox'#11'chkSavePass'#4'Left'
+  +#2#18#6'Height'#2#26#3'Top'#2'r'#5'Width'#2'e'#7'Caption'#6#10'Remeber me'#8
+  +'OnChange'#7#17'chkSavePassChange'#8'TabOrder'#2#4#0#0#7'TButton'#10'btnConn'
+  +'ect'#4'Left'#2'*'#6'Height'#2#25#3'Top'#3#143#0#5'Width'#2'S'#7'Caption'#6#7
+  +'Connect'#7'OnClick'#7#15'btnConnectClick'#8'TabOrder'#2#5#0#0#7'TButton'#13
+  +'btnDisconnect'#4'Left'#3#206#0#6'Height'#2#25#3'Top'#3#143#0#5'Width'#2'W'#7
+  +'Caption'#6#10'Disconnect'#7'OnClick'#7#18'btnDisconnectClick'#8'TabOrder'#2
+  +#6#0#0#9'TCheckBox'#11'chkAutoConn'#4'Left'#3#206#0#6'Height'#2#26#3'Top'#2
+  +'r'#5'Width'#2'j'#7'Caption'#6#12'Auto connect'#8'TabOrder'#2#7#0#0#0#242#2#1
+  +#6'TPanel'#6'Panel1'#4'Left'#2#0#6'Height'#3'N'#1#3'Top'#3#218#0#5'Width'#3
+  +'q'#1#5'Align'#7#8'alClient'#10'BevelOuter'#7#6'bvNone'#7'Caption'#6#6'Panel'
+  +'1'#12'ClientHeight'#3'N'#1#11'ClientWidth'#3'q'#1#8'TabOrder'#2#1#0#6'TPane'
+  +'l'#6'Panel2'#4'Left'#3#20#1#6'Height'#3'9'#1#3'Top'#2#0#5'Width'#2']'#5'Ali'
+  +'gn'#7#7'alRight'#10'BevelOuter'#7#6'bvNone'#12'ClientHeight'#3'9'#1#11'Clie'
+  +'ntWidth'#2']'#8'TabOrder'#2#0#0#7'TButton'#9'btnNewLog'#4'Left'#2#9#6'Heigh'
+  +'t'#2#25#3'Top'#2'p'#5'Width'#2'K'#7'Caption'#6#7'New log'#7'Enabled'#8#7'On'
+  +'Click'#7#14'btnNewLogClick'#8'TabOrder'#2#1#0#0#7'TButton'#10'btnEditLog'#4
+  +'Left'#2#9#6'Height'#2#25#3'Top'#3#137#0#5'Width'#2'K'#7'Caption'#6#8'Edit l'
+  +'og'#7'Enabled'#8#7'OnClick'#7#15'btnEditLogClick'#8'TabOrder'#2#2#0#0#7'TBu'
+  +'tton'#12'btnDeleteLog'#4'Left'#2#9#6'Height'#2#25#3'Top'#3#162#0#5'Width'#2
+  +'K'#7'Caption'#6#10'Delete log'#7'Enabled'#8#7'OnClick'#7#17'btnDeleteLogCli'
+  +'ck'#8'TabOrder'#2#3#0#0#7'TButton'#10'btnOpenLog'#4'Left'#2#9#6'Height'#2#25
+  +#3'Top'#2#10#5'Width'#2'K'#7'Caption'#6#8'Open log'#7'Enabled'#8#7'OnClick'#7
+  +#15'btnOpenLogClick'#8'TabOrder'#2#0#0#0#7'TButton'#9'btnCancel'#4'Left'#2#9
+  +#6'Height'#2#25#3'Top'#2'0'#5'Width'#2'K'#6'Cancel'#9#7'Caption'#6#6'Cancel'
+  +#7'OnClick'#7#14'btnCancelClick'#8'TabOrder'#2#4#0#0#7'TButton'#8'btnUtils'#4
+  +'Left'#2#9#6'Height'#2#25#3'Top'#3#214#0#5'Width'#2'K'#7'Caption'#6#5'Utils'
+  +#7'OnClick'#7#13'btnUtilsClick'#8'TabOrder'#2#5#0#0#0#7'TDBGrid'#9'dbgrdLogs'
+  +#4'Left'#2#0#6'Height'#3'9'#1#3'Top'#2#0#5'Width'#3#20#1#5'Align'#7#8'alClie'
+  +'nt'#5'Color'#7#8'clWindow'#7'Columns'#14#0#7'Options'#11#8'dgTitles'#11'dgI'
+  +'ndicator'#14'dgColumnResize'#12'dgColumnMove'#10'dgColLines'#10'dgRowLines'
+  +#6'dgTabs'#11'dgRowSelect'#21'dgAlwaysShowSelection'#15'dgConfirmDelete'#14
+  +'dgCancelOnExit'#0#8'ReadOnly'#9#8'TabOrder'#2#1#10'TitleStyle'#7#8'tsNative'
+  +#0#0#6'TPanel'#6'Panel4'#4'Left'#2#0#6'Height'#2#21#3'Top'#3'9'#1#5'Width'#3
+  +'q'#1#5'Align'#7#8'alBottom'#10'BevelOuter'#7#6'bvNone'#12'ClientHeight'#2#21
+  +#11'ClientWidth'#3'q'#1#8'TabOrder'#2#2#0#9'TCheckBox'#11'chkAutoOpen'#4'Lef'
+  +'t'#2#8#6'Height'#2#26#3'Top'#2#255#5'Width'#3#231#0#7'Caption'#6'"Open rece'
+  +'nt log after program runs'#8'TabOrder'#2#0#0#0#0#0#242#2#2#6'TPanel'#6'Pane'
+  +'l3'#4'Left'#2#0#6'Height'#2#26#3'Top'#3#192#0#5'Width'#3'q'#1#5'Align'#7#5
+  +'alTop'#10'BevelOuter'#7#6'bvNone'#12'ClientHeight'#2#26#11'ClientWidth'#3'q'
+  +#1#8'TabOrder'#2#2#0#9'TCheckBox'#14'chkSaveToLocal'#4'Left'#2#12#6'Height'#2
+  +#26#3'Top'#2#2#5'Width'#3#196#0#7'Caption'#6#30'Save log data to local machi'
+  +'ne'#7'OnClick'#7#19'chkSaveToLocalClick'#8'TabOrder'#2#0#0#0#0#242#2#3#6'TT'
+  +'imer'#14'tmrAutoConnect'#7'Enabled'#8#7'OnTimer'#7#19'tmrAutoConnectTimer'#4
+  +'left'#2'p'#3'top'#3#144#1#0#0#242#2#4#10'TPopupMenu'#8'popUtils'#4'left'#3
+  ,'8'#1#3'top'#3#216#1#0#9'TMenuItem'#9'MenuItem1'#7'Caption'#6#13'Configurati'
+  +'on'#7'Visible'#8#0#9'TMenuItem'#9'mnuExport'#7'Caption'#6#10'Export ...'#0#0
+  +#9'TMenuItem'#9'MenuItem2'#7'Caption'#6#1'-'#0#0#9'TMenuItem'#9'mnuImport'#7
+  +'Caption'#6#10'Import ...'#0#0#0#9'TMenuItem'#9'MenuItem3'#7'Caption'#6#1'-'
+  +#7'Visible'#8#0#0#9'TMenuItem'#9'mnuRepair'#7'Caption'#6#19'Repair log datab'
+  +'ase'#7'OnClick'#7#14'mnuRepairClick'#0#0#9'TMenuItem'#9'MenuItem5'#7'Captio'
+  +'n'#6#1'-'#0#0#9'TMenuItem'#11'mnuClearLog'#7'Caption'#6#9'Clear log'#7'OnCl'
+  +'ick'#7#16'mnuClearLogClick'#0#0#0#242#2#5#11'TOpenDialog'#7'dlgOpen'#10'Def'
+  +'aultExt'#6#4'.ini'#6'Filter'#6#15'ini files|*.ini'#4'left'#3#151#0#3'top'#3
+  +#234#0#0#0#242#2#6#11'TSaveDialog'#7'dlgSave'#10'DefaultExt'#6#4'.ini'#6'Fil'
+  +'ter'#6#15'ini files|*.ini'#4'left'#3#151#0#3'top'#3''''#1#0#0#0
+]);

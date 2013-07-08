@@ -7,7 +7,8 @@ uses
   cthreads,
   {$ENDIF}{$ENDIF}
   Interfaces, // this includes the LCL widgetset
-  Forms, fMain, uCfgStorage, dData, dUtils, fCommonLocal, fCommonGlobal;
+  Forms, fMain, uCfgStorage, dData, dUtils, fCommonLocal, fCommonGlobal,
+  fDBConnect;
 
 {$R *.res}
 
