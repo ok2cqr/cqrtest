@@ -1,4 +1,6 @@
 object dmData: TdmData
+  OnCreate = DataModuleCreate
+  OnDestroy = DataModuleDestroy
   OldCreateOrder = False
   Height = 272
   HorizontalOffset = 250
@@ -9,5 +11,10 @@ object dmData: TdmData
     Params = <>
     left = 37
     top = 16
+  end
+  object dsrLogList: TDatasource
+    DataSet = qLogList
+    left = 37
+    top = 72
   end
 end

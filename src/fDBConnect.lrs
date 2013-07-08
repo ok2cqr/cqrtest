@@ -72,8 +72,5 @@ LazarusResources.Add('TfrmDBConnect','FORMDATA',[
   +#7'Visible'#8#0#0#9'TMenuItem'#9'mnuRepair'#7'Caption'#6#19'Repair log datab'
   +'ase'#7'OnClick'#7#14'mnuRepairClick'#0#0#9'TMenuItem'#9'MenuItem5'#7'Captio'
   +'n'#6#1'-'#0#0#9'TMenuItem'#11'mnuClearLog'#7'Caption'#6#9'Clear log'#7'OnCl'
-  +'ick'#7#16'mnuClearLogClick'#0#0#0#242#2#5#11'TOpenDialog'#7'dlgOpen'#10'Def'
-  +'aultExt'#6#4'.ini'#6'Filter'#6#15'ini files|*.ini'#4'left'#3#151#0#3'top'#3
-  +#234#0#0#0#242#2#6#11'TSaveDialog'#7'dlgSave'#10'DefaultExt'#6#4'.ini'#6'Fil'
-  +'ter'#6#15'ini files|*.ini'#4'left'#3#151#0#3'top'#3''''#1#0#0#0
+  +'ick'#7#16'mnuClearLogClick'#0#0#0#0
 ]);

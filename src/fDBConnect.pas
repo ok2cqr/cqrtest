@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, FileUtil, LResources, Forms, Controls, Graphics, Dialogs,
-  StdCtrls, ExtCtrls, DBGrids, LCLType, Menus, IniFiles, fCommonLocal;
+  StdCtrls, ExtCtrls, DBGrids, LCLType, Menus,fCommonLocal;
 
 type
 
@@ -43,13 +43,11 @@ type
     mnuClearLog: TMenuItem;
     mnuImport: TMenuItem;
     mnuExport: TMenuItem;
-    dlgOpen: TOpenDialog;
     Panel1: TPanel;
     Panel2: TPanel;
     Panel3: TPanel;
     Panel4: TPanel;
     popUtils: TPopupMenu;
-    dlgSave: TSaveDialog;
     tmrAutoConnect: TTimer;
     procedure btnCancelClick(Sender: TObject);
     procedure btnConnectClick(Sender: TObject);
@@ -86,7 +84,7 @@ var
 
 implementation
 
-uses dData, dUtils, uCfgStorage;//, fNewLog;
+uses dData, uCfgStorage;//, fNewLog;
 
 procedure TfrmDBConnect.EnableButtons;
 begin
@@ -313,15 +311,15 @@ end;
 
 procedure TfrmDBConnect.FormShow(Sender: TObject);
 begin
-  //dbgrdLogs.DataSource := dmData.dsrLogList;
+  if iniLocal.ReadBool('Login','SaveTolocal',True) then
+    dmData.StartMysqldProcess;
+  dbgrdLogs.DataSource := dmData.dsrLogList;
   LoadLogin;
   if OpenFromMenu then
   begin
     UpdateGridFields;
     EnableButtons
-  end;
-  //dlgOpen.InitialDir := dmData.HomeDir;
-  //dlgSave.InitialDir := dmData.HomeDir
+  end
 end;
 
 procedure TfrmDBConnect.mnuClearLogClick(Sender: TObject);
@@ -352,7 +350,7 @@ begin
                               'are you going to save data to local machine?','Question ...',
                               mb_YesNo+mb_IconQuestion) =  idYes then
     begin
-      ShowMessage('Inicialize MySQL')
+      dmData.StartMysqldProcess
     end
     else begin
       chkSaveToLocal.Checked := False;

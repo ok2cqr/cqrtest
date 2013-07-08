@@ -292,16 +292,4 @@ inherited frmDBConnect: TfrmDBConnect
       OnClick = mnuClearLogClick
     end
   end
-  object dlgOpen: TOpenDialog[5]
-    DefaultExt = '.ini'
-    Filter = 'ini files|*.ini'
-    left = 151
-    top = 234
-  end
-  object dlgSave: TSaveDialog[6]
-    DefaultExt = '.ini'
-    Filter = 'ini files|*.ini'
-    left = 151
-    top = 295
-  end
 end
