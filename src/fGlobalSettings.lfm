@@ -87,7 +87,7 @@ object frmGlobalSettings: TfrmGlobalSettings
         Top = 3
         Width = 341
         Caption = ' Internet connection '
-        ClientHeight = 106
+        ClientHeight = 120
         ClientWidth = 337
         TabOrder = 0
         object Label12: TLabel
@@ -781,7 +781,7 @@ object frmGlobalSettings: TfrmGlobalSettings
         Top = 3
         Width = 569
         Caption = ' rigctld '
-        ClientHeight = 57
+        ClientHeight = 71
         ClientWidth = 565
         TabOrder = 0
         object Label17: TLabel
@@ -811,8 +811,8 @@ object frmGlobalSettings: TfrmGlobalSettings
         TabOrder = 1
         object tabTRX1: TTabSheet
           Caption = 'Radio one'
-          ClientHeight = 355
-          ClientWidth = 559
+          ClientHeight = 388
+          ClientWidth = 563
           object GroupBox3: TGroupBox
             Left = 14
             Height = 333
@@ -1138,8 +1138,8 @@ object frmGlobalSettings: TfrmGlobalSettings
         end
         object tabTRX2: TTabSheet
           Caption = 'Radio two'
-          ClientHeight = 355
-          ClientWidth = 559
+          ClientHeight = 388
+          ClientWidth = 563
           object edtRadio2: TEdit
             Left = 146
             Height = 21
@@ -1153,7 +1153,7 @@ object frmGlobalSettings: TfrmGlobalSettings
             Top = 14
             Width = 537
             Caption = ' Radio two, desc.:'
-            ClientHeight = 302
+            ClientHeight = 316
             ClientWidth = 533
             TabOrder = 1
             object Label22: TLabel
@@ -1271,7 +1271,7 @@ object frmGlobalSettings: TfrmGlobalSettings
               Top = 140
               Width = 511
               Caption = 'Radio two serial parameters'
-              ClientHeight = 130
+              ClientHeight = 144
               ClientWidth = 507
               TabOrder = 9
               object Label137: TLabel
@@ -1498,7 +1498,7 @@ object frmGlobalSettings: TfrmGlobalSettings
         Top = 54
         Width = 497
         Caption = ' WinKeyer USB '
-        ClientHeight = 89
+        ClientHeight = 103
         ClientWidth = 493
         TabOrder = 1
         object Label84: TLabel
@@ -1599,7 +1599,7 @@ object frmGlobalSettings: TfrmGlobalSettings
         Top = 182
         Width = 497
         Caption = ' cwdaemon '
-        ClientHeight = 74
+        ClientHeight = 88
         ClientWidth = 493
         TabOrder = 2
         object Label87: TLabel
@@ -1855,7 +1855,7 @@ object frmGlobalSettings: TfrmGlobalSettings
         Top = 8
         Width = 377
         Caption = ' Callbook search '
-        ClientHeight = 129
+        ClientHeight = 143
         ClientWidth = 373
         TabOrder = 0
         object rbHamQTH: TRadioButton

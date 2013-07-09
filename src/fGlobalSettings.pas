@@ -6,13 +6,13 @@ interface
 
 uses
   Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, ExtCtrls,
-  StdCtrls, ComCtrls, Spin, ColorBox;
+  StdCtrls, ComCtrls, Spin, ColorBox, fCommonLocal;
 
 type
 
   { TfrmGlobalSettings }
 
-  TfrmGlobalSettings = class(TForm)
+  TfrmGlobalSettings = class(TfrmCommonLocal)
     btnCancel: TButton;
     btnFldigiPath: TButton;
     btnFrequencies: TButton;
