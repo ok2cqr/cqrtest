@@ -76,7 +76,7 @@ implementation
 
 {$R *.lfm}
 
-uses uCfgStorage, fDBConnect;
+uses uCfgStorage, fDBConnect, fGlobalSettings;
 
 { TfrmMain }
 
@@ -111,8 +111,15 @@ begin
 end;
 
 procedure TfrmMain.acGlobalSettingsExecute(Sender: TObject);
+var
+  frmGlobalSettings : TfrmGlobalSettings;
 begin
-  ShowMessage('Not implemented, yet')
+  frmGlobalSettings := TfrmGlobalSettings.Create(self);
+  try
+    frmGlobalSettings.ShowModal
+  finally
+    FreeAndNil(frmGlobalSettings)
+  end;
 end;
 
 procedure TfrmMain.acGrayLineExecute(Sender: TObject);
