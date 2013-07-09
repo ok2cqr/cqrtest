@@ -7,6 +7,7 @@ object dmData: TdmData
   VerticalOffset = 250
   Width = 471
   object qLogList: TSQLQuery
+    Transaction = trLogList
     ReadOnly = False
     Params = <>
     left = 37
@@ -16,5 +17,122 @@ object dmData: TdmData
     DataSet = qLogList
     left = 37
     top = 72
+  end
+  object scCommon: TSQLScript
+    Directives.Strings = (
+      'SET TERM'
+      'COMMIT'
+      '#IFDEF'
+      '#IFNDEF'
+      '#ELSE'
+      '#ENDIF'
+      '#DEFINE'
+      '#UNDEF'
+      '#UNDEFINE'
+    )
+    Script.Strings = (
+      'CREATE DATABASE cqrtest_common DEFAULT CHARACTER SET = utf8  DEFAULT COLLATE = utf8_bin;'
+      ''
+      'USE cqrtest_common;'
+      ''
+      'CREATE TABLE bands ('
+      '       id_bands INT AUTO_INCREMENT PRIMARY KEY,'
+      '       band VARCHAR(10) DEFAULT '''','
+      '       b_begin NUMERIC(10,4),'
+      '       b_end NUMERIC(10,4),'
+      '       cw NUMERIC(10,4),'
+      '       rtty NUMERIC(10,4),'
+      '       ssb NUMERIC(10,4)'
+      ') ENGINE = InnoDB;'
+      'CREATE INDEX band ON bands(band);'
+      ''
+      'CREATE TABLE dxclusters ('
+      '      id_dxclusters INT AUTO_INCREMENT PRIMARY KEY,'
+      '      description VARCHAR(100) DEFAULT '''','
+      '      address VARCHAR(100) DEFAULT '''','
+      '      port VARCHAR(10) DEFAULT '''','
+      '      dxcuser VARCHAR(12) DEFAULT '''','
+      '      dxcpass VARCHAR(20) DEFAULT '''''
+      ') ENGINE = InnoDB;'
+      'CREATE INDEX description ON dxclusters(description);'
+      ''
+      'CREATE TABLE iota_list ('
+      '      id_iota_list INT AUTO_INCREMENT PRIMARY KEY,'
+      '      iota_nr VARCHAR(6) DEFAULT '''','
+      '      island_name VARCHAR(250) DEFAULT '''','
+      '      dxcc_ref VARCHAR(15) DEFAULT '''','
+      '      pref VARCHAR(15) DEFAULT '''''
+      ') ENGINE = InnoDB;'
+      'CREATE INDEX iota_nr ON iota_list(iota_nr);'
+      'CREATE INDEX pref ON iota_list(pref);'
+      ''
+      'CREATE TABLE dxcc_ref ('
+      '            id_dxcc_ref INT AUTO_INCREMENT PRIMARY KEY,'
+      '            pref VARCHAR(20) NOT NULL,'
+      '            name VARCHAR(100) NOT NULL,'
+      '            cont VARCHAR(6) NOT NULL,'
+      '            utc VARCHAR(12)NOT NULL,'
+      '            lat VARCHAR(10) NOT NULL,'
+      '            longit VARCHAR(10) NOT NULL,'
+      '            itu VARCHAR(20) NOT NULL,'
+      '            waz VARCHAR(20) NOT NULL,'
+      '            adif SMALLINT NOT NULL DEFAULT 0,'
+      '            deleted SMALLINT NOT NULL DEFAULT 0'
+      ') ENGINE = InnoDB;'
+      'CREATE INDEX pref ON dxcc_ref(pref);'
+      'CREATE INDEX adif ON dxcc_ref(adif);'
+      ''
+      'CREATE TABLE log_list ('
+      '            id_log_list INT AUTO_INCREMENT PRIMARY KEY,'
+      '            log_nr SMALLINT NOT NULL,'
+      '            log_name VARCHAR(50) DEFAULT '''','
+      '            auto_open SMALLINT NOT NULL DEFAULT 0'
+      ') ENGINE = InnoDB;'
+      'CREATE INDEX log_nr ON log_list(log_nr);'
+      ''
+      'CREATE TABLE db_version'
+      '('
+      '  nr SMALLINT NOT NULL'
+      ') ENGINE = InnoDB;'
+    )
+    Terminator = ';'
+    CommentsinSQL = True
+    UseSetTerm = True
+    UseCommit = True
+    UseDefines = True
+    left = 232
+    top = 16
+  end
+  object Q: TSQLQuery
+    ReadOnly = False
+    Params = <>
+    ParseSQL = False
+    left = 232
+    top = 80
+  end
+  object trQ: TSQLTransaction
+    Active = False
+    Action = caNone
+    left = 288
+    top = 80
+  end
+  object mQ: TSQLQuery
+    ReadOnly = False
+    Params = <>
+    ParseSQL = False
+    left = 232
+    top = 144
+  end
+  object trmQ: TSQLTransaction
+    Active = False
+    Action = caNone
+    left = 288
+    top = 144
+  end
+  object trLogList: TSQLTransaction
+    Active = False
+    Action = caNone
+    left = 104
+    top = 16
   end
 end

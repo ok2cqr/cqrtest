@@ -66,7 +66,8 @@ type
     procedure mnuRepairClick(Sender : TObject);
     procedure tmrAutoConnectTimer(Sender: TObject);
   private
-    AskForDB : Boolean;
+    AskForDB    : Boolean;
+    RemoteMySQL : Boolean;
 
     procedure SaveLogin;
     procedure LoadLogin;
@@ -145,7 +146,8 @@ begin
       tmrAutoConnect.Enabled := True;
       chkAutoConn.Checked    := False;
       chkSaveToLocal.Checked := True;
-      chkSaveToLocalClick(nil)
+      chkSaveToLocalClick(nil);
+      RemoteMySQL  := False
     end
     else begin
       chkSaveToLocal.Checked := False;
@@ -163,7 +165,8 @@ begin
         chkAutoConn.Checked := iniLocal.ReadBool('Login','AutoConnect',False);
       chkSavePassChange(nil);
       if (chkAutoConn.Checked) and (chkAutoConn.Enabled) then
-        tmrAutoConnect.Enabled := True
+        tmrAutoConnect.Enabled := True;
+      RemoteMySQL  := True
     end;
     chkAutoOpen.Checked := iniLocal.ReadBool('Login','AutoOpen',False)
 end;
@@ -183,7 +186,7 @@ end;
 procedure TfrmDBConnect.btnConnectClick(Sender: TObject);
 begin
   SaveLogin;
-  {
+
   if dmData.OpenConnections(edtServer.Text,edtPort.Text,edtUser.Text,edtPass.Text) then
   begin
     dmData.CheckForDatabases;
@@ -191,7 +194,6 @@ begin
     EnableButtons;
     OpenDefaultLog
   end
-  }
 end;
 
 procedure TfrmDBConnect.btnDeleteLogClick(Sender: TObject);
@@ -304,9 +306,22 @@ end;
 procedure TfrmDBConnect.chkSaveToLocalClick(Sender: TObject);
 begin
   if chkSaveToLocal.Checked then
+  begin
+    if RemoteMySQL then
+    begin
+      if Application.MessageBox('Local database is not running. Dou you want to start it?','Question',mb_YesNo+mb_IconQuestion) = idYes then
+        dmData.StartMysqldProcess
+      else begin
+        chkSaveToLocal.Checked := False;
+        grbLogin.Visible       := True;
+        exit
+      end
+    end;
     grbLogin.Visible := False
-  else
+  end
+  else  begin
     grbLogin.Visible := True
+  end
 end;
 
 procedure TfrmDBConnect.FormShow(Sender: TObject);
