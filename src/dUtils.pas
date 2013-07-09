@@ -12,7 +12,7 @@ type
   private
     { private declarations }
   public
-    { public declarations }
+    procedure DebugMsg(what : String; Level : Integer=1);
   end; 
 
 var
@@ -21,6 +21,11 @@ var
 implementation
 
 {$R *.lfm}
+
+procedure TdmUtils.DebugMsg(what : String; Level : Integer=1);
+begin
+  Writeln(what)
+end;
 
 end.
 
