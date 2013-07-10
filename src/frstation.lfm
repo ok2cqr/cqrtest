@@ -1,0 +1,170 @@
+object fraStation: TfraStation
+  Left = 0
+  Height = 305
+  Top = 0
+  Width = 345
+  ClientHeight = 305
+  ClientWidth = 345
+  TabOrder = 0
+  DesignLeft = 437
+  DesignTop = 327
+  object Label3: TLabel
+    Left = 16
+    Height = 16
+    Top = 16
+    Width = 47
+    Caption = 'Callsign:'
+    ParentColor = False
+  end
+  object edtCall: TEdit
+    Left = 86
+    Height = 21
+    Top = 11
+    Width = 128
+    CharCase = ecUppercase
+    TabOrder = 0
+  end
+  object Label1: TLabel
+    Left = 16
+    Height = 16
+    Top = 48
+    Width = 37
+    Caption = 'Name:'
+    ParentColor = False
+  end
+  object edtName: TEdit
+    Left = 86
+    Height = 21
+    Top = 43
+    Width = 232
+    TabOrder = 1
+  end
+  object Label2: TLabel
+    Left = 16
+    Height = 16
+    Top = 141
+    Width = 26
+    Caption = 'City:'
+    ParentColor = False
+  end
+  object edtCity: TEdit
+    Left = 86
+    Height = 21
+    Top = 136
+    Width = 232
+    TabOrder = 2
+  end
+  object Label4: TLabel
+    Left = 16
+    Height = 16
+    Top = 205
+    Width = 35
+    Caption = 'State:'
+    ParentColor = False
+  end
+  object edtState: TEdit
+    Left = 86
+    Height = 21
+    Top = 200
+    Width = 42
+    CharCase = ecUppercase
+    TabOrder = 3
+  end
+  object edtStreet1: TEdit
+    Left = 86
+    Height = 21
+    Top = 74
+    Width = 232
+    TabOrder = 4
+  end
+  object Label5: TLabel
+    Left = 16
+    Height = 16
+    Top = 79
+    Width = 41
+    Caption = 'Street:'
+    ParentColor = False
+  end
+  object edtStreet2: TEdit
+    Left = 86
+    Height = 21
+    Top = 105
+    Width = 232
+    TabOrder = 5
+  end
+  object edtZipCode: TEdit
+    Left = 86
+    Height = 21
+    Top = 168
+    Width = 88
+    TabOrder = 6
+  end
+  object Label6: TLabel
+    Left = 16
+    Height = 16
+    Top = 174
+    Width = 52
+    Caption = 'ZIP code:'
+    ParentColor = False
+  end
+  object edtGrid: TEdit
+    Left = 16
+    Height = 21
+    Top = 264
+    Width = 72
+    TabOrder = 7
+  end
+  object Label7: TLabel
+    Left = 40
+    Height = 16
+    Top = 243
+    Width = 24
+    Caption = 'Grid'
+    ParentColor = False
+  end
+  object edtCQZ: TEdit
+    Left = 96
+    Height = 21
+    Top = 264
+    Width = 40
+    TabOrder = 8
+  end
+  object Label8: TLabel
+    Left = 104
+    Height = 16
+    Top = 243
+    Width = 18
+    Caption = 'CQ'
+    ParentColor = False
+  end
+  object edtITU: TEdit
+    Left = 144
+    Height = 21
+    Top = 264
+    Width = 40
+    TabOrder = 9
+  end
+  object Label9: TLabel
+    Left = 152
+    Height = 16
+    Top = 243
+    Width = 19
+    Caption = 'ITU'
+    ParentColor = False
+  end
+  object edtIOTA: TEdit
+    Left = 192
+    Height = 21
+    Top = 264
+    Width = 64
+    TabOrder = 10
+  end
+  object Label10: TLabel
+    Left = 208
+    Height = 16
+    Top = 243
+    Width = 26
+    Caption = 'IOTA'
+    ParentColor = False
+  end
+end
