@@ -1,0 +1,171 @@
+object fraVisibleColumns: TfraVisibleColumns
+  Left = 0
+  Height = 302
+  Top = 0
+  Width = 376
+  ClientHeight = 302
+  ClientWidth = 376
+  TabOrder = 0
+  DesignLeft = 448
+  DesignTop = 185
+  object chkDate: TCheckBox
+    Left = 14
+    Height = 26
+    Top = 12
+    Width = 56
+    Caption = 'Date'
+    TabOrder = 0
+  end
+  object chkTimeOn: TCheckBox
+    Left = 14
+    Height = 26
+    Top = 39
+    Width = 73
+    Caption = 'Time on'
+    TabOrder = 1
+  end
+  object chkCallSign: TCheckBox
+    Left = 12
+    Height = 26
+    Top = 71
+    Width = 71
+    Caption = 'CallSign'
+    TabOrder = 2
+  end
+  object chkMode: TCheckBox
+    Left = 14
+    Height = 26
+    Top = 103
+    Width = 60
+    Caption = 'Mode'
+    TabOrder = 3
+  end
+  object chkFreq: TCheckBox
+    Left = 14
+    Height = 26
+    Top = 135
+    Width = 53
+    Caption = 'Freq'
+    TabOrder = 4
+  end
+  object chkRST_S: TCheckBox
+    Left = 14
+    Height = 26
+    Top = 167
+    Width = 78
+    Caption = 'RST sent'
+    TabOrder = 5
+  end
+  object chkRST_R: TCheckBox
+    Left = 14
+    Height = 26
+    Top = 199
+    Width = 103
+    Caption = 'RST Received'
+    TabOrder = 6
+  end
+  object chkName: TCheckBox
+    Left = 14
+    Height = 26
+    Top = 231
+    Width = 61
+    Caption = 'Name'
+    TabOrder = 7
+  end
+  object chkQTH: TCheckBox
+    Left = 14
+    Height = 26
+    Top = 263
+    Width = 52
+    Caption = 'QTH'
+    TabOrder = 8
+  end
+  object chkMyLoc: TCheckBox
+    Left = 132
+    Height = 26
+    Top = 12
+    Width = 88
+    Caption = 'My locator'
+    TabOrder = 9
+  end
+  object chkLoc: TCheckBox
+    Left = 132
+    Height = 26
+    Top = 39
+    Width = 72
+    Caption = 'Locator'
+    TabOrder = 10
+  end
+  object chkIOTA: TCheckBox
+    Left = 132
+    Height = 26
+    Top = 71
+    Width = 53
+    Caption = 'IOTA'
+    TabOrder = 11
+  end
+  object chkPower: TCheckBox
+    Left = 132
+    Height = 26
+    Top = 103
+    Width = 63
+    Caption = 'Power'
+    TabOrder = 12
+  end
+  object chkDXCC: TCheckBox
+    Left = 132
+    Height = 26
+    Top = 135
+    Width = 60
+    Caption = 'DXCC'
+    TabOrder = 13
+  end
+  object chkWAZ: TCheckBox
+    Left = 132
+    Height = 26
+    Top = 167
+    Width = 53
+    Caption = 'WAZ'
+    TabOrder = 14
+  end
+  object chkITU: TCheckBox
+    Left = 132
+    Height = 26
+    Top = 199
+    Width = 46
+    Caption = 'ITU'
+    TabOrder = 15
+  end
+  object chkState: TCheckBox
+    Left = 132
+    Height = 26
+    Top = 231
+    Width = 59
+    Caption = 'State'
+    TabOrder = 16
+  end
+  object chkCont: TCheckBox
+    Left = 134
+    Height = 26
+    Top = 263
+    Width = 86
+    Caption = 'Continent'
+    TabOrder = 17
+  end
+  object chkExchange1: TCheckBox
+    Left = 248
+    Height = 26
+    Top = 12
+    Width = 92
+    Caption = 'Exchange 1'
+    TabOrder = 18
+  end
+  object chkExchange2: TCheckBox
+    Left = 248
+    Height = 26
+    Top = 39
+    Width = 92
+    Caption = 'Exchange 2'
+    TabOrder = 19
+  end
+end
