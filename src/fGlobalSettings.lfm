@@ -1,4 +1,4 @@
-object frmGlobalSettings: TfrmGlobalSettings
+inherited frmGlobalSettings: TfrmGlobalSettings
   Left = 246
   Height = 614
   Top = 95
@@ -6,8 +6,8 @@ object frmGlobalSettings: TfrmGlobalSettings
   Caption = 'Global settings'
   ClientHeight = 614
   ClientWidth = 776
-  LCLVersion = '0.9.30.2'
-  object Panel1: TPanel
+  OnShow = FormShow
+  object Panel1: TPanel[0]
     Left = 0
     Height = 44
     Top = 570
@@ -46,7 +46,7 @@ object frmGlobalSettings: TfrmGlobalSettings
       TabOrder = 2
     end
   end
-  object lbPreferences: TListBox
+  object lbPreferences: TListBox[1]
     Left = 0
     Height = 570
     Top = 0
@@ -67,15 +67,15 @@ object frmGlobalSettings: TfrmGlobalSettings
     ScrollWidth = 156
     TabOrder = 1
   end
-  object pgPreferences: TPageControl
+  object pgPreferences: TPageControl[2]
     Left = 160
     Height = 570
     Top = 0
     Width = 616
-    ActivePage = tabFldigi1
+    ActivePage = tabVisibleColumns
     Align = alClient
     Anchors = [akLeft, akRight, akBottom]
-    TabIndex = 7
+    TabIndex = 3
     TabOrder = 2
     object tabProgram: TTabSheet
       Caption = 'Program'
@@ -87,7 +87,7 @@ object frmGlobalSettings: TfrmGlobalSettings
         Top = 3
         Width = 341
         Caption = ' Internet connection '
-        ClientHeight = 120
+        ClientHeight = 106
         ClientWidth = 337
         TabOrder = 0
         object Label12: TLabel
@@ -164,67 +164,21 @@ object frmGlobalSettings: TfrmGlobalSettings
       Caption = 'Station'
       ClientHeight = 533
       ClientWidth = 608
-      object Label1: TLabel
-        Left = 11
-        Height = 16
-        Top = 48
-        Width = 37
-        Caption = 'Name:'
-        ParentColor = False
-      end
-      object Label2: TLabel
-        Left = 27
-        Height = 16
-        Top = 80
-        Width = 28
-        Caption = 'QTH:'
-        ParentColor = False
-      end
-      object Label3: TLabel
-        Left = 27
-        Height = 16
-        Top = 16
-        Width = 24
-        Caption = 'Call:'
-        ParentColor = False
-      end
-      object Label4: TLabel
-        Left = 28
-        Height = 16
-        Top = 112
-        Width = 24
-        Caption = 'Loc:'
-        ParentColor = False
-      end
-      object edtName: TEdit
-        Left = 86
-        Height = 21
-        Top = 43
-        Width = 128
-        TabOrder = 1
-      end
-      object edtQTH: TEdit
-        Left = 86
-        Height = 21
-        Top = 75
-        Width = 128
-        TabOrder = 2
-      end
-      object edtCall: TEdit
-        Left = 86
-        Height = 21
-        Top = 11
-        Width = 128
-        CharCase = ecUppercase
-        TabOrder = 0
-      end
-      object edtLoc: TEdit
-        Left = 86
-        Height = 21
-        Top = 107
-        Width = 128
-        CharCase = ecUppercase
-        TabOrder = 3
+      inline fraStn: TfraStation
+        Left = 6
+        Top = 12
+        inherited edtCity: TEdit
+          TabOrder = 11
+        end
+        inherited edtZipCode: TEdit
+          TabOrder = 12
+        end
+        inherited edtGrid: TEdit
+          TabOrder = 13
+        end
+        inherited edtCQZ: TEdit
+          TabOrder = 14
+        end
       end
     end
     object tabNewQSO: TTabSheet
@@ -252,523 +206,18 @@ object frmGlobalSettings: TfrmGlobalSettings
       Caption = 'Visible columns'
       ClientHeight = 533
       ClientWidth = 608
-      object chkDate: TCheckBox
-        Left = 14
-        Height = 26
-        Top = 12
-        Width = 56
-        Caption = 'Date'
-        TabOrder = 0
-      end
-      object chkTimeOn: TCheckBox
-        Left = 14
-        Height = 26
-        Top = 43
-        Width = 73
-        Caption = 'Time on'
-        TabOrder = 1
-      end
-      object chkTimeOff: TCheckBox
-        Left = 14
-        Height = 26
-        Top = 75
-        Width = 75
-        Caption = 'Time off'
-        TabOrder = 2
-      end
-      object chkCallSign: TCheckBox
-        Left = 14
-        Height = 26
-        Top = 107
-        Width = 71
-        Caption = 'CallSign'
-        TabOrder = 3
-      end
-      object chkMode: TCheckBox
-        Left = 14
-        Height = 26
-        Top = 139
-        Width = 60
-        Caption = 'Mode'
-        TabOrder = 4
-      end
-      object chkFreq: TCheckBox
-        Left = 14
-        Height = 26
-        Top = 171
-        Width = 53
-        Caption = 'Freq'
-        TabOrder = 5
-      end
-      object chkQSL_S: TCheckBox
-        Left = 14
-        Height = 26
-        Top = 334
-        Width = 78
-        Caption = 'QSL sent'
-        TabOrder = 6
-      end
-      object chkQSL_R: TCheckBox
-        Left = 14
-        Height = 26
-        Top = 366
-        Width = 100
-        Caption = 'QSL received'
-        TabOrder = 7
-      end
-      object chkRST_S: TCheckBox
-        Left = 14
-        Height = 26
-        Top = 203
-        Width = 78
-        Caption = 'RST sent'
-        TabOrder = 8
-      end
-      object chkRST_R: TCheckBox
-        Left = 14
-        Height = 26
-        Top = 235
-        Width = 103
-        Caption = 'RST Received'
-        TabOrder = 9
-      end
-      object chkName: TCheckBox
-        Left = 14
-        Height = 26
-        Top = 267
-        Width = 61
-        Caption = 'Name'
-        TabOrder = 10
-      end
-      object chkQTH: TCheckBox
-        Left = 14
-        Height = 26
-        Top = 299
-        Width = 52
-        Caption = 'QTH'
-        TabOrder = 11
-      end
-      object chkQSL_VIA: TCheckBox
-        Left = 167
-        Height = 26
-        Top = 12
-        Width = 101
-        Caption = 'QSL manager'
-        TabOrder = 12
-      end
-      object chkLoc: TCheckBox
-        Left = 167
-        Height = 26
-        Top = 43
-        Width = 72
-        Caption = 'Locator'
-        TabOrder = 13
-      end
-      object chkMyLoc: TCheckBox
-        Left = 167
-        Height = 26
-        Top = 75
-        Width = 88
-        Caption = 'My locator'
-        TabOrder = 14
-      end
-      object chkIOTA: TCheckBox
-        Left = 167
-        Height = 26
-        Top = 107
-        Width = 53
-        Caption = 'IOTA'
-        TabOrder = 15
-      end
-      object chkAward: TCheckBox
-        Left = 167
-        Height = 26
-        Top = 139
-        Width = 62
-        Caption = 'Award'
-        TabOrder = 16
-      end
-      object chkCounty: TCheckBox
-        Left = 167
-        Height = 26
-        Top = 171
-        Width = 68
-        Caption = 'County'
-        TabOrder = 17
-      end
-      object chkPower: TCheckBox
-        Left = 167
-        Height = 26
-        Top = 203
-        Width = 63
-        Caption = 'Power'
-        TabOrder = 18
-      end
-      object chkDXCC: TCheckBox
-        Left = 167
-        Height = 26
-        Top = 235
-        Width = 60
-        Caption = 'DXCC'
-        TabOrder = 19
-      end
-      object chkRemarks: TCheckBox
-        Left = 167
-        Height = 26
-        Top = 267
-        Width = 128
-        Caption = 'Comment to QSO'
-        TabOrder = 20
-      end
-      object chkWAZ: TCheckBox
-        Left = 167
-        Height = 26
-        Top = 299
-        Width = 53
-        Caption = 'WAZ'
-        TabOrder = 21
-      end
-      object chkITU: TCheckBox
-        Left = 167
-        Height = 26
-        Top = 334
-        Width = 46
-        Caption = 'ITU'
-        TabOrder = 22
-      end
-      object chkState: TCheckBox
-        Left = 167
-        Height = 26
-        Top = 366
-        Width = 59
-        Caption = 'State'
-        TabOrder = 23
-      end
-      object chkLoTWQSLSDate: TCheckBox
-        Left = 327
-        Height = 26
-        Top = 12
-        Width = 142
-        Caption = 'LoTW QSL send date'
-        TabOrder = 24
-      end
-      object chkLoTWQSLRDate: TCheckBox
-        Left = 327
-        Height = 26
-        Top = 43
-        Width = 163
-        Caption = 'LoTW QSL received date'
-        TabOrder = 25
-      end
-      object chkLoTWQSLS: TCheckBox
-        Left = 327
-        Height = 26
-        Top = 75
-        Width = 112
-        Caption = 'LoTW QSL sent'
-        TabOrder = 26
-      end
-      object chkLoTWQSLR: TCheckBox
-        Left = 327
-        Height = 26
-        Top = 107
-        Width = 134
-        Caption = 'LoTW QSL received'
-        TabOrder = 27
-      end
-      object chkCont: TCheckBox
-        Left = 327
-        Height = 26
-        Top = 139
-        Width = 86
-        Caption = 'Continent'
-        TabOrder = 28
-      end
-      object chkQSLSentDate: TCheckBox
-        Left = 327
-        Height = 26
-        Top = 171
-        Width = 107
-        Caption = 'QSL sent date'
-        TabOrder = 29
-      end
-      object chkQSLRcvdDate: TCheckBox
-        Left = 327
-        Height = 26
-        Top = 203
-        Width = 129
-        Caption = 'QSL received date'
-        TabOrder = 30
-      end
-      object chkeQSLSent: TCheckBox
-        Left = 327
-        Height = 26
-        Top = 235
-        Width = 85
-        Caption = 'eQSL sent'
-        TabOrder = 31
-      end
-      object chkeQSLSentDate: TCheckBox
-        Left = 327
-        Height = 26
-        Top = 267
-        Width = 114
-        Caption = 'eQSL sent date'
-        TabOrder = 32
-      end
-      object chkeQSLRcvd: TCheckBox
-        Left = 327
-        Height = 26
-        Top = 299
-        Width = 107
-        Caption = 'eQSL received'
-        TabOrder = 33
-      end
-      object chkeQSLRcvdDate: TCheckBox
-        Left = 327
-        Height = 26
-        Top = 334
-        Width = 136
-        Caption = 'eQSL received date'
-        TabOrder = 34
-      end
-      object chkQSLRAll: TCheckBox
-        Left = 327
-        Height = 26
-        Top = 366
-        Width = 171
-        Caption = 'Received QSL,LoTW,eQSL '
-        TabOrder = 35
-      end
-      object Label16: TLabel
-        Left = 357
-        Height = 16
-        Top = 392
-        Width = 140
-        Caption = '(all values in one column)'
-        ParentColor = False
-      end
-      object chkCountry: TCheckBox
-        Left = 14
-        Height = 26
-        Top = 395
-        Width = 107
-        Caption = 'Country name'
-        TabOrder = 36
+      inline fraVisibleColumn: TfraVisibleColumns
+        Left = 12
+        Top = 7
       end
     end
     object tabBands: TTabSheet
       Caption = 'Bands'
       ClientHeight = 533
       ClientWidth = 608
-      object cb136kHz: TCheckBox
-        Left = 14
-        Height = 26
-        Top = 19
-        Width = 72
-        Caption = '136 kHz'
-        TabOrder = 0
-      end
-      object cb160m: TCheckBox
-        Left = 14
-        Height = 26
-        Top = 67
-        Width = 73
-        Caption = '1.8 MHz'
-        TabOrder = 1
-      end
-      object cb80m: TCheckBox
-        Left = 14
-        Height = 26
-        Top = 99
-        Width = 73
-        Caption = '3.5 MHz'
-        TabOrder = 2
-      end
-      object cb40m: TCheckBox
-        Left = 14
-        Height = 26
-        Top = 163
-        Width = 63
-        Caption = '7 MHz'
-        TabOrder = 3
-      end
-      object cb30m: TCheckBox
-        Left = 14
-        Height = 26
-        Top = 195
-        Width = 80
-        Caption = '10.1 MHz'
-        TabOrder = 4
-      end
-      object cb20m: TCheckBox
-        Left = 14
-        Height = 26
-        Top = 227
-        Width = 70
-        Caption = '14 MHz'
-        TabOrder = 5
-      end
-      object cb17m: TCheckBox
-        Left = 14
-        Height = 26
-        Top = 259
-        Width = 70
-        Caption = '18 MHz'
-        TabOrder = 6
-      end
-      object cb15m: TCheckBox
-        Left = 14
-        Height = 26
-        Top = 291
-        Width = 70
-        Caption = '21 MHz'
-        TabOrder = 7
-      end
-      object cb12m: TCheckBox
-        Left = 14
-        Height = 26
-        Top = 323
-        Width = 70
-        Caption = '24 MHz'
-        TabOrder = 8
-      end
-      object cb10m: TCheckBox
-        Left = 14
-        Height = 26
-        Top = 355
-        Width = 70
-        Caption = '28 MHz'
-        TabOrder = 9
-      end
-      object cb6m: TCheckBox
-        Left = 166
-        Height = 26
-        Top = 67
-        Width = 70
-        Caption = '50 MHz'
-        TabOrder = 10
-      end
-      object cb2m: TCheckBox
-        Left = 166
-        Height = 26
-        Top = 131
-        Width = 77
-        Caption = '144 MHz'
-        TabOrder = 11
-      end
-      object cb70cm: TCheckBox
-        Left = 166
-        Height = 26
-        Top = 195
-        Width = 77
-        Caption = '430 MHz'
-        TabOrder = 12
-      end
-      object cb23cm: TCheckBox
-        Left = 166
-        Height = 26
-        Top = 259
-        Width = 84
-        Caption = '1260 MHz'
-        TabOrder = 13
-      end
-      object cb13cm: TCheckBox
-        Left = 166
-        Height = 26
-        Top = 291
-        Width = 84
-        Caption = '2300 MHz'
-        TabOrder = 14
-      end
-      object cb8cm: TCheckBox
-        Left = 166
-        Height = 26
-        Top = 323
-        Width = 84
-        Caption = '3400 MHz'
-        TabOrder = 15
-      end
-      object cb5cm: TCheckBox
-        Left = 166
-        Height = 26
-        Top = 355
-        Width = 84
-        Caption = '5650 MHz'
-        TabOrder = 16
-      end
-      object cb3cm: TCheckBox
-        Left = 310
-        Height = 26
-        Top = 67
-        Width = 67
-        Caption = '10 GHz'
-        TabOrder = 17
-      end
-      object cb1cm: TCheckBox
-        Left = 310
-        Height = 26
-        Top = 99
-        Width = 67
-        Caption = '24 GHz'
-        TabOrder = 18
-      end
-      object cb47GHz: TCheckBox
-        Left = 310
-        Height = 26
-        Top = 131
-        Width = 67
-        Caption = '47 GHz'
-        TabOrder = 19
-      end
-      object cb76GHz: TCheckBox
-        Left = 310
-        Height = 26
-        Top = 163
-        Width = 67
-        Caption = '76 GHz'
-        TabOrder = 20
-      end
-      object btnFrequencies: TButton
-        Left = 310
-        Height = 25
-        Top = 206
-        Width = 94
-        BorderSpacing.InnerBorder = 4
-        Caption = 'Frequencies'
-        TabOrder = 21
-      end
-      object cb4m: TCheckBox
-        Left = 166
-        Height = 26
-        Top = 98
-        Width = 67
-        Caption = '70MHz'
-        TabOrder = 22
-      end
-      object cb60m: TCheckBox
-        Left = 14
-        Height = 26
-        Top = 131
-        Width = 63
-        Caption = '5 MHz'
-        TabOrder = 23
-      end
-      object cb125m: TCheckBox
-        Left = 166
-        Height = 26
-        Top = 162
-        Width = 77
-        Caption = '220 MHz'
-        TabOrder = 24
-      end
-      object cb30cm: TCheckBox
-        Left = 166
-        Height = 26
-        Top = 227
-        Width = 77
-        Caption = '900 MHz'
-        TabOrder = 25
+      inline fraBand: TfraBands
+        Left = 12
+        Top = 7
       end
     end
     object tabTRXcontrol: TTabSheet
@@ -781,7 +230,7 @@ object frmGlobalSettings: TfrmGlobalSettings
         Top = 3
         Width = 569
         Caption = ' rigctld '
-        ClientHeight = 71
+        ClientHeight = 57
         ClientWidth = 565
         TabOrder = 0
         object Label17: TLabel
@@ -811,8 +260,8 @@ object frmGlobalSettings: TfrmGlobalSettings
         TabOrder = 1
         object tabTRX1: TTabSheet
           Caption = 'Radio one'
-          ClientHeight = 388
-          ClientWidth = 563
+          ClientHeight = 355
+          ClientWidth = 559
           object GroupBox3: TGroupBox
             Left = 14
             Height = 333
@@ -1138,8 +587,8 @@ object frmGlobalSettings: TfrmGlobalSettings
         end
         object tabTRX2: TTabSheet
           Caption = 'Radio two'
-          ClientHeight = 388
-          ClientWidth = 563
+          ClientHeight = 355
+          ClientWidth = 559
           object edtRadio2: TEdit
             Left = 146
             Height = 21
@@ -1153,7 +602,7 @@ object frmGlobalSettings: TfrmGlobalSettings
             Top = 14
             Width = 537
             Caption = ' Radio two, desc.:'
-            ClientHeight = 316
+            ClientHeight = 302
             ClientWidth = 533
             TabOrder = 1
             object Label22: TLabel
@@ -1271,7 +720,7 @@ object frmGlobalSettings: TfrmGlobalSettings
               Top = 140
               Width = 511
               Caption = 'Radio two serial parameters'
-              ClientHeight = 144
+              ClientHeight = 130
               ClientWidth = 507
               TabOrder = 9
               object Label137: TLabel
@@ -1498,7 +947,7 @@ object frmGlobalSettings: TfrmGlobalSettings
         Top = 54
         Width = 497
         Caption = ' WinKeyer USB '
-        ClientHeight = 103
+        ClientHeight = 89
         ClientWidth = 493
         TabOrder = 1
         object Label84: TLabel
@@ -1599,7 +1048,7 @@ object frmGlobalSettings: TfrmGlobalSettings
         Top = 182
         Width = 497
         Caption = ' cwdaemon '
-        ClientHeight = 88
+        ClientHeight = 74
         ClientWidth = 493
         TabOrder = 2
         object Label87: TLabel
@@ -1855,7 +1304,7 @@ object frmGlobalSettings: TfrmGlobalSettings
         Top = 8
         Width = 377
         Caption = ' Callbook search '
-        ClientHeight = 143
+        ClientHeight = 129
         ClientWidth = 373
         TabOrder = 0
         object rbHamQTH: TRadioButton

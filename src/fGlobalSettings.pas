@@ -6,7 +6,8 @@ interface
 
 uses
   Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, ExtCtrls,
-  StdCtrls, ComCtrls, Spin, ColorBox, fCommonLocal;
+  StdCtrls, ComCtrls, Spin, ColorBox, fCommonLocal, uCfgStorage, frStation,
+  frBands, frVisibleColumns;
 
 type
 
@@ -15,81 +16,18 @@ type
   TfrmGlobalSettings = class(TfrmCommonLocal)
     btnCancel: TButton;
     btnFldigiPath: TButton;
-    btnFrequencies: TButton;
     btnHelp: TButton;
     btnKeyText: TButton;
     btnOK: TButton;
-    cb10m: TCheckBox;
-    cb125m: TCheckBox;
-    cb12m: TCheckBox;
-    cb136kHz: TCheckBox;
-    cb13cm: TCheckBox;
-    cb15m: TCheckBox;
-    cb160m: TCheckBox;
-    cb17m: TCheckBox;
-    cb1cm: TCheckBox;
-    cb20m: TCheckBox;
-    cb23cm: TCheckBox;
-    cb2m: TCheckBox;
-    cb30cm: TCheckBox;
-    cb30m: TCheckBox;
-    cb3cm: TCheckBox;
-    cb40m: TCheckBox;
-    cb47GHz: TCheckBox;
-    cb4m: TCheckBox;
-    cb5cm: TCheckBox;
-    cb60m: TCheckBox;
-    cb6m: TCheckBox;
-    cb70cm: TCheckBox;
-    cb76GHz: TCheckBox;
-    cb80m: TCheckBox;
-    cb8cm: TCheckBox;
     chkAutoSearch: TCheckBox;
-    chkAward: TCheckBox;
-    chkCallSign: TCheckBox;
     chkClearRIT: TCheckBox;
-    chkCont: TCheckBox;
-    chkCountry: TCheckBox;
-    chkCounty: TCheckBox;
-    chkDate: TCheckBox;
-    chkDXCC: TCheckBox;
-    chkeQSLRcvd: TCheckBox;
-    chkeQSLRcvdDate: TCheckBox;
-    chkeQSLSent: TCheckBox;
-    chkeQSLSentDate: TCheckBox;
-    chkFreq: TCheckBox;
-    chkIOTA: TCheckBox;
-    chkITU: TCheckBox;
-    chkLoc: TCheckBox;
-    chkLoTWQSLR: TCheckBox;
-    chkLoTWQSLRDate: TCheckBox;
-    chkLoTWQSLS: TCheckBox;
-    chkLoTWQSLSDate: TCheckBox;
-    chkMode: TCheckBox;
-    chkMyLoc: TCheckBox;
-    chkName: TCheckBox;
     chkNewDXCCTables: TCheckBox;
     chkPotSpeed: TCheckBox;
-    chkPower: TCheckBox;
-    chkQSLRAll: TCheckBox;
-    chkQSLRcvdDate: TCheckBox;
-    chkQSLSentDate: TCheckBox;
-    chkQSL_R: TCheckBox;
-    chkQSL_S: TCheckBox;
-    chkQSL_VIA: TCheckBox;
-    chkQTH: TCheckBox;
     chkR1RunRigCtld: TCheckBox;
     chkR1SendCWR: TCheckBox;
     chkR2RunRigCtld: TCheckBox;
     chkR2SendCWR: TCheckBox;
-    chkRemarks: TCheckBox;
-    chkRST_R: TCheckBox;
-    chkRST_S: TCheckBox;
     chkRunFldigi: TCheckBox;
-    chkState: TCheckBox;
-    chkTimeOff: TCheckBox;
-    chkTimeOn: TCheckBox;
-    chkWAZ: TCheckBox;
     cmbDataBitsR1: TComboBox;
     cmbDataBitsR2: TComboBox;
     cmbDefaultMode: TComboBox;
@@ -106,7 +44,6 @@ type
     cmbSpeedR2: TComboBox;
     cmbStopBitsR1: TComboBox;
     cmbStopBitsR2: TComboBox;
-    edtCall: TEdit;
     edtCbPass: TEdit;
     edtCbUser: TEdit;
     edtCWAddress: TEdit;
@@ -115,15 +52,15 @@ type
     edtDefaultFreq: TEdit;
     edtDefaultRST: TEdit;
     edtFldigiPath: TEdit;
+    edtGridSquare: TEdit;
     edtLoadFromFldigi: TSpinEdit;
-    edtLoc: TEdit;
-    edtName: TEdit;
     edtPasswd: TEdit;
     edtPoll1: TEdit;
     edtPoll2: TEdit;
     edtPort: TEdit;
     edtProxy: TEdit;
     edtQTH: TEdit;
+    edtQTH1: TEdit;
     edtR1Device: TEdit;
     edtR1Host: TEdit;
     edtR1RigCtldArgs: TEdit;
@@ -138,10 +75,14 @@ type
     edtRigID1: TEdit;
     edtRigID2: TEdit;
     edtUser: TEdit;
+    edtWAZ: TEdit;
     edtWinMaxSpeed: TSpinEdit;
     edtWinMinSpeed: TSpinEdit;
     edtWinPort: TEdit;
     edtWinSpeed: TSpinEdit;
+    fraBand: TfraBands;
+    fraStn: TfraStation;
+    fraVisibleColumn: TfraVisibleColumns;
     grbSerialR1: TGroupBox;
     grbSerialR2: TGroupBox;
     GroupBox2: TGroupBox;
@@ -153,7 +94,6 @@ type
     GroupBox38: TGroupBox;
     GroupBox4: TGroupBox;
     GroupBox40: TGroupBox;
-    Label1: TLabel;
     Label111: TLabel;
     Label112: TLabel;
     Label12: TLabel;
@@ -175,19 +115,15 @@ type
     Label141: TLabel;
     Label142: TLabel;
     Label143: TLabel;
-    Label16: TLabel;
     Label17: TLabel;
     Label18: TLabel;
     Label19: TLabel;
-    Label2: TLabel;
     Label20: TLabel;
     Label21: TLabel;
     Label22: TLabel;
     Label24: TLabel;
     Label25: TLabel;
     Label27: TLabel;
-    Label3: TLabel;
-    Label4: TLabel;
     Label83: TLabel;
     Label84: TLabel;
     Label85: TLabel;
@@ -224,6 +160,7 @@ type
     tabTRX2: TTabSheet;
     tabTRXcontrol: TTabSheet;
     tabVisibleColumns: TTabSheet;
+    procedure FormShow(Sender: TObject);
   private
     { private declarations }
   public
@@ -236,6 +173,21 @@ var
 implementation
 
 {$R *.lfm}
+
+{ TfrmGlobalSettings }
+
+procedure TfrmGlobalSettings.FormShow(Sender: TObject);
+begin
+  inherited;
+  edtProxy.Text  := iniLocal.ReadString('Program', 'Proxy', '');
+  edtPort.Text   := iniLocal.ReadString('Program', 'Port', '');
+  edtUser.Text   := iniLocal.ReadString('Program', 'User', '');
+  edtPasswd.Text := iniLocal.ReadString('Program', 'Passwd', '');
+
+  fraStn.LoadSettings(iniLocal);
+  fraBand.LoadSettings(iniLocal);
+  fraVisibleColumn.LoadSettings(iniLocal)
+end;
 
 end.
 

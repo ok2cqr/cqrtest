@@ -8,7 +8,7 @@ uses
   {$ENDIF}{$ENDIF}
   Interfaces, // this includes the LCL widgetset
   Forms, fMain, uCfgStorage, dData, dUtils, fCommonLocal, fCommonGlobal,
-  fDBConnect, fGlobalSettings;
+  fDBConnect, fGlobalSettings, frStation, frBands, frVisibleColumns;
 
 {$R *.res}
 
