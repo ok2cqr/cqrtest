@@ -96,8 +96,8 @@ begin
   else begin
     if (BorderStyle <> bsDialog) then
     begin
-      Height := iniLocal.ReadInteger(name,'Height',100);
-      Width  := iniLocal.ReadInteger(name,'Width',500)
+      Height := iniLocal.ReadInteger(name,'Height',Height);
+      Width  := iniLocal.ReadInteger(name,'Width',Width)
     end;
     Top  := iniLocal.ReadInteger(name,'Top',Top);
     Left := iniLocal.ReadInteger(name,'Left',Left)

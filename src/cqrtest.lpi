@@ -42,16 +42,16 @@
         <PackageName Value="LCL"/>
       </Item3>
     </RequiredPackages>
-    <Units Count="26">
+    <Units Count="29">
       <Unit0>
         <Filename Value="cqrtest.lpr"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="cqrtest"/>
-        <EditorIndex Value="12"/>
+        <EditorIndex Value="13"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
-        <CursorPos X="75" Y="22"/>
-        <UsageCount Value="72"/>
+        <CursorPos X="75" Y="23"/>
+        <UsageCount Value="78"/>
         <Loaded Value="True"/>
       </Unit0>
       <Unit1>
@@ -62,11 +62,11 @@
         <UnitName Value="fMain"/>
         <EditorIndex Value="0"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="100"/>
-        <CursorPos X="32" Y="119"/>
-        <UsageCount Value="72"/>
+        <TopLine Value="124"/>
+        <CursorPos X="26" Y="133"/>
+        <UsageCount Value="78"/>
         <Bookmarks Count="1">
-          <Item0 X="3" Y="117" ID="1"/>
+          <Item0 X="1" Y="141" ID="1"/>
         </Bookmarks>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -77,22 +77,22 @@
         <WindowIndex Value="0"/>
         <TopLine Value="32"/>
         <CursorPos X="10" Y="32"/>
-        <UsageCount Value="7"/>
+        <UsageCount Value="6"/>
       </Unit2>
       <Unit3>
         <Filename Value=""/>
-        <UsageCount Value="7"/>
+        <UsageCount Value="6"/>
         <DefaultSyntaxHighlighter Value="None"/>
       </Unit3>
       <Unit4>
         <Filename Value="uCfgStorage.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="uCfgStorage"/>
-        <EditorIndex Value="11"/>
+        <EditorIndex Value="12"/>
         <WindowIndex Value="0"/>
         <TopLine Value="159"/>
         <CursorPos X="44" Y="184"/>
-        <UsageCount Value="66"/>
+        <UsageCount Value="72"/>
         <Loaded Value="True"/>
       </Unit4>
       <Unit5>
@@ -101,11 +101,11 @@
         <ComponentName Value="dmData"/>
         <ResourceBaseClass Value="DataModule"/>
         <UnitName Value="dData"/>
-        <EditorIndex Value="3"/>
+        <EditorIndex Value="4"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="259"/>
-        <CursorPos X="67" Y="287"/>
-        <UsageCount Value="37"/>
+        <TopLine Value="31"/>
+        <CursorPos X="28" Y="52"/>
+        <UsageCount Value="43"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit5>
@@ -115,11 +115,11 @@
         <ComponentName Value="dmUtils"/>
         <ResourceBaseClass Value="DataModule"/>
         <UnitName Value="dUtils"/>
-        <EditorIndex Value="10"/>
+        <EditorIndex Value="11"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
-        <CursorPos X="15" Y="15"/>
-        <UsageCount Value="37"/>
+        <CursorPos X="36" Y="8"/>
+        <UsageCount Value="43"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit6>
@@ -129,13 +129,10 @@
         <ComponentName Value="frmCommonLocal"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="fCommonLocal"/>
-        <EditorIndex Value="1"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="54"/>
-        <CursorPos X="62" Y="67"/>
-        <UsageCount Value="37"/>
-        <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
+        <TopLine Value="1"/>
+        <CursorPos X="56" Y="100"/>
+        <UsageCount Value="43"/>
       </Unit7>
       <Unit8>
         <Filename Value="/usr/share/fpcsrc/2.4.4/packages/fcl-base/src/inifiles.pp"/>
@@ -143,7 +140,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="125"/>
         <CursorPos X="75" Y="153"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="9"/>
       </Unit8>
       <Unit9>
         <Filename Value="fCommonGlobal.pas"/>
@@ -151,20 +148,17 @@
         <ComponentName Value="frmCommonGlobal"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="fCommonGlobal"/>
-        <EditorIndex Value="2"/>
         <WindowIndex Value="0"/>
         <TopLine Value="28"/>
         <CursorPos X="37" Y="33"/>
-        <UsageCount Value="32"/>
-        <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
+        <UsageCount Value="38"/>
       </Unit9>
       <Unit10>
         <Filename Value="fDBConnect.lfm"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="1" Y="1"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="9"/>
         <DefaultSyntaxHighlighter Value="LFM"/>
       </Unit10>
       <Unit11>
@@ -174,11 +168,11 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="fDBConnect"/>
-        <EditorIndex Value="9"/>
+        <EditorIndex Value="10"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="169"/>
-        <CursorPos X="19" Y="190"/>
-        <UsageCount Value="32"/>
+        <TopLine Value="179"/>
+        <CursorPos X="19" Y="185"/>
+        <UsageCount Value="38"/>
         <Bookmarks Count="1">
           <Item0 X="3" Y="361" ID="2"/>
         </Bookmarks>
@@ -187,17 +181,19 @@
       </Unit11>
       <Unit12>
         <Filename Value="/usr/lib/lazarus/0.9.30.2/lcl/include/customform.inc"/>
+        <EditorIndex Value="1"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="1732"/>
-        <CursorPos X="1" Y="1748"/>
+        <TopLine Value="2093"/>
+        <CursorPos X="1" Y="2112"/>
         <UsageCount Value="10"/>
+        <Loaded Value="True"/>
       </Unit12>
       <Unit13>
         <Filename Value="mysql/mysql.inc"/>
         <WindowIndex Value="0"/>
         <TopLine Value="290"/>
         <CursorPos X="1" Y="290"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="9"/>
       </Unit13>
       <Unit14>
         <Filename Value="mysql/mysql55dyn.pp"/>
@@ -205,7 +201,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="7" Y="10"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="9"/>
       </Unit14>
       <Unit15>
         <Filename Value="mysql/mysql55conn.pas"/>
@@ -213,14 +209,14 @@
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="11" Y="11"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="9"/>
       </Unit15>
       <Unit16>
         <Filename Value="mysql/mysqlconn.inc"/>
         <WindowIndex Value="0"/>
         <TopLine Value="147"/>
         <CursorPos X="1" Y="147"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="9"/>
       </Unit16>
       <Unit17>
         <Filename Value="/usr/share/fpcsrc/2.4.4/packages/fcl-process/src/process.pp"/>
@@ -228,28 +224,28 @@
         <WindowIndex Value="0"/>
         <TopLine Value="93"/>
         <CursorPos X="14" Y="110"/>
-        <UsageCount Value="12"/>
+        <UsageCount Value="11"/>
       </Unit17>
       <Unit18>
         <Filename Value="/usr/share/fpcsrc/2.4.4/packages/fcl-process/src/unix/process.inc"/>
         <WindowIndex Value="0"/>
         <TopLine Value="416"/>
         <CursorPos X="3" Y="430"/>
-        <UsageCount Value="11"/>
+        <UsageCount Value="10"/>
       </Unit18>
       <Unit19>
         <Filename Value="/usr/share/fpcsrc/2.4.4/rtl/unix/bunxh.inc"/>
         <WindowIndex Value="0"/>
         <TopLine Value="48"/>
         <CursorPos X="15" Y="65"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="9"/>
       </Unit19>
       <Unit20>
         <Filename Value="/usr/lib/lazarus/0.9.30.2/lcl/include/control.inc"/>
         <WindowIndex Value="0"/>
         <TopLine Value="2273"/>
         <CursorPos X="67" Y="2291"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="9"/>
       </Unit20>
       <Unit21>
         <Filename Value="../../cqrlog/src/fPreferences.pas"/>
@@ -257,11 +253,11 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="fPreferences"/>
-        <EditorIndex Value="4"/>
+        <EditorIndex Value="5"/>
         <WindowIndex Value="0"/>
         <TopLine Value="2620"/>
         <CursorPos X="1" Y="2648"/>
-        <UsageCount Value="13"/>
+        <UsageCount Value="16"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit21>
@@ -271,12 +267,11 @@
         <ComponentName Value="frmGlobalSettings"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="fGlobalSettings"/>
-        <IsVisibleTab Value="True"/>
-        <EditorIndex Value="5"/>
+        <EditorIndex Value="6"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="221"/>
-        <CursorPos X="72" Y="251"/>
-        <UsageCount Value="25"/>
+        <TopLine Value="165"/>
+        <CursorPos X="15" Y="188"/>
+        <UsageCount Value="31"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit22>
@@ -286,11 +281,11 @@
         <ComponentName Value="fraStation"/>
         <ResourceBaseClass Value="Frame"/>
         <UnitName Value="frStation"/>
-        <EditorIndex Value="8"/>
+        <EditorIndex Value="9"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="1"/>
-        <CursorPos X="59" Y="8"/>
-        <UsageCount Value="23"/>
+        <TopLine Value="34"/>
+        <CursorPos X="60" Y="56"/>
+        <UsageCount Value="29"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit23>
@@ -300,11 +295,11 @@
         <ComponentName Value="fraBands"/>
         <ResourceBaseClass Value="Frame"/>
         <UnitName Value="frBands"/>
-        <EditorIndex Value="7"/>
+        <EditorIndex Value="8"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="1" Y="28"/>
-        <UsageCount Value="22"/>
+        <UsageCount Value="28"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit24>
@@ -314,136 +309,146 @@
         <ComponentName Value="fraVisibleColumns"/>
         <ResourceBaseClass Value="Frame"/>
         <UnitName Value="frVisibleColumns"/>
-        <EditorIndex Value="6"/>
+        <EditorIndex Value="7"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="59"/>
+        <TopLine Value="61"/>
         <CursorPos X="59" Y="91"/>
-        <UsageCount Value="21"/>
+        <UsageCount Value="27"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit25>
+      <Unit26>
+        <Filename Value="fabout.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmAbout"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="fAbout"/>
+        <EditorIndex Value="3"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="59" Y="10"/>
+        <UsageCount Value="25"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit26>
+      <Unit27>
+        <Filename Value="fGrayline.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmGrayline"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="fGrayline"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="2"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="61"/>
+        <CursorPos X="30" Y="83"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit27>
+      <Unit28>
+        <Filename Value="gline2.pas"/>
+        <UnitName Value="gline2"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="10"/>
+      </Unit28>
     </Units>
-    <JumpHistory Count="30" HistoryIndex="29">
+    <JumpHistory Count="23" HistoryIndex="22">
       <Position1>
-        <Filename Value="fGlobalSettings.pas"/>
-        <Caret Line="206" Column="1" TopLine="177"/>
+        <Filename Value="fmain.pas"/>
+        <Caret Line="119" Column="32" TopLine="100"/>
       </Position1>
       <Position2>
-        <Filename Value="fGlobalSettings.pas"/>
-        <Caret Line="205" Column="1" TopLine="176"/>
+        <Filename Value="fDBConnect.pas"/>
+        <Caret Line="192" Column="25" TopLine="49"/>
       </Position2>
       <Position3>
-        <Filename Value="fGlobalSettings.pas"/>
-        <Caret Line="204" Column="1" TopLine="175"/>
+        <Filename Value="fDBConnect.pas"/>
+        <Caret Line="329" Column="3" TopLine="327"/>
       </Position3>
       <Position4>
-        <Filename Value="fGlobalSettings.pas"/>
-        <Caret Line="203" Column="1" TopLine="174"/>
+        <Filename Value="fmain.pas"/>
+        <Caret Line="127" Column="30" TopLine="127"/>
       </Position4>
       <Position5>
-        <Filename Value="fGlobalSettings.pas"/>
-        <Caret Line="202" Column="1" TopLine="173"/>
+        <Filename Value="fmain.pas"/>
+        <Caret Line="159" Column="1" TopLine="131"/>
       </Position5>
       <Position6>
-        <Filename Value="fGlobalSettings.pas"/>
-        <Caret Line="201" Column="1" TopLine="172"/>
+        <Filename Value="fabout.pas"/>
+        <Caret Line="1" Column="1" TopLine="1"/>
       </Position6>
       <Position7>
-        <Filename Value="fGlobalSettings.pas"/>
-        <Caret Line="200" Column="1" TopLine="171"/>
+        <Filename Value="fmain.pas"/>
+        <Caret Line="28" Column="32" TopLine="18"/>
       </Position7>
       <Position8>
-        <Filename Value="fGlobalSettings.pas"/>
-        <Caret Line="199" Column="1" TopLine="170"/>
+        <Filename Value="fmain.pas"/>
+        <Caret Line="29" Column="29" TopLine="18"/>
       </Position8>
       <Position9>
-        <Filename Value="fGlobalSettings.pas"/>
-        <Caret Line="198" Column="1" TopLine="169"/>
+        <Filename Value="fmain.pas"/>
+        <Caret Line="94" Column="44" TopLine="46"/>
       </Position9>
       <Position10>
-        <Filename Value="fGlobalSettings.pas"/>
-        <Caret Line="197" Column="1" TopLine="168"/>
+        <Filename Value="dUtils.pas"/>
+        <Caret Line="25" Column="1" TopLine="13"/>
       </Position10>
       <Position11>
-        <Filename Value="fGlobalSettings.pas"/>
-        <Caret Line="196" Column="1" TopLine="167"/>
+        <Filename Value="dUtils.pas"/>
+        <Caret Line="15" Column="15" TopLine="10"/>
       </Position11>
       <Position12>
-        <Filename Value="fGlobalSettings.pas"/>
-        <Caret Line="195" Column="1" TopLine="166"/>
+        <Filename Value="dUtils.pas"/>
+        <Caret Line="29" Column="43" TopLine="14"/>
       </Position12>
       <Position13>
         <Filename Value="fGlobalSettings.pas"/>
-        <Caret Line="194" Column="1" TopLine="165"/>
+        <Caret Line="188" Column="15" TopLine="165"/>
       </Position13>
       <Position14>
-        <Filename Value="fGlobalSettings.pas"/>
-        <Caret Line="193" Column="1" TopLine="164"/>
+        <Filename Value="fmain.pas"/>
+        <Caret Line="74" Column="20" TopLine="1"/>
       </Position14>
       <Position15>
-        <Filename Value="fGlobalSettings.pas"/>
-        <Caret Line="192" Column="1" TopLine="163"/>
+        <Filename Value="fmain.pas"/>
+        <Caret Line="148" Column="6" TopLine="139"/>
       </Position15>
       <Position16>
-        <Filename Value="fGlobalSettings.pas"/>
-        <Caret Line="191" Column="1" TopLine="162"/>
+        <Filename Value="fmain.pas"/>
+        <Caret Line="143" Column="11" TopLine="130"/>
       </Position16>
       <Position17>
-        <Filename Value="fGlobalSettings.pas"/>
-        <Caret Line="190" Column="1" TopLine="161"/>
+        <Filename Value="fmain.pas"/>
+        <Caret Line="141" Column="24" TopLine="124"/>
       </Position17>
       <Position18>
-        <Filename Value="fGlobalSettings.pas"/>
-        <Caret Line="189" Column="1" TopLine="160"/>
+        <Filename Value="fmain.pas"/>
+        <Caret Line="143" Column="46" TopLine="124"/>
       </Position18>
       <Position19>
-        <Filename Value="fGlobalSettings.pas"/>
-        <Caret Line="188" Column="1" TopLine="159"/>
+        <Filename Value="fmain.pas"/>
+        <Caret Line="144" Column="1" TopLine="124"/>
       </Position19>
       <Position20>
-        <Filename Value="frVisibleColumns.pas"/>
-        <Caret Line="37" Column="46" TopLine="11"/>
+        <Filename Value="fmain.pas"/>
+        <Caret Line="145" Column="1" TopLine="124"/>
       </Position20>
       <Position21>
-        <Filename Value="frVisibleColumns.pas"/>
-        <Caret Line="8" Column="70" TopLine="1"/>
+        <Filename Value="/usr/lib/lazarus/0.9.30.2/lcl/include/customform.inc"/>
+        <Caret Line="2110" Column="1" TopLine="2093"/>
       </Position21>
       <Position22>
-        <Filename Value="frVisibleColumns.pas"/>
-        <Caret Line="56" Column="56" TopLine="31"/>
+        <Filename Value="/usr/lib/lazarus/0.9.30.2/lcl/include/customform.inc"/>
+        <Caret Line="2111" Column="1" TopLine="2093"/>
       </Position22>
       <Position23>
-        <Filename Value="frVisibleColumns.pas"/>
-        <Caret Line="57" Column="56" TopLine="32"/>
+        <Filename Value="/usr/lib/lazarus/0.9.30.2/lcl/include/customform.inc"/>
+        <Caret Line="2112" Column="1" TopLine="2093"/>
       </Position23>
-      <Position24>
-        <Filename Value="fGlobalSettings.pas"/>
-        <Caret Line="188" Column="1" TopLine="159"/>
-      </Position24>
-      <Position25>
-        <Filename Value="fGlobalSettings.pas"/>
-        <Caret Line="189" Column="19" TopLine="160"/>
-      </Position25>
-      <Position26>
-        <Filename Value="fGlobalSettings.pas"/>
-        <Caret Line="190" Column="42" TopLine="159"/>
-      </Position26>
-      <Position27>
-        <Filename Value="../../cqrlog/src/fPreferences.pas"/>
-        <Caret Line="2679" Column="3" TopLine="2652"/>
-      </Position27>
-      <Position28>
-        <Filename Value="../../cqrlog/src/fPreferences.pas"/>
-        <Caret Line="1004" Column="1" TopLine="1004"/>
-      </Position28>
-      <Position29>
-        <Filename Value="fGlobalSettings.pas"/>
-        <Caret Line="250" Column="1" TopLine="217"/>
-      </Position29>
-      <Position30>
-        <Filename Value="fGlobalSettings.pas"/>
-        <Caret Line="229" Column="15" TopLine="226"/>
-      </Position30>
     </JumpHistory>
   </ProjectOptions>
   <CompilerOptions>

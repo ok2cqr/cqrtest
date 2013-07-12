@@ -8,7 +8,8 @@ uses
   {$ENDIF}{$ENDIF}
   Interfaces, // this includes the LCL widgetset
   Forms, fMain, uCfgStorage, dData, dUtils, fCommonLocal, fCommonGlobal,
-  fDBConnect, fGlobalSettings, frStation, frBands, frVisibleColumns;
+  fDBConnect, fGlobalSettings, frStation, frBands, frVisibleColumns, fAbout,
+  fGrayline;
 
 {$R *.res}
 
@@ -17,7 +18,7 @@ begin
   Application.CreateForm(TfrmMain, frmMain);
   Application.CreateForm(TdmData, dmData);
   Application.CreateForm(TdmUtils, dmUtils);
-  Application.CreateForm(TfrmGlobalSettings, frmGlobalSettings);
+  Application.CreateForm(TfrmGrayline, frmGrayline);
   Application.Run;
 end.
 

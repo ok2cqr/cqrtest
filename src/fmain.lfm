@@ -8,7 +8,7 @@ inherited frmMain: TfrmMain
   ClientWidth = 503
   Menu = mnuMain
   OnDestroy = FormDestroy
-  OnShow = FormShow
+  OnShow = nil
   object StatusBar1: TStatusBar[0]
     Left = 0
     Height = 19
@@ -85,6 +85,11 @@ inherited frmMain: TfrmMain
       Caption = 'Gray line'
       OnExecute = acGrayLineExecute
     end
+    object acAbout: TAction
+      Category = 'Help'
+      Caption = 'About CQRTest'
+      OnExecute = acAboutExecute
+    end
   end
   object mnuMain: TMainMenu[2]
     left = 64
@@ -149,8 +154,11 @@ inherited frmMain: TfrmMain
       end
     end
     object MenuItem4: TMenuItem
-      Caption = 'About'
+      Caption = 'Help'
       RightJustify = True
+      object MenuItem19: TMenuItem
+        Action = acAbout
+      end
     end
   end
 end
