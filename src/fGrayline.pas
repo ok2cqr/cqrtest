@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, LResources, Forms, Controls, Graphics, Dialogs, gline2,
-  ExtCtrls, Buttons, inifiles, FileUtil;
+  ExtCtrls, Buttons, FileUtil;
 
 type
 
