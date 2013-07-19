@@ -9,9 +9,9 @@ inherited frmAbout: TfrmAbout
     Height = 220
     Top = 0
     Width = 316
-    ActivePage = TabSheet1
+    ActivePage = TabSheet2
     Align = alClient
-    TabIndex = 0
+    TabIndex = 1
     TabOrder = 0
     object TabSheet1: TTabSheet
       Caption = 'Program'
@@ -760,6 +760,7 @@ inherited frmAbout: TfrmAbout
         Width = 312
         Align = alClient
         Lines.Strings = (
+          'Pekka, OH2BSC  $20'
           'Flavio, IK3OCD '#9' $20'
         )
         ReadOnly = True
