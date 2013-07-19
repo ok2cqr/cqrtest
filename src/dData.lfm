@@ -104,6 +104,7 @@ object dmData: TdmData
     top = 16
   end
   object Q: TSQLQuery
+    Transaction = trQ
     ReadOnly = False
     Params = <>
     ParseSQL = False
@@ -117,6 +118,7 @@ object dmData: TdmData
     top = 80
   end
   object mQ: TSQLQuery
+    Transaction = trmQ
     ReadOnly = False
     Params = <>
     ParseSQL = False

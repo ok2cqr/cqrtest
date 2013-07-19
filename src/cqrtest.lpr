@@ -9,7 +9,7 @@ uses
   Interfaces, // this includes the LCL widgetset
   Forms, fMain, uCfgStorage, dData, dUtils, fCommonLocal, fCommonGlobal,
   fDBConnect, fGlobalSettings, frStation, frBands, frVisibleColumns, fAbout,
-  fGrayline;
+  fGrayline, fImportProgress, dDXCC;
 
 {$R *.res}
 
@@ -19,6 +19,7 @@ begin
   Application.CreateForm(TdmData, dmData);
   Application.CreateForm(TdmUtils, dmUtils);
   Application.CreateForm(TfrmGrayline, frmGrayline);
+  Application.CreateForm(TdmDXCC, dmDXCC);
   Application.Run;
 end.
 

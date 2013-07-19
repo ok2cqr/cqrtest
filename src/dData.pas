@@ -35,8 +35,12 @@ type
     procedure PrepareMysqlConfigFile;
     procedure PrepareBandDatabase;
     procedure PrepareDXClusterDatabase;
+    procedure PrepareDXCCData;
+    procedure PrepareCtyData;
+    procedure PrepareDirectories;
   public
     MainCon : TMysql55Connection;
+    DxccCon : TMysql55Connection;
     property AppHomeDir : String read fAppHomeDir write fAppHomeDir;
 
     function  OpenConnections(host,port,user,pass : String) : Boolean;
@@ -54,7 +58,7 @@ implementation
 
 { TdmData }
 
-uses dUtils;
+uses dUtils, fImportProgress;
 
 function TdmData.OpenConnections(host,port,user,pass : String) : Boolean;
 begin
@@ -62,8 +66,8 @@ begin
 
   if MainCon.Connected then
     MainCon.Connected := False;
-  //if dmDXCluster.dbDXC.Connected then
-  //  dmDXCluster.dbDXC.Connected := False;
+  if DxccCon.Connected then
+    DxccCon.Connected := False;
 
   MainCon.HostName     := host;
   MainCon.port         := StrToInt(port);
@@ -71,13 +75,15 @@ begin
   MainCon.Password     := pass;
   MainCon.DatabaseName := 'information_schema';
 
-  //dmDXCluster.dbDXC.UserName     := user;
-  //dmDXCluster.dbDXC.Password     := pass;
-  //dmDXCluster.dbDXC.DatabaseName := 'information_schema';
+  DxccCon.HostName     := host;
+  DxccCon.port         := StrToInt(port);
+  DxccCon.UserName     := user;
+  DxccCon.Password     := pass;
+  DxccCon.DatabaseName := 'information_schema';
 
   try
     MainCon.Connected := True;
-    //dmDXCluster.dbDXC.Connected := True
+    DxccCon.Connected := True
   except
     on E : Exception do
     begin
@@ -85,6 +91,87 @@ begin
                              'Error',mb_ok + mb_IconError);
       Result := False
     end
+  end
+end;
+
+procedure TdmData.PrepareDirectories;
+begin
+  //creting directory in $HOME/.config
+  if not DirectoryExistsUTF8(fAppHomeDir) then
+    CreateDirUTF8(fAppHomeDir);
+
+  if not DirectoryExistsUTF8(fAppHomeDir+'database') then
+    CreateDir(fAppHomeDir+'database');
+
+  if not DirectoryExistsUTF8(fAppHomeDir+'images') then
+    CreateDirUTF8(fAppHomeDir+'images');
+
+  if not DirectoryExistsUTF8(fAppHomeDir+'dxcc_data') then
+    CreateDirUTF8(fAppHomeDir+'dxcc_data');
+  if not DirectoryExistsUTF8(fAppHomeDir+'ctyfiles') then
+    CreateDirUTF8(fAppHomeDir+'ctyfiles')
+end;
+
+procedure TdmData.PrepareCtyData;
+var
+  s,d : String;
+begin
+  s := ExpandFileNameUTF8('..'+PathDelim+'share'+PathDelim+'cqrlog'+PathDelim+'ctyfiles'+PathDelim);
+  d := fAppHomeDir+'ctyfiles'+PathDelim;
+
+  if not FileExistsUTF8(fAppHomeDir+'ctyfiles'+PathDelim+'AreaOK1RR.tbl') then
+  begin
+    dmUtils.DebugMsg('');
+    dmUtils.DebugMsg('Ctyfiles dir: '+ExpandFileNameUTF8(s));
+    dmUtils.DebugMsg('Local ctyfiles dir: '+d);
+
+    CopyFile(s+'AreaOK1RR.tbl',d+'AreaOK1RR.tbl',True);
+    CopyFile(s+'CallResolution.tbl',d+'CallResolution.tbl',True);
+    CopyFile(s+'Country.tab',d+'Country.tab',True);
+    CopyFile(s+'CountryDel.tab',d+'CountryDel.tab',True);
+    CopyFile(s+'Ambiguous.tbl',d+'Ambiguous.tbl',True);
+    CopyFile(s+'Exceptions.tbl',d+'Exceptions.tbl',True);
+    CopyFile(s+'iota.tbl',d+'iota.tbl',True);
+    CopyFile(s+'qslmgr.csv',d+'qslmgr.csv',True)
+  end;
+
+  {
+  if not FileExistsUTF8(fHomeDir+'lotw1.txt') then
+    CopyFile(s+'lotw1.txt',fHomeDir+'lotw1.txt',True);
+  if not FileExistsUTF8(fHomeDir+'eqsl.txt') then
+    CopyFile(s+'eqsl.txt',fHomeDir+'eqsl.txt',True);
+  }
+  if not FileExistsUTF8(fAppHomeDir+'MASTER.SCP') then
+    CopyFile(s+'MASTER.SCP',fAppHomeDir+'MASTER.SCP',True)
+end;
+
+procedure TdmData.PrepareDXCCData;
+var
+  l,ll : TStringList;
+begin
+  if FileExistsUTF8(fAppHomeDir+'dxcc_data'+PathDelim+'country.tab') then
+    exit;
+  l  := TStringList.Create;
+  ll := TStringList.Create;
+  try
+    l.Clear;
+    ll.Clear;
+    ll.LoadFromFile(fAppHomeDir+'ctyfiles'+PathDelim+'Country.tab');
+    l.AddStrings(ll);
+    ll.LoadFromFile(fAppHomeDir+'ctyfiles'+PathDelim+'CallResolution.tbl');
+    l.AddStrings(ll);
+    ll.LoadFromFile(fAppHomeDir+'ctyfiles'+PathDelim+'AreaOK1RR.tbl');
+    l.AddStrings(ll);
+    l.SaveToFile(fAppHomeDir+'dxcc_data'+PathDelim+'country.tab');
+    CopyFile(fAppHomeDir+'ctyfiles'+PathDelim+'CountryDel.tab',
+             fAppHomeDir+'dxcc_data'+PathDelim+'country_del.tab');
+    CopyFile(fAppHomeDir+'ctyfiles'+PathDelim+'Exceptions.tbl',
+             fAppHomeDir+'dxcc_data'+PathDelim+'exceptions.tab');
+    CopyFile(fAppHomeDir+'ctyfiles'+PathDelim+'Ambiguous.tbl',
+             fAppHomeDir+'dxcc_data'+PathDelim+'ambiguous.tab')
+  finally
+    l.Free;
+    ll.Free
   end
 end;
 
@@ -201,18 +288,6 @@ begin
   Q.Close;
   trQ.StartTransaction;
   Q.SQL.Text := 'INSERT INTO dxclusters (description,address,port) ' +
-                'VALUES ('+QuotedStr('OK0DXH') + ',' + QuotedStr('194.213.40.187') +
-                ','+QuotedStr('41112')+')';
-  dmUtils.DebugMsg(Q.SQL.Text);
-  Q.ExecSQL;
-
-  Q.SQL.Text := 'INSERT INTO dxclusters (description,address,port) ' +
-                'VALUES ('+QuotedStr('OZ2DXC') + ',' + QuotedStr('80.198.77.12') +
-                ','+QuotedStr('8000')+')';
-  dmUtils.DebugMsg(Q.SQL.Text);
-  Q.ExecSQL;
-
-  Q.SQL.Text := 'INSERT INTO dxclusters (description,address,port) ' +
                 'VALUES ('+QuotedStr('HamQTH') + ',' + QuotedStr('hamqth.com') +
                 ','+QuotedStr('7300')+')';
   dmUtils.DebugMsg(Q.SQL.Text);
@@ -252,33 +327,18 @@ begin
     PrepareBandDatabase;
     PrepareDXClusterDatabase;
 
-    {
-    CreateDatabase(1,'Log 001');
-
     //we must incialize dxcc tables, first
     with TfrmImportProgress.Create(self) do
     try
       lblComment.Caption := 'Importing DXCC data ...';
-      Directory  := dmData.fHomeDir + 'ctyfiles' + PathDelim;
+      Directory  := dmData.AppHomeDir + 'ctyfiles' + PathDelim;
       ImportType := 1;
       ShowModal
     finally
       Free
-    end;
-
-    with TfrmImportProgress.Create(self) do
-    try
-      lblComment.Caption := 'Importing QSL data ...';
-      Directory     := dmData.fHomeDir + 'ctyfiles' + PathDelim;
-      FileName      := Directory+'qslmgr.csv';
-      ImportType    := 5;
-      CloseAfImport := True;
-      ShowModal
-    finally
-      Free
     end
-  end; }
 
+    //CreateDatabase(1,'Log 001');
   end;
   mQ.SQL.Clear;
   qLogList.Close;
@@ -366,29 +426,41 @@ begin
 end;
 
 procedure TdmData.DataModuleCreate(Sender: TObject);
+var
+  i : Integer;
 begin
+  chdir(ExtractFilePath(ParamStr(0)));
+
   fAppHomeDir := ExtractFilePath(GetAppConfigFile(False))+'cqrtest'+DirectorySeparator;
   if not DirectoryExistsUTF8(fAppHomeDir+'database') then
     CreateDirUTF8(fAppHomeDir+'database');
-  MainCon := TMySQL55Connection.Create(nil);
+  MainCon := TMysql55Connection.Create(nil);
+  DxccCon := TMysql55Connection.Create(nil);
+  MainCon.KeepConnection := True;
+  DxccCon.KeepConnection := True;
 
   scCommon.DataBase := MainCon;
   scCommon.Transaction := trmQ;
 
-  qLogList.DataBase  := MainCon;
-  trLogList.DataBase := MainCon;
+  for i:=0 to ComponentCount-1 do
+   begin
+     if Components[i] is TSQLQuery then
+       (Components[i] as TSQLQuery).DataBase := MainCon;
+     if Components[i] is TSQLTransaction then
+       (Components[i] as TSQLTransaction).DataBase := MainCon
+   end;
 
-  mQ.DataBase   := MainCon;
-  trmQ.DataBase := MainCon;
-
-  Q.DataBase   := MainCon;
-  trQ.DataBase := MainCon
+  PrepareDirectories;
+  PrepareCtyData;
+  PrepareDXCCData
 end;
 
 procedure TdmData.DataModuleDestroy(Sender: TObject);
 begin
   MainCon.Close;
+  DxccCon.Close;
   FreeAndNil(MainCon);
+  FreeAndNil(DxccCon);
   if MysqlProcess.Running then
     fpkill(MysqlProcess.Handle,SIGTERM)
 end;
