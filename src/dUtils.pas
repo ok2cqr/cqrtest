@@ -5,7 +5,10 @@ unit dUtils;
 interface
 
 uses
-  Classes, SysUtils, FileUtil, Unix;
+  Classes, SysUtils, FileUtil, Unix, process;
+
+type
+  TExplodeArray = Array of String;
 
 type
   TdmUtils = class(TDataModule)
@@ -13,6 +16,8 @@ type
     { private declarations }
   public
     function  GetDateTime(delta : Currency) : TDateTime;
+    function  Explode(const cSeparator, vString: String): TExplodeArray;
+    function  UnTarFiles(FileName,TargetDir : String) : Boolean;
 
     procedure DebugMsg(what : String; Level : Integer=1);
   end; 
@@ -39,6 +44,49 @@ end;
 procedure TdmUtils.DebugMsg(what : String; Level : Integer=1);
 begin
   Writeln(what)
+end;
+
+function TdmUtils.Explode(const cSeparator, vString: String): TExplodeArray;
+var
+  i: Integer;
+  S: String;
+begin
+  S := vString;
+  SetLength(Result, 0);
+  i := 0;
+  while Pos(cSeparator, S) > 0 do
+  begin
+    SetLength(Result, Length(Result) +1);
+    Result[i] := Copy(S, 1, Pos(cSeparator, S) -1);
+    Inc(i);
+    S := Copy(S, Pos(cSeparator, S) + Length(cSeparator), Length(S))
+  end;
+  SetLength(Result, Length(Result) +1);
+  Result[i] := Copy(S, 1, Length(S))
+end;
+
+function TdmUtils.UnTarFiles(FileName,TargetDir : String) : Boolean;
+var
+  AProcess : TProcess;
+  dir      : String;
+begin
+  Result := True;
+  dir := GetCurrentDir;
+  SetCurrentDir(TargetDir);
+  AProcess := TProcess.Create(nil);
+  try
+    AProcess.CommandLine := 'tar -xvzf '+FileName;
+    AProcess.Options := [poNoConsole,poNewProcessGroup,poWaitOnExit];
+    DebugMsg('Command line: '+AProcess.CommandLine);
+    try
+      AProcess.Execute
+    except
+      Result := False
+    end
+  finally
+    SetCurrentDir(dir);
+    AProcess.Free
+  end
 end;
 
 end.
