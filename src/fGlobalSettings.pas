@@ -162,6 +162,7 @@ type
     tabVisibleColumns: TTabSheet;
     procedure btnOKClick(Sender: TObject);
     procedure FormShow(Sender: TObject);
+    procedure lbPreferencesDblClick(Sender: TObject);
   private
     { private declarations }
   public
@@ -252,6 +253,11 @@ begin
   chkClearRIT.Checked   := iniLocal.ReadBool('NewQSO','ClearRit',False)
 end;
 
+procedure TfrmGlobalSettings.lbPreferencesDblClick(Sender: TObject);
+begin
+  pgPreferences.ActivePageIndex := lbPreferences.ItemIndex
+end;
+
 procedure TfrmGlobalSettings.btnOKClick(Sender: TObject);
 begin
   iniLocal.WriteString('Program', 'Proxy',edtProxy.Text);
@@ -323,7 +329,9 @@ begin
   iniLocal.WriteBool('Callbook', 'QRZ',rbQRZ.Checked);
 
   iniLocal.WriteBool('NewQSO','AutoSearch',chkAutoSearch.Checked);
-  iniLocal.WriteBool('NewQSO','ClearRit',chkClearRIT.Checked)
+  iniLocal.WriteBool('NewQSO','ClearRit',chkClearRIT.Checked);
+
+  ModalResult := mrOK
 end;
 
 end.
