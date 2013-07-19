@@ -1,0 +1,47 @@
+object dmDXCC: TdmDXCC
+  OnCreate = DataModuleCreate
+  OldCreateOrder = False
+  Height = 279
+  HorizontalOffset = 250
+  VerticalOffset = 250
+  Width = 408
+  object Q: TSQLQuery
+    Transaction = trQ
+    ReadOnly = False
+    Params = <>
+    left = 27
+    top = 11
+  end
+  object trQ: TSQLTransaction
+    Active = False
+    Action = caNone
+    left = 28
+    top = 70
+  end
+  object Q1: TSQLQuery
+    Transaction = trQ1
+    ReadOnly = False
+    Params = <>
+    left = 96
+    top = 11
+  end
+  object trQ1: TSQLTransaction
+    Active = False
+    Action = caNone
+    left = 97
+    top = 70
+  end
+  object qDXCCRef: TSQLQuery
+    Transaction = trDXCCRef
+    ReadOnly = False
+    Params = <>
+    left = 168
+    top = 11
+  end
+  object trDXCCRef: TSQLTransaction
+    Active = False
+    Action = caNone
+    left = 169
+    top = 70
+  end
+end
