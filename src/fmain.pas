@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, ActnList,
-  Menus, ComCtrls, fCommonLocal;
+  Menus, ComCtrls, fCommonLocal, fBandMap;
 
 type
 
@@ -65,10 +65,15 @@ type
     procedure acOpenLogExecute(Sender: TObject);
     procedure acQSOListExecute(Sender: TObject);
     procedure acScoreExecute(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
+    procedure FormShow(Sender: TObject);
   private
   public
-    { public declarations }
+    frmBandMapRig1VfoA : TfrmBandMap;
+    frmBandMapRig1VfoB : TfrmBandMap;
+    frmBandMapRig2VfoA : TfrmBandMap;
+    frmBandMapRig2VfoB : TfrmBandMap;
   end; 
 
 var
@@ -89,7 +94,8 @@ end;
 
 procedure TfrmMain.acBandMapVFOA1Execute(Sender: TObject);
 begin
-  ShowMessage('Not implemented, yet')
+  frmBandMapRig1VfoA.Caption := iniLocal.ReadString('TRX1', 'Desc','Radio1')+' VFO A';
+  frmBandMapRig1VfoA.Show
 end;
 
 procedure TfrmMain.acAboutExecute(Sender: TObject);
@@ -106,17 +112,20 @@ end;
 
 procedure TfrmMain.acBandMapVFOA2Execute(Sender: TObject);
 begin
-  ShowMessage('Not implemented, yet')
+  frmBandMapRig2VfoA.Caption := iniLocal.ReadString('TRX2', 'Desc','Radio2')+' VFO A';
+  frmBandMapRig2VfoA.Show
 end;
 
 procedure TfrmMain.acBandMapVFOB1Execute(Sender: TObject);
 begin
-  ShowMessage('Not implemented, yet')
+  frmBandMapRig1VfoB.Caption := iniLocal.ReadString('TRX1', 'Desc','Radio1')+' VFO B';
+  frmBandMapRig1VfoB.Show;
 end;
 
 procedure TfrmMain.acBandMapVFOB2Execute(Sender: TObject);
 begin
-  ShowMessage('Not implemented, yet')
+  frmBandMapRig2VfoB.Caption := iniLocal.ReadString('TRX2', 'Desc','Radio2')+' VFO B';
+  frmBandMapRig2VfoB.Show
 end;
 
 procedure TfrmMain.acContestSettingsExecute(Sender: TObject);
@@ -173,10 +182,23 @@ begin
   ShowMessage('Not implemented, yet')
 end;
 
+procedure TfrmMain.FormCreate(Sender: TObject);
+begin
+  inherited;
+end;
+
 procedure TfrmMain.FormDestroy(Sender: TObject);
 begin
   FreeAndNil(iniLocal);
   FreeAndNil(iniGlobal)
+end;
+
+procedure TfrmMain.FormShow(Sender: TObject);
+begin
+  frmBandMapRig1VfoA := TfrmBandMap.Create(self);
+  frmBandMapRig1VfoB := TfrmBandMap.Create(self);
+  frmBandMapRig2VfoA := TfrmBandMap.Create(self);
+  frmBandMapRig2VfoB := TfrmBandMap.Create(self);
 end;
 
 end.
