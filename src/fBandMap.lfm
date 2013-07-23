@@ -1,0 +1,35 @@
+object frmBandMap: TfrmBandMap
+  Left = 540
+  Height = 556
+  Top = 190
+  Width = 259
+  Caption = 'frmBandMap'
+  ClientHeight = 556
+  ClientWidth = 259
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  LCLVersion = '0.9.30.2'
+  object Panel1: TPanel
+    Left = 0
+    Height = 24
+    Top = 0
+    Width = 259
+    Align = alTop
+    BevelOuter = bvNone
+    TabOrder = 0
+  end
+  object pnlBandMap: TPanel
+    Left = 0
+    Height = 532
+    Top = 24
+    Width = 259
+    Align = alClient
+    BevelOuter = bvNone
+    Color = clWhite
+    Font.Height = -11
+    Font.Name = 'Monospace'
+    ParentColor = False
+    ParentFont = False
+    TabOrder = 1
+  end
+end
