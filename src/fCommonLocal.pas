@@ -42,7 +42,7 @@ procedure TfrmCommonLocal.FormCreate(Sender: TObject);
 begin
   if (iniLocal = nil) then
   begin
-    iniLocal  := TCfgStorage.Create(GetLocalConfigFile)
+    iniLocal := TCfgStorage.Create(GetLocalConfigFile)
   end
 end;
 
