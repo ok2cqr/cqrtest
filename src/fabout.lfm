@@ -15,8 +15,8 @@ inherited frmAbout: TfrmAbout
     TabOrder = 0
     object TabSheet1: TTabSheet
       Caption = 'Program'
-      ClientHeight = 190
-      ClientWidth = 312
+      ClientHeight = 183
+      ClientWidth = 308
       object Image1: TImage
         Left = 6
         Height = 98
@@ -751,17 +751,17 @@ inherited frmAbout: TfrmAbout
     end
     object TabSheet2: TTabSheet
       Caption = 'Our donors'
-      ClientHeight = 190
-      ClientWidth = 312
+      ClientHeight = 183
+      ClientWidth = 308
       object Memo1: TMemo
         Left = 0
-        Height = 190
+        Height = 183
         Top = 0
-        Width = 312
+        Width = 308
         Align = alClient
         Lines.Strings = (
           'Pekka, OH2BSC  $20'
-          'Flavio, IK3OCD '#9' $20'
+          'Flavio, IK3OCD   $20'
         )
         ReadOnly = True
         TabOrder = 0
