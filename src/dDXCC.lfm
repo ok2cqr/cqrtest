@@ -1,5 +1,6 @@
 object dmDXCC: TdmDXCC
   OnCreate = DataModuleCreate
+  OnDestroy = DataModuleDestroy
   OldCreateOrder = False
   Height = 279
   HorizontalOffset = 250
