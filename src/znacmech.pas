@@ -21,7 +21,7 @@
 unit znacmech;
 
 // zakomentuj nasledujici radek, bude Ti fungovat "debug" :-P  Mti.
-//{$define nuse_ddata}
+{$define nuse_ddata}
 
 
 interface
