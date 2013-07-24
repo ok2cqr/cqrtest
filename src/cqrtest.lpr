@@ -15,9 +15,9 @@ begin
   Application.Initialize;
   Application.CreateForm(TfrmMain, frmMain);
   Application.CreateForm(TdmData, dmData);
+  Application.CreateForm(TdmDXCC, dmDXCC);
   Application.CreateForm(TdmUtils, dmUtils);
   Application.CreateForm(TfrmGrayline, frmGrayline);
-  Application.CreateForm(TdmDXCC, dmDXCC);
   Application.Run;
 end.
 
