@@ -91,6 +91,11 @@ inherited frmMain: TfrmMain
       Caption = 'About CQRTest'
       OnExecute = acAboutExecute
     end
+    object acDXCluster: TAction
+      Category = 'Window'
+      Caption = 'DX cluster'
+      OnExecute = acDXClusterExecute
+    end
   end
   object mnuMain: TMainMenu[2]
     left = 64
@@ -152,6 +157,9 @@ inherited frmMain: TfrmMain
       end
       object MenuItem18: TMenuItem
         Action = acScore
+      end
+      object MenuItem20: TMenuItem
+        Action = acDXCluster
       end
     end
     object MenuItem4: TMenuItem

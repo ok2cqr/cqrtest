@@ -137,4 +137,22 @@ object dmData: TdmData
     left = 104
     top = 16
   end
+  object qDXClusters: TSQLQuery
+    Transaction = trDXClusters
+    ReadOnly = False
+    Params = <>
+    left = 37
+    top = 152
+  end
+  object trDXClusters: TSQLTransaction
+    Active = False
+    Action = caNone
+    left = 37
+    top = 214
+  end
+  object dsrDXCluster: TDatasource
+    DataSet = qDXClusters
+    left = 128
+    top = 152
+  end
 end

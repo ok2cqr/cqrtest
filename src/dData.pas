@@ -16,11 +16,14 @@ type
   { TdmData }
 
   TdmData = class(TDataModule)
+    dsrDXCluster: TDatasource;
     dsrLogList: TDatasource;
     mQ: TSQLQuery;
     qLogList: TSQLQuery;
     scCommon: TSQLScript;
     Q: TSQLQuery;
+    qDXClusters: TSQLQuery;
+    trDXClusters: TSQLTransaction;
     trLogList: TSQLTransaction;
     trQ: TSQLTransaction;
     trmQ: TSQLTransaction;
@@ -44,6 +47,7 @@ type
     property AppHomeDir : String read fAppHomeDir write fAppHomeDir;
 
     function  OpenConnections(host,port,user,pass : String) : Boolean;
+    function  QueryLocate(qry : TSQLQuery; Column : String; Value : Variant; DisableGrid : Boolean; exatly : Boolean = True) : Boolean;
 
     procedure StartMysqldProcess;
     procedure CheckForDatabases;
@@ -424,6 +428,45 @@ begin
     end
   end
 end;
+
+function TdmData.QueryLocate(qry : TSQLQuery; Column : String; Value : Variant; DisableGrid : Boolean; exatly : Boolean = True) : Boolean;
+//
+// Workaround for bug http://mantis.freepascal.org/bug_view_page.php?bug_id=17624
+//
+begin
+  Result := False;
+  if DisableGrid then
+    qry.DisableControls;
+  qry.First;
+  try
+    while not qry.EOF do
+    begin
+      if exatly then
+      begin
+        if UpperCase(qry.FieldByName(Column).AsVariant) = UpperCase(Value) then
+        begin
+          Result := True;
+          break
+        end
+        else
+          qry.Next
+      end
+      else begin
+        if Pos(UpperCase(Value),UpperCase(qry.FieldByName(Column).AsVariant))=1 then
+        begin
+          Result := True;
+          break
+        end
+        else
+          qry.Next
+      end
+    end
+  finally
+    if DisableGrid then
+      qry.EnableControls
+  end
+end;
+
 
 procedure TdmData.DataModuleCreate(Sender: TObject);
 var

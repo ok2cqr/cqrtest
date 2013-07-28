@@ -27,6 +27,7 @@ type
     acScore: TAction;
     acGrayLine: TAction;
     acAbout: TAction;
+    acDXCluster: TAction;
     ActionList1: TActionList;
     MenuItem1: TMenuItem;
     MenuItem10: TMenuItem;
@@ -40,6 +41,7 @@ type
     MenuItem18: TMenuItem;
     MenuItem19: TMenuItem;
     MenuItem2: TMenuItem;
+    MenuItem20: TMenuItem;
     MenuItem3: TMenuItem;
     MenuItem4: TMenuItem;
     MenuItem5: TMenuItem;
@@ -58,6 +60,7 @@ type
     procedure acBandMapVFOB2Execute(Sender: TObject);
     procedure acCloseExecute(Sender: TObject);
     procedure acContestSettingsExecute(Sender: TObject);
+    procedure acDXClusterExecute(Sender: TObject);
     procedure acGlobalSettingsExecute(Sender: TObject);
     procedure acGrayLineExecute(Sender: TObject);
     procedure acNewQSOWindow1Execute(Sender: TObject);
@@ -83,7 +86,7 @@ implementation
 
 {$R *.lfm}
 
-uses uCfgStorage, fDBConnect, fGlobalSettings, fAbout, fGrayline;
+uses uCfgStorage, fDBConnect, fGlobalSettings, fAbout, fGrayline, fDXCluster;
 
 { TfrmMain }
 
@@ -131,6 +134,11 @@ end;
 procedure TfrmMain.acContestSettingsExecute(Sender: TObject);
 begin
   ShowMessage('Not implemented, yet')
+end;
+
+procedure TfrmMain.acDXClusterExecute(Sender: TObject);
+begin
+  frmDXCluster.Show
 end;
 
 procedure TfrmMain.acGlobalSettingsExecute(Sender: TObject);

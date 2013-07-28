@@ -65,6 +65,8 @@ type
                                 offset, ITU, lat, long: string) : Word; overload;
     function  id_country(call : String; date : TDateTime; var pfx,country : String) : Word; overload;
     function  id_country(call : String; date : TDateTime) : String; overload;
+    function  id_country(call : String; date : TDateTime; var pfx,waz,itu,cont,lat,long : String) : Word; overload;
+    function  CountryFromADIF(adif : Word) : String;
 
     procedure ReloadDXCCTables;
     procedure LoadDXCCRefArray;
@@ -133,6 +135,29 @@ begin
   try
     cont := '';WAZ := '';posun := '';ITU := '';lat := '';long := '';
     Result := id_country(call,date,pfx,country,cont,itu,waz,posun,lat,long)
+  finally
+    LeaveCriticalsection(csDXCC)
+  end
+end;
+
+function TdmDXCC.id_country(call : String; date : TDateTime; var pfx,waz,itu,cont,lat,long : String) : Word;
+var
+  posun,country : string;
+begin
+  EnterCriticalsection(csDXCC);
+  try
+    cont := '';WAZ := '';posun := '';ITU := '';lat := '';long := '';country := '';
+    Result := id_country(call,date,pfx,country,cont,itu,waz,posun,lat,long)
+  finally
+    LeaveCriticalsection(csDXCC)
+  end
+end;
+
+function TdmDXCC.CountryFromADIF(adif : Word) : String;
+begin
+  EnterCriticalsection(csDXCC);
+  try
+    Result := DXCCRefArray[adif].name
   finally
     LeaveCriticalsection(csDXCC)
   end

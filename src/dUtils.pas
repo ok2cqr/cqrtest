@@ -10,6 +10,10 @@ uses
 type
   TExplodeArray = Array of String;
 
+const
+    AllowedChars = ['A'..'Z','a'..'z','0'..'9','/',',','.','?','!',' ',':','|','-','=','+','@','#','*',
+                  '%','_','(',')','$'];
+
 type
   TdmUtils = class(TDataModule)
   private
@@ -18,6 +22,7 @@ type
     function  GetDateTime(delta : Currency) : TDateTime;
     function  Explode(const cSeparator, vString: String): TExplodeArray;
     function  UnTarFiles(FileName,TargetDir : String) : Boolean;
+    function  MyTrim(text : String) : String;
 
     procedure DebugMsg(what : String; Level : Integer=1);
   end; 
@@ -86,6 +91,19 @@ begin
   finally
     SetCurrentDir(dir);
     AProcess.Free
+  end
+end;
+
+function TdmUtils.MyTrim(text : String) : String;
+var
+  i : Integer;
+begin
+  text := Trim(text);
+  Result := '';
+  for i:=1 to Length(text) do
+  begin
+    if (text[i] in AllowedChars) then
+     Result := Result + text[i]
   end
 end;
 
