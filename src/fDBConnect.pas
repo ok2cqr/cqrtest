@@ -310,7 +310,10 @@ begin
     if RemoteMySQL then
     begin
       if Application.MessageBox('Local database is not running. Dou you want to start it?','Question',mb_YesNo+mb_IconQuestion) = idYes then
-        dmData.StartMysqldProcess
+      begin
+        dmData.StartMysqldProcess;
+        btnConnectClick(nil)
+      end
       else begin
         chkSaveToLocal.Checked := False;
         grbLogin.Visible       := True;
