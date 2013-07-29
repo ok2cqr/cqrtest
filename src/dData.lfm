@@ -155,4 +155,65 @@ object dmData: TdmData
     left = 128
     top = 152
   end
+  object scLog: TSQLScript
+    Directives.Strings = (
+      'SET TERM'
+      'COMMIT'
+      '#IFDEF'
+      '#IFNDEF'
+      '#ELSE'
+      '#ENDIF'
+      '#DEFINE'
+      '#UNDEF'
+      '#UNDEFINE'
+    )
+    Script.Strings = (
+      'CREATE TABLE cqrtest ('
+      '         id_cqrtest INTEGER NOT NULL PRIMARY KEY,'
+      '         qsodate  VARCHAR(10),'
+      '         time_on  VARCHAR(5),'
+      '         qso_nr   INTEGER,'
+      '         callign  VARCHAR(20),'
+      '         freq     NUMERIC(10,4) NOT NULL,'
+      '         mode     VARCHAR(8),'
+      '         rst_s    VARCHAR(20),'
+      '         nr_sent  VARCHAR(20),'
+      '         rst_r    VARCHAR(20),'
+      '         nr_rcvd  VARCHAR(20),'
+      '         exch1    VARCHAR(20),'
+      '         exch2    VARCHAR(20),'
+      '         mult1    SMALLINT,'
+      '         mult2    SMALLINT,'
+      '         name     VARCHAR(20),'
+      '         qth      VARCHAR(20),'
+      '         points   INTEGER,'
+      '         power    VARCHAR(10),'
+      '         waz      VARCHAR(3),'
+      '         itu      VARCHAR(3),'
+      '         band     VARCHAR(8),'
+      '         wpx      VARCHAR(20),'
+      '         op       VARCHAR(20),'
+      '         dxcc_ref INTEGER'
+      ');'
+      ''
+      'CREATE TABLE cqrtest_config ('
+      '  id_cqrtest_config INT AUTO_INCREMENT PRIMARY KEY,'
+      '  config_file LONGTEXT'
+      ');'
+      'INSERT INTO cqrtest_config (config_file) VALUES ('''');'
+      ''
+      'CREATE TABLE db_version'
+      '('
+      '  nr SMALLINT NOT NULL'
+      ') ENGINE = InnoDB;'
+      ''
+    )
+    Terminator = ';'
+    CommentsinSQL = True
+    UseSetTerm = True
+    UseCommit = True
+    UseDefines = True
+    left = 320
+    top = 16
+  end
 end

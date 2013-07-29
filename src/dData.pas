@@ -6,10 +6,11 @@ interface
 
 uses
   Classes, SysUtils, sqldb, db, FileUtil, mysql55dyn, mysql55conn,LCLType,
-  Forms, process, BaseUnix;
+  Forms, process, BaseUnix, sqlscript;
 
 const
   cDB_COMN_VER = 1;
+  cDB_MAIN_VER = 1;
 
 type
 
@@ -23,6 +24,7 @@ type
     scCommon: TSQLScript;
     Q: TSQLQuery;
     qDXClusters: TSQLQuery;
+    scLog: TSQLScript;
     trDXClusters: TSQLTransaction;
     trLogList: TSQLTransaction;
     trQ: TSQLTransaction;
@@ -30,8 +32,11 @@ type
     procedure DataModuleCreate(Sender: TObject);
     procedure DataModuleDestroy(Sender: TObject);
   private
-    fAppHomeDir : String;
+    fAppHomeDir  : String;
+    fConnected   : Boolean;
+    fLogName     : String;
     MysqlProcess : TProcess;
+    fDBName      : String;
 
     function  GetMysqldPath : String;
 
@@ -45,12 +50,23 @@ type
     MainCon : TMysql55Connection;
     DxccCon : TMysql55Connection;
     property AppHomeDir : String read fAppHomeDir write fAppHomeDir;
+    property Connected  : Boolean read fConnected;
+    property LogName    : String read fLogName write fLogName;
+    property DBName     : String read fDBName;
 
     function  OpenConnections(host,port,user,pass : String) : Boolean;
     function  QueryLocate(qry : TSQLQuery; Column : String; Value : Variant; DisableGrid : Boolean; exatly : Boolean = True) : Boolean;
+    function  GetProperDBName(nr : Word) : String;
+    function  LogExists(nr : Word) : Boolean;
 
     procedure StartMysqldProcess;
     procedure CheckForDatabases;
+    procedure CreateDatabase(nr : Word; log_name : String);
+    procedure RefreshLogList(nr : Word = 0);
+    procedure CloseDatabases;
+    procedure OpenDatabase(nr : Word);
+    procedure EditDatabaseName(nr : Word; log_name : String);
+    procedure DeleteLogDatabase(nr : Word);
   end;
 
 var
@@ -62,11 +78,12 @@ implementation
 
 { TdmData }
 
-uses dUtils, fImportProgress;
+uses dUtils, fImportProgress, dDXCC;
 
 function TdmData.OpenConnections(host,port,user,pass : String) : Boolean;
 begin
-  Result := True;
+  Result     := True;
+  fConnected := True;
 
   if MainCon.Connected then
     MainCon.Connected := False;
@@ -93,9 +110,182 @@ begin
     begin
       Application.MessageBox(PChar('Error during connection to database: '+E.Message),
                              'Error',mb_ok + mb_IconError);
-      Result := False
+      fConnected := False;
+      Result     := False
     end
   end
+end;
+
+procedure TdmData.CreateDatabase(nr : Word; log_name : String);
+var
+  db : String;
+  i  : Integer;
+begin
+  db := GetProperDBName(nr);
+
+  mQ.Close;
+  if trmQ.Active then
+    trmQ.Rollback;
+
+  mQ.SQL.Clear;
+  mQ.SQL.Text := 'CREATE DATABASE IF NOT EXISTS '+db+' DEFAULT CHARACTER SET = '+
+                 'utf8 DEFAULT COLLATE = utf8_bin;';
+//"if not exists is" because bug in TSQLScript caused that database was created but without
+//any table, so if user try to create new database which already exists but it is not in the
+//log list, database will be created and added to the log list
+
+  trmQ.StartTransaction;
+  dmUtils.DebugMsg(mQ.SQL.Text);
+  mQ.ExecSQL;
+  trmQ.Commit;
+
+  mQ.SQL.Text := 'use '+db+';';
+  dmUtils.DebugMsg(mQ.SQL.Text);
+  trmQ.StartTransaction;
+  mQ.ExecSQL;
+  trmQ.Commit;
+
+  trmQ.StartTransaction;
+  mQ.SQL.Text := '';
+  for i:=0 to scLog.Script.Count-1 do
+  begin
+    if Pos(';',scLog.Script.Strings[i]) = 0 then
+      mQ.SQL.Add(scLog.Script.Strings[i])
+    else begin
+      mQ.SQL.Add(scLog.Script.Strings[i]);
+      dmUtils.DebugMsg(mQ.SQL.Text);
+      mQ.ExecSQL;
+      mQ.SQL.Text := ''
+    end
+  end;
+  trmQ.Commit;
+
+//^^ because of bug in  TSQLSript. For the firt time cretreates the database,
+//second database - no effect. My workaround works. Semicolon is a delimitter.
+
+  trmQ.StartTransaction;
+  mQ.SQL.Text := 'insert into db_version (nr) values('+IntToStr(cDB_MAIN_VER)+')';
+  dmUtils.DebugMsg(mQ.SQL.Text);
+  mQ.ExecSQL;
+  trmQ.Commit;
+
+  mQ.SQL.Text := 'insert into cqrtest_common.log_list (log_nr,log_name) values '+
+                 '('+IntToStr(nr)+','+QuotedStr(log_name)+')';
+  trmQ.StartTransaction;
+  dmUtils.DebugMsg(mQ.SQL.Text);
+  mQ.ExecSQL;
+  trmQ.Commit;
+  RefreshLogList(nr)
+end;
+
+procedure TdmData.RefreshLogList(nr : Word = 0);
+begin
+  qLogList.Close;
+  if trLogList.Active then
+    trLogList.Rollback;
+  qLogList.SQL.Text := 'SELECT log_nr,log_name FROM cqrtest_common.log_list order by log_nr';
+  trLogList.StartTransaction;
+  qLogList.Open;
+  if nr > 0 then
+    qLogList.Locate('log_nr',nr,[])
+end;
+
+procedure TdmData.CloseDatabases;
+var
+  i : Integer;
+begin
+  for i := 0 to ComponentCount-1 do
+  begin
+    if (Components[i] is TSQLQuery) then
+    begin
+      if (Components[i] as TSQLQuery).Name <> 'qLogList' then
+        (Components[i] as TSQLQuery).Close
+    end;
+    if (Components[i] is TSQLTransaction) then
+    begin
+      if (Components[i] as TSQLTransaction).Name <> 'trLogList' then
+        (Components[i] as TSQLTransaction).Rollback
+    end
+  end;
+  for i := 0 to dmDXCC.ComponentCount-1 do
+  begin
+    if (dmDXCC.Components[i] is TSQLQuery) then
+    begin
+      (dmDXCC.Components[i] as TSQLQuery).Close
+    end;
+    if (dmDXCC.Components[i] is TSQLTransaction) then
+    begin
+      (dmDXCC.Components[i] as TSQLTransaction).Rollback
+    end
+  end
+end;
+
+procedure TdmData.OpenDatabase(nr : Word);
+var
+  l : TStringList;
+  v : Integer;
+begin
+  fDBName := GetProperDBName(nr);
+  if trQ.Active then
+    trQ.Rollback;
+  Q.SQL.Text := 'use ' + fDBName;
+  dmUtils.DebugMsg(Q.SQL.Text);
+  trQ.StartTransaction;
+  Q.ExecSQL;
+  trQ.Commit;
+
+  if dmDXCC.trQ.Active then
+    dmDXCC.trQ.Rollback;
+  dmDXCC.Q.Close;
+  dmDXCC.Q.SQL.Text := 'use ' + fDBName;
+  dmUtils.DebugMsg(dmDXCC.Q.SQL.Text);
+  dmDXCC.trQ.StartTransaction;
+  dmDXCC.Q.ExecSQL;
+  dmDXCC.trQ.Commit;
+
+  trQ.StartTransaction;
+  try
+    Q.SQL.Text := 'select * from db_version';
+    Q.Open;
+    //UpdateDatabase(Q.Fields[0].AsInteger)
+  finally
+    Q.Close();
+    trQ.Rollback
+  end;
+
+  dmDXCC.LoadDXCCRefArray;
+  dmDXCC.LoadAmbiguousArray;
+  dmDXCC.LoadExceptionArray;
+end;
+
+procedure TdmData.EditDatabaseName(nr : Word; log_name : String);
+begin
+  mQ.Close;
+  if trmQ.Active then
+    trmQ.Rollback;
+  mQ.SQL.Text := 'UPDATE cqrtest_common.log_list SET log_name = '+
+                 QuotedStr(log_name) + ' where log_nr = '+IntToStr(nr);
+  trmQ.StartTransaction;
+  mQ.ExecSQL;
+  trmQ.Commit;
+  RefreshLogList(nr)
+end;
+
+procedure TdmData.DeleteLogDatabase(nr : Word);
+var
+  db : String;
+begin
+  db := GetProperDBName(nr);
+  mQ.Close;
+  if trmQ.Active then
+    trmQ.Rollback;
+  mQ.SQL.Text := 'DROP DATABASE '+db;
+  trmQ.StartTransaction;
+  mQ.ExecSQL;
+  mQ.SQL.Text := 'DELETE FROM cqrtest_common.log_list WHERE log_nr = '+IntToStr(nr);
+  mQ.ExecSQL;
+  trmQ.Commit;
+  RefreshLogList()
 end;
 
 procedure TdmData.PrepareDirectories;
@@ -340,9 +530,9 @@ begin
       ShowModal
     finally
       Free
-    end
+    end;
 
-    //CreateDatabase(1,'Log 001');
+    CreateDatabase(1,'Log 001')
   end;
   mQ.SQL.Clear;
   qLogList.Close;
@@ -465,6 +655,30 @@ begin
     if DisableGrid then
       qry.EnableControls
   end
+end;
+
+function TdmData.GetProperDBName(nr : Word) : String;
+begin
+  if (nr < 10) then
+    Result := '00'+IntToStr(nr)
+  else if (nr < 100) then
+    Result := '0'+IntToStr(nr)
+  else
+    Result := IntToStr(nr);
+  Result := 'cqrtest'+Result
+end;
+
+function TdmData.LogExists(nr : Word) : Boolean;
+begin
+  if trmQ.Active then
+    trmQ.Rollback;
+  mQ.SQL.Text := 'select log_nr from cqrtest_common.log_list where log_nr = '+
+                 IntToStr(nr);
+  trmQ.StartTransaction;
+  mQ.Open;
+  Result := mQ.RecordCount > 0;
+  mQ.Close;
+  trmQ.Rollback
 end;
 
 

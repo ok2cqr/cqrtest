@@ -8,7 +8,7 @@ uses
   Forms, fMain, uCfgStorage, dData, dUtils, fCommonLocal, fCommonGlobal,
   fDBConnect, fGlobalSettings, frStation, frBands, frVisibleColumns, fAbout,
   fGrayline, fImportProgress, dDXCC, jakozememo, fBandMap, fDXCluster,
-  fDXClusterList, fNewDXCluster;
+  fDXClusterList, fNewDXCluster, fNewLog;
 
 {$R *.res}
 

@@ -85,7 +85,7 @@ var
 
 implementation
 
-uses dData, uCfgStorage;//, fNewLog;
+uses dData, uCfgStorage, fNewLog;
 
 procedure TfrmDBConnect.EnableButtons;
 begin
@@ -210,7 +210,7 @@ begin
     if Application.MessageBox('LOG WILL BE _DELETED_. Are you sure?','Question ...',
                              mb_YesNo + mb_IconQuestion) = idYes then
     begin
-      //dmData.DeleteLogDatabase(dmData.qLogList.Fields[0].AsInteger);
+      dmData.DeleteLogDatabase(dmData.qLogList.Fields[0].AsInteger);
       UpdateGridFields
     end
   end
@@ -223,16 +223,18 @@ end;
 
 procedure TfrmDBConnect.btnDisconnectClick(Sender: TObject);
 begin
-  {
   if dmData.MainCon.Connected then
+  begin
     dmData.MainCon.Connected := False;
-  }
+    dmData.DxccCon.Connected := False
+  end;
   DisableButtons
 end;
 
 procedure TfrmDBConnect.btnEditLogClick(Sender: TObject);
+var
+  frmNewLog : TfrmNewLog;
 begin
-  {
   frmNewLog := TfrmNewLog.Create(nil);
   try
     frmNewLog.Caption := 'Edit existing log ...';
@@ -249,20 +251,20 @@ begin
   finally
     frmNewLog.Free
   end
-  }
 end;
 
 procedure TfrmDBConnect.btnNewLogClick(Sender: TObject);
+var
+  frmNewLog : TfrmNewLog;
 begin
-  {
   frmNewLog := TfrmNewLog.Create(nil);
   try
     frmNewLog.Caption := 'New log ...';
     frmNewLog.ShowModal;
     if frmNewLog.ModalResult = mrOK then
     begin
-      //if dmData.LogName <> '' then
-      //  dmData.CloseDatabases;
+      if dmData.LogName <> '' then
+        dmData.CloseDatabases;
       dmData.CreateDatabase(StrToInt(frmNewLog.edtLogNR.Text),
                             frmNewLog.edtLogName.Text);
       UpdateGridFields
@@ -270,7 +272,6 @@ begin
   finally
     frmNewLog.Free
   end
-  }
 end;
 
 procedure TfrmDBConnect.btnOpenLogClick(Sender: TObject);
@@ -279,8 +280,8 @@ begin
   iniLocal.WriteInteger('Login','LastLog',dmData.qLogList.Fields[0].AsInteger);
   if not OpenFromMenu then
   begin
-    //dmData.OpenDatabase(dmData.qLogList.Fields[0].AsInteger);
-    //dmData.LogName := dmData.qLogList.Fields[1].AsString
+    dmData.OpenDatabase(dmData.qLogList.Fields[0].AsInteger);
+    dmData.LogName := dmData.qLogList.Fields[1].AsString
   end;
   ModalResult    := mrOK
 end;

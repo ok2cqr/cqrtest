@@ -72,6 +72,7 @@ type
     procedure FormDestroy(Sender: TObject);
     procedure FormShow(Sender: TObject);
   private
+    procedure UpdateMenu;
   public
     frmBandMapRig1VfoA : TfrmBandMap;
     frmBandMapRig1VfoB : TfrmBandMap;
@@ -86,7 +87,7 @@ implementation
 
 {$R *.lfm}
 
-uses uCfgStorage, fDBConnect, fGlobalSettings, fAbout, fGrayline, fDXCluster;
+uses uCfgStorage, fDBConnect, fGlobalSettings, fAbout, fGrayline, fDXCluster, dData;
 
 { TfrmMain }
 
@@ -207,6 +208,21 @@ begin
   frmBandMapRig1VfoB := TfrmBandMap.Create(self);
   frmBandMapRig2VfoA := TfrmBandMap.Create(self);
   frmBandMapRig2VfoB := TfrmBandMap.Create(self);
+  UpdateMenu
+end;
+
+procedure TfrmMain.UpdateMenu;
+begin
+  acContestSettings.Enabled := dmData.Connected;
+  acNewQSOWindow1.Enabled   := dmData.Connected;
+  acBandMapVFOA1.Enabled    := dmData.Connected;
+  acBandMapVFOB1.Enabled    := dmData.Connected;
+  acNewQSOWindow2.Enabled   := dmData.Connected;
+  acBandMapVFOA2.Enabled    := dmData.Connected;
+  acBandMapVFOB2.Enabled    := dmData.Connected;
+  acQSOList.Enabled         := dmData.Connected;
+  acScore.Enabled           := dmData.Connected;
+  acDXCluster.Enabled       := dmData.Connected
 end;
 
 end.

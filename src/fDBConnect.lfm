@@ -16,13 +16,13 @@ inherited frmDBConnect: TfrmDBConnect
     Width = 369
     Align = alTop
     Caption = ' MySQL server '
-    ClientHeight = 174
+    ClientHeight = 161
     ClientWidth = 365
     TabOrder = 0
     Visible = False
     object edtServer: TEdit
       Left = 14
-      Height = 26
+      Height = 21
       Top = 25
       Width = 168
       TabOrder = 0
@@ -30,23 +30,23 @@ inherited frmDBConnect: TfrmDBConnect
     end
     object Label1: TLabel
       Left = 14
-      Height = 17
+      Height = 16
       Top = 9
-      Width = 80
+      Width = 73
       Caption = 'Server name:'
       ParentColor = False
     end
     object Label2: TLabel
       Left = 218
-      Height = 17
+      Height = 16
       Top = 9
-      Width = 31
+      Width = 29
       Caption = 'Port:'
       ParentColor = False
     end
     object edtPort: TEdit
       Left = 218
-      Height = 26
+      Height = 21
       Top = 25
       Width = 80
       TabOrder = 1
@@ -54,30 +54,30 @@ inherited frmDBConnect: TfrmDBConnect
     end
     object Label3: TLabel
       Left = 14
-      Height = 17
+      Height = 16
       Top = 61
-      Width = 68
+      Width = 64
       Caption = 'User name:'
       ParentColor = False
     end
     object edtUser: TEdit
       Left = 14
-      Height = 26
+      Height = 21
       Top = 79
       Width = 168
       TabOrder = 2
     end
     object Label4: TLabel
       Left = 218
-      Height = 17
+      Height = 16
       Top = 61
-      Width = 61
+      Width = 57
       Caption = 'Password:'
       ParentColor = False
     end
     object edtPass: TEdit
       Left = 218
-      Height = 26
+      Height = 21
       Top = 79
       Width = 132
       EchoMode = emPassword
@@ -86,9 +86,9 @@ inherited frmDBConnect: TfrmDBConnect
     end
     object chkSavePass: TCheckBox
       Left = 18
-      Height = 24
+      Height = 26
       Top = 114
-      Width = 104
+      Width = 101
       Caption = 'Remeber me'
       OnChange = chkSavePassChange
       TabOrder = 4
@@ -113,9 +113,9 @@ inherited frmDBConnect: TfrmDBConnect
     end
     object chkAutoConn: TCheckBox
       Left = 206
-      Height = 24
+      Height = 26
       Top = 114
-      Width = 109
+      Width = 106
       Caption = 'Auto connect'
       TabOrder = 7
     end
@@ -226,9 +226,9 @@ inherited frmDBConnect: TfrmDBConnect
       TabOrder = 2
       object chkAutoOpen: TCheckBox
         Left = 8
-        Height = 24
+        Height = 26
         Top = -1
-        Width = 243
+        Width = 231
         Caption = 'Open recent log after program runs'
         TabOrder = 0
       end
@@ -246,9 +246,9 @@ inherited frmDBConnect: TfrmDBConnect
     TabOrder = 2
     object chkSaveToLocal: TCheckBox
       Left = 12
-      Height = 24
+      Height = 26
       Top = 2
-      Width = 213
+      Width = 196
       Caption = 'Save log data to local machine'
       OnClick = chkSaveToLocalClick
       TabOrder = 0
