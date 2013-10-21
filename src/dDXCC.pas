@@ -61,11 +61,11 @@ type
     function  IsAmbiguous(call : String) : Boolean;
     function  IsPrefix(pref : String; Date : TDateTime) : Boolean;
     function  GetCont(call : String; Date : TDateTime) : String;
-    function  id_country(call: string; date : TDateTime; var pfx, cont, country, WAZ,
-                                offset, ITU, lat, long: string) : Word; overload;
+    function  id_country(call: string;  date : TDateTime; var pfx, cont, country, WAZ, offset, ITU, lat, long: string) : Word; overload;
     function  id_country(call : String; date : TDateTime; var pfx,country : String) : Word; overload;
     function  id_country(call : String; date : TDateTime) : String; overload;
     function  id_country(call : String; date : TDateTime; var pfx,waz,itu,cont,lat,long : String) : Word; overload;
+    function  id_country(call : String; var lat,long : String) : Word; overload;
     function  CountryFromADIF(adif : Word) : String;
 
     procedure ReloadDXCCTables;
@@ -148,6 +148,19 @@ begin
   try
     cont := '';WAZ := '';posun := '';ITU := '';lat := '';long := '';country := '';
     Result := id_country(call,date,pfx,country,cont,itu,waz,posun,lat,long)
+  finally
+    LeaveCriticalsection(csDXCC)
+  end
+end;
+
+function TdmDXCC.id_country(call : String;var lat,long : String) : Word;
+var
+  cont, WAZ, posun, ITU, pfx, country, offset: string;
+begin
+  EnterCriticalsection(csDXCC);
+  try
+    cont := '';WAZ := '';posun := '';ITU := ''; offset := '';
+    Result := id_country(call,now,pfx, cont, country, WAZ,offset, ITU, lat, long)
   finally
     LeaveCriticalsection(csDXCC)
   end

@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, ActnList,
-  Menus, ComCtrls, fCommonLocal, fBandMap;
+  Menus, ComCtrls, fCommonLocal, fBandMapRig1VfoA;
 
 type
 
@@ -74,11 +74,7 @@ type
   private
     procedure UpdateMenu;
   public
-    frmBandMapRig1VfoA : TfrmBandMap;
-    frmBandMapRig1VfoB : TfrmBandMap;
-    frmBandMapRig2VfoA : TfrmBandMap;
-    frmBandMapRig2VfoB : TfrmBandMap;
-  end; 
+  end;
 
 var
   frmMain: TfrmMain;
@@ -99,6 +95,9 @@ end;
 procedure TfrmMain.acBandMapVFOA1Execute(Sender: TObject);
 begin
   frmBandMapRig1VfoA.Caption := iniLocal.ReadString('TRX1', 'Desc','Radio1')+' VFO A';
+  frmBandMapRig1VfoA.FirstInterval  := 60;
+  frmBandMapRig1VfoA.SecondInterval := 120;
+  frmBandMapRig1VfoA.DeleteAfter    := 180;
   frmBandMapRig1VfoA.Show
 end;
 
@@ -116,20 +115,20 @@ end;
 
 procedure TfrmMain.acBandMapVFOA2Execute(Sender: TObject);
 begin
-  frmBandMapRig2VfoA.Caption := iniLocal.ReadString('TRX2', 'Desc','Radio2')+' VFO A';
-  frmBandMapRig2VfoA.Show
+  //frmBandMapRig2VfoA.Caption := iniLocal.ReadString('TRX2', 'Desc','Radio2')+' VFO A';
+  //frmBandMapRig2VfoA.Show
 end;
 
 procedure TfrmMain.acBandMapVFOB1Execute(Sender: TObject);
 begin
-  frmBandMapRig1VfoB.Caption := iniLocal.ReadString('TRX1', 'Desc','Radio1')+' VFO B';
-  frmBandMapRig1VfoB.Show;
+  //frmBandMapRig1VfoB.Caption := iniLocal.ReadString('TRX1', 'Desc','Radio1')+' VFO B';
+  //frmBandMapRig1VfoB.Show;
 end;
 
 procedure TfrmMain.acBandMapVFOB2Execute(Sender: TObject);
 begin
-  frmBandMapRig2VfoB.Caption := iniLocal.ReadString('TRX2', 'Desc','Radio2')+' VFO B';
-  frmBandMapRig2VfoB.Show
+  //frmBandMapRig2VfoB.Caption := iniLocal.ReadString('TRX2', 'Desc','Radio2')+' VFO B';
+  //frmBandMapRig2VfoB.Show
 end;
 
 procedure TfrmMain.acContestSettingsExecute(Sender: TObject);
@@ -178,7 +177,8 @@ begin
       Application.Terminate
   finally
     Free
-  end
+  end;
+  UpdateMenu
 end;
 
 procedure TfrmMain.acQSOListExecute(Sender: TObject);
@@ -204,10 +204,6 @@ end;
 
 procedure TfrmMain.FormShow(Sender: TObject);
 begin
-  frmBandMapRig1VfoA := TfrmBandMap.Create(self);
-  frmBandMapRig1VfoB := TfrmBandMap.Create(self);
-  frmBandMapRig2VfoA := TfrmBandMap.Create(self);
-  frmBandMapRig2VfoB := TfrmBandMap.Create(self);
   UpdateMenu
 end;
 

@@ -7,8 +7,8 @@ uses
   Interfaces, // this includes the LCL widgetset
   Forms, fMain, uCfgStorage, dData, dUtils, fCommonLocal, fCommonGlobal,
   fDBConnect, fGlobalSettings, frStation, frBands, frVisibleColumns, fAbout,
-  fGrayline, fImportProgress, dDXCC, jakozememo, fBandMap, fDXCluster,
-  fDXClusterList, fNewDXCluster, fNewLog;
+  fGrayline, fImportProgress, dDXCC, jakozememo, fDXCluster,
+  fDXClusterList, fNewDXCluster, fNewLog, fBandMapRig1VfoA;
 
 {$R *.res}
 
@@ -20,6 +20,7 @@ begin
   Application.CreateForm(TdmUtils, dmUtils);
   Application.CreateForm(TfrmGrayline, frmGrayline);
   Application.CreateForm(TfrmDXCluster, frmDXCluster);
+  Application.CreateForm(TfrmBandMapRig1VfoA, frmBandMapRig1VfoA);
   Application.Run;
 end.
 

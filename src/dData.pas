@@ -25,6 +25,8 @@ type
     Q: TSQLQuery;
     qDXClusters: TSQLQuery;
     scLog: TSQLScript;
+    qBands: TSQLQuery;
+    trBands: TSQLTransaction;
     trDXClusters: TSQLTransaction;
     trLogList: TSQLTransaction;
     trQ: TSQLTransaction;
@@ -252,6 +254,13 @@ begin
     Q.Close();
     trQ.Rollback
   end;
+
+  qDXClusters.Close;
+  qDXClusters.SQL.Text := 'select * from cqrtest_common.dxclusters order by description';
+  qDXClusters.Open;
+
+  qBands.Close;
+  qBands.SQL.Text := '';
 
   dmDXCC.LoadDXCCRefArray;
   dmDXCC.LoadAmbiguousArray;

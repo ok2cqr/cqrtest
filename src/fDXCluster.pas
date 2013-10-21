@@ -80,6 +80,7 @@ type
     procedure lConnect(aSocket: TLSocket);
     procedure lDisconnect(aSocket: TLSocket);
     procedure lReceive(aSocket: TLSocket);
+    procedure AddToBandMap(spot : String);
 
     function  ShowSpot(spot : String; var sColor : Integer; var Country : String) : Boolean;
     function  GetFreq(spot : String) : String;
@@ -124,7 +125,7 @@ implementation
 
 { TfrmDXCluster }
 
-uses dUtils, fDXClusterList, dData, uCfgStorage, dDXCC;
+uses dUtils, fDXClusterList, dData, uCfgStorage, dDXCC, fMain, fBandMapRig1VfoA;
 
 procedure TfrmDXCluster.ConnectToWeb;
 var
@@ -305,7 +306,6 @@ var
   mode : String = '';
   call : String = '';
   etmp : Extended = 0;
-  stmp : String = '';
   i    : Integer = 0;
   f    : Currency;
 begin
@@ -340,6 +340,8 @@ var
   f : TFont;
 begin
   f := TFont.Create;
+  f.Name := iniLocal.ReadString('DXCluster','Font','DejaVu Sans Mono');
+  f.Size := iniLocal.ReadInteger('DXCluster','FontSize',12);
   try
     WebSpots.nastav_font(f);
     TelSpots.nastav_font(f)
@@ -536,7 +538,7 @@ function TfrmDXCluster.GetFreq(spot : String) : String;
 var
   tmp : String;
 begin
-  tmp    := copy(spot,Pos(' ',spot),Pos('.',spot)+2 - Pos(' ',spot));
+  tmp    := copy(spot,Pos(':',spot)+1,Pos('.',spot)+2 - Pos(':',spot));
   Result := trim(tmp)
 end;
 
@@ -617,10 +619,6 @@ var
   kmitocet : Extended = 0.0;
   call     : String  = '';
   freq     : String  = '';
-  tmp      : Integer = 0;
-  band     : String  = '';
-  mode     : String  = '';
-  seznam   : TStringList;
   i        : Integer = 0;
   prefix   : String  = '';
   waz      : String = '';
@@ -630,7 +628,6 @@ var
   long     : String = '';
   adif     : Word   = 0;
   f        : Currency;
-  splitstr : String;
 begin
   sColor  := 0; //cerna
 
@@ -649,45 +646,24 @@ begin
     call     := GetCall(Spot, ConWeb)
   end;
 
-  splitstr := GetSplit(Spot);
-
-  Writeln('Freq:',freq);
-  Writeln('Call:',call);
-  Writeln('Split:',splitstr);
-
-  tmp := Pos('.',freq);
-  if tmp > 0 then
-    freq[tmp] := DecimalSeparator;
-  tmp := Pos(',',freq);
-  if tmp > 0 then
-    freq[tmp] := DecimalSeparator;
-
   ThBckColor := clWhite;
-
   if not TryStrToFloat(freq,kmitocet) then
   begin
     Result := False;
     exit
   end;
-
-  //freq    := FloatToStr(freq);
   adif    := dmDXCC.id_country(call,now,prefix,waz,itu,cont,lat,long);
   prefix  := dmDXCC.PfxFromADIF(adif);
   Country := dmDXCC.CountryFromADIF(adif);
 
   Result  := True;
-
-  {
-  frmBandMap.AddFromDXCluster(call,mode,prefix,band,lat,long,kmitocet,
-                               cqrini.ReadInteger('BandMap','ClusterColor',clBlack),ThBckColor,splitstr)
-  }
 end;
 
 procedure TTelThread.Execute;
 var
   dx      : String;
-  sColor  : TColor;
-  Country : String;
+  sColor  : TColor = clBlack;
+  Country : String = '';
 begin
   while true do
   begin
@@ -803,12 +779,11 @@ end;
 
 procedure TfrmDXCluster.SynTelnet;
 begin
-  //if dmData.DebugLevel>=1 then Writeln('TfrmDXCluster.SynTelnet - begin ');
+  dmUtils.DebugMsg('TfrmDXCluster.SynTelnet - begin ',2);
   if ThSpot = '' then
     exit;
-  //if dmData.DebugLevel>=1 then Writeln('TfrmDXCluster.SynTelnet - before MapToScreen');
-  //frmBandMap.MapToScreen;
-  //if dmData.DebugLevel>=1 then Writeln('TfrmDXCluster.SynTelnet - Before ]'yu
+  dmUtils.DebugMsg('TfrmDXCluster.SynTelnet - before MapToScreen',2);
+  AddToBandMap(ThSpot);
   if ConTelnet then
   begin
     TelSpots.zakaz_kresleni(true);
@@ -822,10 +797,62 @@ begin
       WebSpots.vloz_vetu(ThSpot,ThColor,ThBckColor,0,0);
       WebSpots.zakaz_kresleni(false);
     end
-  end;
-  //if dmData.DebugLevel>=1 then Writeln('TfrmDXCluster.SynTelnet - before PridejVetu ');
-  //if dmData.DebugLevel>=1 then Writeln('TfrmDXCluster.SynTelnet - after zakaz_kresleni');
-  //Sleep(200)
+  end
+end;
+{
+procedure TfrmBandMap.AddToBandMap(Freq : Double; Call, Mode, Band, SplitInfo : String; Lat,Long : Double; ItemColor, BgColor : LongInt;
+                                   fromNewQSO : Boolean=False);
+}
+procedure TfrmDXCluster.AddToBandMap(spot : String);
+var
+  freq  : String;
+  call  : String;
+  mode  : String;
+  band  : String;
+  split : String;
+  lat   : String = '';
+  long  : String = '';
+
+  la : Currency = 0;
+  lo : Currency = 0;
+  f  : Double = 0;
+begin
+  freq  := GetFreq(spot);
+  call  := GetCall(spot);
+  split := GetSplit(spot);
+
+  band  := dmUtils.GetBandFromFreq(freq,True);
+
+  dmUtils.DebugMsg('freq:'+freq+'*');
+  dmUtils.DebugMsg('call:'+call+'*');
+  dmUtils.DebugMsg('band:'+band+'*');
+
+  mode  := dmUtils.GetModeFromFreq(freq,True);
+  dmDXCC.id_country(call,lat,long);
+
+  dmUtils.DebugMsg('freq:'+freq+'**');
+  dmUtils.DebugMsg('call:'+call+'**');
+  dmUtils.DebugMsg('band:'+band+'**');
+  dmUtils.DebugMsg('mode:'+mode+'**');
+  dmUtils.DebugMsg('lat:'+lat+'**');
+  dmUtils.DebugMsg('long:'+long+'**');
+
+  ///
+
+  f  := StrToFloat(freq);
+  dmUtils.GetRealCoordinates(lat,long,la,lo);
+
+  dmUtils.DebugMsg('freq:'+freq+'***');
+  dmUtils.DebugMsg('call:'+call+'***');
+  dmUtils.DebugMsg('band:'+band+'***');
+  dmUtils.DebugMsg('mode:'+mode+'***');
+  dmUtils.DebugMsg('lat:'+lat+'***');
+  dmUtils.DebugMsg('long:'+long+'***');
+
+  //AddToBandMap(Freq : Double; Call, Mode, Band, SplitInfo : String; Lat,Long : Double; ItemColor, BgColor : LongInt;
+  //                                   fromNewQSO : Boolean=False);
+
+  frmBandMapRig1VfoA.AddToBandMap(f,call,mode,band,split,la,lo,clBlack,clWhite);
 end;
 
 initialization

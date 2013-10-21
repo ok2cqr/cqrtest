@@ -47,7 +47,7 @@ begin
     dmData.qDXClusters.Close;
     if dmData.trDXClusters.Active then dmData.trDXClusters.Rollback;
     dmData.trDXClusters.StartTransaction;
-    dmData.qDXClusters.SQL.Text := 'select * from cqrlog_common.dxclusters order by description';
+    dmData.qDXClusters.SQL.Text := 'select * from cqrtest_common.dxclusters order by description';
     dmData.qDXClusters.Open;
     if id > 0 then
       dmData.QueryLocate(dmData.qDXClusters,'id_dxclusters',id,False)
@@ -92,7 +92,7 @@ begin
   id := dmData.qDXClusters.FieldByName('id_dxclusters').AsInteger;
   dmData.qDXClusters.Close;
   if dmData.trDXClusters.Active then dmData.trDXClusters.Rollback;
-  dmData.qDXClusters.SQL.Text := 'delete from cqrlog_common.dxclusters where id_dxclusters = ' + IntToStr(id);
+  dmData.qDXClusters.SQL.Text := 'delete from cqrtest_common.dxclusters where id_dxclusters = ' + IntToStr(id);
   dmUtils.DebugMsg(dmData.qDXClusters.SQL.Text);
   dmData.trDXClusters.StartTransaction;
   dmData.qDXClusters.ExecSQL;
@@ -116,7 +116,7 @@ begin
     if ModalResult = mrOK then
     begin
       dmData.qDXClusters.Close;
-      dmData.qDXClusters.SQL.Text := 'UPDATE cqrlog_common.dxclusters SET description='+QuotedStr(edtDescription.Text)+
+      dmData.qDXClusters.SQL.Text := 'UPDATE cqrtest_common.dxclusters SET description='+QuotedStr(edtDescription.Text)+
                                       ',address='+QuotedStr(edtAddress.Text)+
                                       ',port='+QuotedStr(edtPort.Text)+
                                       ',dxcuser='+QuotedStr(edtUserName.Text)+
@@ -142,7 +142,7 @@ begin
     if ModalResult = mrOK then
     begin
       dmData.qDXClusters.Close;
-      dmData.qDXClusters.SQL.Text := 'INSERT INTO cqrlog_common.dxclusters (description,address,port,dxcuser,dxcpass) ' +
+      dmData.qDXClusters.SQL.Text := 'INSERT INTO cqrtest_common.dxclusters (description,address,port,dxcuser,dxcpass) ' +
                 'values ('+QuotedStr(edtDescription.Text) + ',' + QuotedStr(edtAddress.Text) +
                 ','+QuotedStr(edtPort.Text)+','+QuotedStr(edtUserName.Text)+
                 ','+QuotedStr(edtPassword.Text)+')';

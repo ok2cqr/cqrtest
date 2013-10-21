@@ -132,8 +132,8 @@ object frmDXCluster: TfrmDXCluster
     TabOrder = 0
     object tabWeb: TTabSheet
       Caption = 'Web'
-      ClientHeight = 182
-      ClientWidth = 556
+      ClientHeight = 189
+      ClientWidth = 560
       object Panel4: TPanel
         Left = 0
         Height = 36
@@ -215,36 +215,36 @@ object frmDXCluster: TfrmDXCluster
     end
     object tabTelnet: TTabSheet
       Caption = 'Telnet'
-      ClientHeight = 182
-      ClientWidth = 556
+      ClientHeight = 189
+      ClientWidth = 560
       object Panel1: TPanel
         Left = 0
         Height = 34
-        Top = 148
-        Width = 556
+        Top = 155
+        Width = 560
         Align = alBottom
         BevelOuter = bvNone
         ClientHeight = 34
-        ClientWidth = 556
+        ClientWidth = 560
         TabOrder = 0
         object Label1: TLabel
           Left = 6
-          Height = 16
+          Height = 17
           Top = 13
-          Width = 61
+          Width = 65
           Caption = 'Command:'
           ParentColor = False
         end
         object edtCommand: TEdit
           Left = 88
-          Height = 21
+          Height = 26
           Top = 8
           Width = 266
           OnKeyPress = edtCommandKeyPress
           TabOrder = 0
         end
         object Button1: TButton
-          Left = 467
+          Left = 471
           Height = 25
           Top = 8
           Width = 85
@@ -269,15 +269,15 @@ object frmDXCluster: TfrmDXCluster
         Left = 0
         Height = 30
         Top = 0
-        Width = 556
+        Width = 560
         Align = alTop
         BevelOuter = bvNone
         ClientHeight = 30
-        ClientWidth = 556
+        ClientWidth = 560
         TabOrder = 1
         object edtTelAddress: TEdit
           Left = 8
-          Height = 21
+          Height = 26
           Top = 1
           Width = 189
           TabOrder = 0
@@ -315,9 +315,9 @@ object frmDXCluster: TfrmDXCluster
       end
       object pnlTelnet: TPanel
         Left = 0
-        Height = 118
+        Height = 125
         Top = 30
-        Width = 556
+        Width = 560
         Align = alClient
         BevelOuter = bvNone
         Color = clWhite
