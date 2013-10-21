@@ -9,9 +9,9 @@ inherited frmAbout: TfrmAbout
     Height = 220
     Top = 0
     Width = 316
-    ActivePage = TabSheet2
+    ActivePage = TabSheet1
     Align = alClient
-    TabIndex = 1
+    TabIndex = 0
     TabOrder = 0
     object TabSheet1: TTabSheet
       Caption = 'Program'
@@ -734,17 +734,17 @@ inherited frmAbout: TfrmAbout
       end
       object Label1: TLabel
         Left = 6
-        Height = 17
+        Height = 16
         Top = 108
-        Width = 117
+        Width = 112
         Caption = 'http://cqrtest.com'
         ParentColor = False
       end
       object Label2: TLabel
         Left = 6
-        Height = 17
+        Height = 16
         Top = 132
-        Width = 204
+        Width = 196
         Caption = '(c) Petr, OK2CQR && Martin, OK1RR'
         ParentColor = False
       end
@@ -760,8 +760,17 @@ inherited frmAbout: TfrmAbout
         Width = 308
         Align = alClient
         Lines.Strings = (
+          'Ulf, DK5TX             $25'
+          'Dave,   K3DCW    $35'
           'Pekka, OH2BSC  $20'
-          'Flavio, IK3OCD   $20'
+          'Flavio, IK3OCD    $20'
+          'Pawel, SQ5LTL '#9' $10'
+          'Bob, VE3SRE  '#9' $25'
+          ''
+          ' '
+          ''
+          ' '
+          ''
         )
         ReadOnly = True
         TabOrder = 0
