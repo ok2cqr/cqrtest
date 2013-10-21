@@ -1,0 +1,37 @@
+inherited frmBandMapRig1VfoA: TfrmBandMapRig1VfoA
+  Left = 895
+  Height = 556
+  Top = 83
+  Width = 259
+  Caption = 'RIG 1, VFO A'
+  ClientHeight = 556
+  ClientWidth = 259
+  OnClose = FormClose
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  OnShow = FormShow
+  object Panel1: TPanel[0]
+    Left = 0
+    Height = 24
+    Top = 0
+    Width = 259
+    Align = alTop
+    BevelOuter = bvNone
+    TabOrder = 0
+    Visible = False
+  end
+  object pnlBandMap: TPanel[1]
+    Left = 0
+    Height = 532
+    Top = 24
+    Width = 259
+    Align = alClient
+    BevelOuter = bvNone
+    Color = clWhite
+    Font.Height = -11
+    Font.Name = 'Monospace'
+    ParentColor = False
+    ParentFont = False
+    TabOrder = 1
+  end
+end
