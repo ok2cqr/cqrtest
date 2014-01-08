@@ -94,11 +94,14 @@ end;
 
 procedure TfrmMain.acBandMapVFOA1Execute(Sender: TObject);
 begin
+  ShowMessage('Not implemented, yet')
+  {
   frmBandMapRig1VfoA.Caption := iniLocal.ReadString('TRX1', 'Desc','Radio1')+' VFO A';
   frmBandMapRig1VfoA.FirstInterval  := 60;
   frmBandMapRig1VfoA.SecondInterval := 120;
   frmBandMapRig1VfoA.DeleteAfter    := 180;
   frmBandMapRig1VfoA.Show
+  }
 end;
 
 procedure TfrmMain.acAboutExecute(Sender: TObject);
@@ -138,7 +141,8 @@ end;
 
 procedure TfrmMain.acDXClusterExecute(Sender: TObject);
 begin
-  frmDXCluster.Show
+  ShowMessage('Not implemented, yet')
+  //frmDXCluster.Show
 end;
 
 procedure TfrmMain.acGlobalSettingsExecute(Sender: TObject);

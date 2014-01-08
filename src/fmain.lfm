@@ -4,7 +4,7 @@ inherited frmMain: TfrmMain
   Top = 254
   Width = 503
   Caption = 'CQRTEST'
-  ClientHeight = 79
+  ClientHeight = 78
   ClientWidth = 503
   Menu = mnuMain
   OnCreate = FormCreate
@@ -12,7 +12,7 @@ inherited frmMain: TfrmMain
   OnShow = FormShow
   object StatusBar1: TStatusBar[0]
     Left = 0
-    Height = 20
+    Height = 19
     Top = 59
     Width = 503
     Panels = <>
