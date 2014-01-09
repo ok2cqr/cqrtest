@@ -42,7 +42,7 @@
         <PackageName Value="LCL"/>
       </Item3>
     </RequiredPackages>
-    <Units Count="42">
+    <Units Count="40">
       <Unit0>
         <Filename Value="cqrtest.lpr"/>
         <IsPartOfProject Value="True"/>
@@ -50,7 +50,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="12" Y="6"/>
-        <UsageCount Value="117"/>
+        <UsageCount Value="157"/>
       </Unit0>
       <Unit1>
         <Filename Value="fmain.pas"/>
@@ -60,49 +60,37 @@
         <UnitName Value="fMain"/>
         <EditorIndex Value="0"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="103"/>
-        <CursorPos X="134" Y="112"/>
-        <UsageCount Value="117"/>
+        <TopLine Value="1"/>
+        <CursorPos X="5" Y="145"/>
+        <UsageCount Value="157"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit1>
       <Unit2>
-        <Filename Value="/usr/lib/lazarus/0.9.30.2/lcl/lclclasses.pp"/>
-        <UnitName Value="LCLClasses"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="32"/>
-        <CursorPos X="10" Y="32"/>
-        <UsageCount Value="3"/>
-      </Unit2>
-      <Unit3>
-        <Filename Value=""/>
-        <UsageCount Value="3"/>
-        <DefaultSyntaxHighlighter Value="None"/>
-      </Unit3>
-      <Unit4>
         <Filename Value="uCfgStorage.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="uCfgStorage"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="17" Y="1"/>
-        <UsageCount Value="111"/>
-      </Unit4>
-      <Unit5>
+        <UsageCount Value="151"/>
+      </Unit2>
+      <Unit3>
         <Filename Value="dData.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="dmData"/>
         <ResourceBaseClass Value="DataModule"/>
         <UnitName Value="dData"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="49"/>
-        <CursorPos X="55" Y="63"/>
-        <UsageCount Value="82"/>
+        <TopLine Value="165"/>
+        <CursorPos X="11" Y="191"/>
+        <UsageCount Value="122"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
-      </Unit5>
-      <Unit6>
+      </Unit3>
+      <Unit4>
         <Filename Value="dUtils.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="dmUtils"/>
@@ -112,11 +100,11 @@
         <WindowIndex Value="0"/>
         <TopLine Value="33"/>
         <CursorPos X="33" Y="33"/>
-        <UsageCount Value="82"/>
+        <UsageCount Value="122"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
-      </Unit6>
-      <Unit7>
+      </Unit4>
+      <Unit5>
         <Filename Value="fCommonLocal.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="frmCommonLocal"/>
@@ -126,18 +114,18 @@
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="3" Y="14"/>
-        <UsageCount Value="82"/>
+        <UsageCount Value="122"/>
         <Loaded Value="True"/>
-      </Unit7>
-      <Unit8>
+      </Unit5>
+      <Unit6>
         <Filename Value="/usr/share/fpcsrc/2.4.4/packages/fcl-base/src/inifiles.pp"/>
         <UnitName Value="IniFiles"/>
         <WindowIndex Value="0"/>
         <TopLine Value="125"/>
         <CursorPos X="75" Y="153"/>
-        <UsageCount Value="6"/>
-      </Unit8>
-      <Unit9>
+        <UsageCount Value="2"/>
+      </Unit6>
+      <Unit7>
         <Filename Value="fCommonGlobal.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="frmCommonGlobal"/>
@@ -146,17 +134,17 @@
         <WindowIndex Value="0"/>
         <TopLine Value="28"/>
         <CursorPos X="26" Y="45"/>
-        <UsageCount Value="77"/>
-      </Unit9>
-      <Unit10>
+        <UsageCount Value="117"/>
+      </Unit7>
+      <Unit8>
         <Filename Value="fDBConnect.lfm"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="1" Y="1"/>
-        <UsageCount Value="6"/>
+        <UsageCount Value="2"/>
         <DefaultSyntaxHighlighter Value="LFM"/>
-      </Unit10>
-      <Unit11>
+      </Unit8>
+      <Unit9>
         <Filename Value="fDBConnect.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="frmDBConnect"/>
@@ -166,78 +154,78 @@
         <WindowIndex Value="0"/>
         <TopLine Value="277"/>
         <CursorPos X="26" Y="286"/>
-        <UsageCount Value="77"/>
+        <UsageCount Value="117"/>
         <Bookmarks Count="1">
           <Item0 X="3" Y="365" ID="2"/>
         </Bookmarks>
-      </Unit11>
-      <Unit12>
+      </Unit9>
+      <Unit10>
         <Filename Value="/usr/lib/lazarus/0.9.30.2/lcl/include/customform.inc"/>
         <WindowIndex Value="0"/>
         <TopLine Value="2093"/>
         <CursorPos X="1" Y="2112"/>
-        <UsageCount Value="7"/>
-      </Unit12>
-      <Unit13>
+        <UsageCount Value="3"/>
+      </Unit10>
+      <Unit11>
         <Filename Value="mysql/mysql.inc"/>
         <WindowIndex Value="0"/>
         <TopLine Value="290"/>
         <CursorPos X="1" Y="290"/>
-        <UsageCount Value="6"/>
-      </Unit13>
-      <Unit14>
+        <UsageCount Value="2"/>
+      </Unit11>
+      <Unit12>
         <Filename Value="mysql/mysql55dyn.pp"/>
         <UnitName Value="mysql55dyn"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="7" Y="10"/>
-        <UsageCount Value="6"/>
-      </Unit14>
-      <Unit15>
+        <UsageCount Value="2"/>
+      </Unit12>
+      <Unit13>
         <Filename Value="mysql/mysql55conn.pas"/>
         <UnitName Value="mysql55conn"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="11" Y="11"/>
-        <UsageCount Value="6"/>
-      </Unit15>
-      <Unit16>
+        <UsageCount Value="2"/>
+      </Unit13>
+      <Unit14>
         <Filename Value="mysql/mysqlconn.inc"/>
         <WindowIndex Value="0"/>
         <TopLine Value="147"/>
         <CursorPos X="1" Y="147"/>
-        <UsageCount Value="6"/>
-      </Unit16>
-      <Unit17>
+        <UsageCount Value="2"/>
+      </Unit14>
+      <Unit15>
         <Filename Value="/usr/share/fpcsrc/2.4.4/packages/fcl-process/src/process.pp"/>
         <UnitName Value="process"/>
         <WindowIndex Value="0"/>
         <TopLine Value="93"/>
         <CursorPos X="14" Y="110"/>
-        <UsageCount Value="8"/>
-      </Unit17>
-      <Unit18>
+        <UsageCount Value="4"/>
+      </Unit15>
+      <Unit16>
         <Filename Value="/usr/share/fpcsrc/2.4.4/packages/fcl-process/src/unix/process.inc"/>
         <WindowIndex Value="0"/>
         <TopLine Value="416"/>
         <CursorPos X="3" Y="430"/>
-        <UsageCount Value="7"/>
-      </Unit18>
-      <Unit19>
+        <UsageCount Value="3"/>
+      </Unit16>
+      <Unit17>
         <Filename Value="/usr/share/fpcsrc/2.4.4/rtl/unix/bunxh.inc"/>
         <WindowIndex Value="0"/>
         <TopLine Value="48"/>
         <CursorPos X="15" Y="65"/>
-        <UsageCount Value="6"/>
-      </Unit19>
-      <Unit20>
+        <UsageCount Value="2"/>
+      </Unit17>
+      <Unit18>
         <Filename Value="/usr/lib/lazarus/0.9.30.2/lcl/include/control.inc"/>
         <WindowIndex Value="0"/>
         <TopLine Value="2273"/>
         <CursorPos X="67" Y="2291"/>
-        <UsageCount Value="6"/>
-      </Unit20>
-      <Unit21>
+        <UsageCount Value="2"/>
+      </Unit18>
+      <Unit19>
         <Filename Value="../../cqrlog/src/fPreferences.pas"/>
         <ComponentName Value="frmPreferences"/>
         <HasResources Value="True"/>
@@ -246,9 +234,9 @@
         <WindowIndex Value="0"/>
         <TopLine Value="2171"/>
         <CursorPos X="60" Y="2173"/>
-        <UsageCount Value="18"/>
-      </Unit21>
-      <Unit22>
+        <UsageCount Value="14"/>
+      </Unit19>
+      <Unit20>
         <Filename Value="fGlobalSettings.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="frmGlobalSettings"/>
@@ -257,9 +245,9 @@
         <WindowIndex Value="0"/>
         <TopLine Value="256"/>
         <CursorPos X="29" Y="268"/>
-        <UsageCount Value="70"/>
-      </Unit22>
-      <Unit23>
+        <UsageCount Value="110"/>
+      </Unit20>
+      <Unit21>
         <Filename Value="frstation.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="fraStation"/>
@@ -268,9 +256,9 @@
         <WindowIndex Value="0"/>
         <TopLine Value="34"/>
         <CursorPos X="60" Y="56"/>
-        <UsageCount Value="68"/>
-      </Unit23>
-      <Unit24>
+        <UsageCount Value="108"/>
+      </Unit21>
+      <Unit22>
         <Filename Value="frbands.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="fraBands"/>
@@ -279,9 +267,9 @@
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="1" Y="28"/>
-        <UsageCount Value="67"/>
-      </Unit24>
-      <Unit25>
+        <UsageCount Value="107"/>
+      </Unit22>
+      <Unit23>
         <Filename Value="frVisibleColumns.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="fraVisibleColumns"/>
@@ -290,9 +278,9 @@
         <WindowIndex Value="0"/>
         <TopLine Value="58"/>
         <CursorPos X="59" Y="91"/>
-        <UsageCount Value="66"/>
-      </Unit25>
-      <Unit26>
+        <UsageCount Value="106"/>
+      </Unit23>
+      <Unit24>
         <Filename Value="fabout.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="frmAbout"/>
@@ -302,11 +290,11 @@
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="52" Y="22"/>
-        <UsageCount Value="64"/>
+        <UsageCount Value="104"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
-      </Unit26>
-      <Unit27>
+      </Unit24>
+      <Unit25>
         <Filename Value="fGrayline.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="frmGrayline"/>
@@ -316,17 +304,17 @@
         <WindowIndex Value="0"/>
         <TopLine Value="41"/>
         <CursorPos X="62" Y="50"/>
-        <UsageCount Value="59"/>
-      </Unit27>
-      <Unit28>
+        <UsageCount Value="99"/>
+      </Unit25>
+      <Unit26>
         <Filename Value="gline2.pas"/>
         <UnitName Value="gline2"/>
         <WindowIndex Value="0"/>
         <TopLine Value="415"/>
         <CursorPos X="1" Y="431"/>
-        <UsageCount Value="9"/>
-      </Unit28>
-      <Unit29>
+        <UsageCount Value="5"/>
+      </Unit26>
+      <Unit27>
         <Filename Value="fImportProgress.pas"/>
         <IsPartOfProject Value="True"/>
         <HasResources Value="True"/>
@@ -334,33 +322,33 @@
         <WindowIndex Value="0"/>
         <TopLine Value="255"/>
         <CursorPos X="82" Y="285"/>
-        <UsageCount Value="59"/>
-      </Unit29>
-      <Unit30>
+        <UsageCount Value="99"/>
+      </Unit27>
+      <Unit28>
         <Filename Value="httpsend.pas"/>
         <UnitName Value="httpsend"/>
         <WindowIndex Value="0"/>
         <TopLine Value="45"/>
         <CursorPos X="3" Y="61"/>
-        <UsageCount Value="9"/>
-      </Unit30>
-      <Unit31>
+        <UsageCount Value="5"/>
+      </Unit28>
+      <Unit29>
         <Filename Value="blcksock.pas"/>
         <UnitName Value="blcksock"/>
         <WindowIndex Value="0"/>
         <TopLine Value="76"/>
         <CursorPos X="1" Y="91"/>
-        <UsageCount Value="8"/>
-      </Unit31>
-      <Unit32>
+        <UsageCount Value="4"/>
+      </Unit29>
+      <Unit30>
         <Filename Value="synsock.pas"/>
         <UnitName Value="synsock"/>
         <WindowIndex Value="0"/>
         <TopLine Value="36"/>
         <CursorPos X="6" Y="59"/>
-        <UsageCount Value="8"/>
-      </Unit32>
-      <Unit33>
+        <UsageCount Value="4"/>
+      </Unit30>
+      <Unit31>
         <Filename Value="dDXCC.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="dmDXCC"/>
@@ -370,30 +358,29 @@
         <WindowIndex Value="0"/>
         <TopLine Value="44"/>
         <CursorPos X="24" Y="55"/>
-        <UsageCount Value="56"/>
+        <UsageCount Value="96"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
-      </Unit33>
-      <Unit34>
+      </Unit31>
+      <Unit32>
         <Filename Value="fBandMapRig1VfoA.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="frmBandMapRig1VfoA"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="fBandMapRig1VfoA"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="5"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="83"/>
+        <TopLine Value="1"/>
         <CursorPos X="15" Y="109"/>
-        <UsageCount Value="50"/>
+        <UsageCount Value="90"/>
         <Bookmarks Count="1">
           <Item0 X="13" Y="478" ID="2"/>
         </Bookmarks>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
-      </Unit34>
-      <Unit35>
+      </Unit32>
+      <Unit33>
         <Filename Value="jakozememo.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="jakozememo"/>
@@ -401,18 +388,18 @@
         <WindowIndex Value="0"/>
         <TopLine Value="191"/>
         <CursorPos X="1" Y="206"/>
-        <UsageCount Value="50"/>
+        <UsageCount Value="90"/>
         <Loaded Value="True"/>
-      </Unit35>
-      <Unit36>
+      </Unit33>
+      <Unit34>
         <Filename Value="znacmech.pas"/>
         <UnitName Value="znacmech"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="1" Y="24"/>
-        <UsageCount Value="9"/>
-      </Unit36>
-      <Unit37>
+        <UsageCount Value="5"/>
+      </Unit34>
+      <Unit35>
         <Filename Value="fDXCluster.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="frmDXCluster"/>
@@ -423,14 +410,14 @@
         <WindowIndex Value="0"/>
         <TopLine Value="299"/>
         <CursorPos X="22" Y="307"/>
-        <UsageCount Value="47"/>
+        <UsageCount Value="87"/>
         <Bookmarks Count="1">
           <Item0 X="3" Y="348" ID="1"/>
         </Bookmarks>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
-      </Unit37>
-      <Unit38>
+      </Unit35>
+      <Unit36>
         <Filename Value="fDXClusterList.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="frmDXClusterList"/>
@@ -440,12 +427,12 @@
         <WindowIndex Value="0"/>
         <TopLine Value="120"/>
         <CursorPos X="48" Y="137"/>
-        <UsageCount Value="47"/>
+        <UsageCount Value="87"/>
         <Bookmarks Count="1">
           <Item0 X="3" Y="73" ID="1"/>
         </Bookmarks>
-      </Unit38>
-      <Unit39>
+      </Unit36>
+      <Unit37>
         <Filename Value="fNewDXCluster.pas"/>
         <IsPartOfProject Value="True"/>
         <HasResources Value="True"/>
@@ -453,9 +440,9 @@
         <WindowIndex Value="0"/>
         <TopLine Value="15"/>
         <CursorPos X="1" Y="45"/>
-        <UsageCount Value="47"/>
-      </Unit39>
-      <Unit40>
+        <UsageCount Value="87"/>
+      </Unit37>
+      <Unit38>
         <Filename Value="../../cqrlog/src/dData.pas"/>
         <ComponentName Value="dmData"/>
         <HasResources Value="True"/>
@@ -465,11 +452,11 @@
         <WindowIndex Value="0"/>
         <TopLine Value="61"/>
         <CursorPos X="1" Y="61"/>
-        <UsageCount Value="22"/>
+        <UsageCount Value="42"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
-      </Unit40>
-      <Unit41>
+      </Unit38>
+      <Unit39>
         <Filename Value="fNewLog.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="frmNewLog"/>
@@ -479,130 +466,126 @@
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="34" Y="9"/>
-        <UsageCount Value="43"/>
-      </Unit41>
+        <UsageCount Value="83"/>
+      </Unit39>
     </Units>
-    <JumpHistory Count="30" HistoryIndex="29">
+    <JumpHistory Count="29" HistoryIndex="28">
       <Position1>
         <Filename Value="fDXCluster.pas"/>
-        <Caret Line="228" Column="12" TopLine="203"/>
+        <Caret Line="326" Column="10" TopLine="301"/>
       </Position1>
       <Position2>
         <Filename Value="fDXCluster.pas"/>
-        <Caret Line="230" Column="12" TopLine="205"/>
+        <Caret Line="327" Column="10" TopLine="302"/>
       </Position2>
       <Position3>
         <Filename Value="fDXCluster.pas"/>
-        <Caret Line="287" Column="10" TopLine="262"/>
+        <Caret Line="328" Column="10" TopLine="303"/>
       </Position3>
       <Position4>
         <Filename Value="fDXCluster.pas"/>
-        <Caret Line="288" Column="10" TopLine="263"/>
+        <Caret Line="329" Column="10" TopLine="304"/>
       </Position4>
       <Position5>
         <Filename Value="fDXCluster.pas"/>
-        <Caret Line="289" Column="10" TopLine="264"/>
+        <Caret Line="330" Column="10" TopLine="305"/>
       </Position5>
       <Position6>
         <Filename Value="fDXCluster.pas"/>
-        <Caret Line="290" Column="10" TopLine="265"/>
+        <Caret Line="554" Column="12" TopLine="529"/>
       </Position6>
       <Position7>
         <Filename Value="fDXCluster.pas"/>
-        <Caret Line="291" Column="10" TopLine="266"/>
+        <Caret Line="589" Column="14" TopLine="564"/>
       </Position7>
       <Position8>
         <Filename Value="fDXCluster.pas"/>
-        <Caret Line="326" Column="10" TopLine="301"/>
+        <Caret Line="591" Column="14" TopLine="566"/>
       </Position8>
       <Position9>
         <Filename Value="fDXCluster.pas"/>
-        <Caret Line="327" Column="10" TopLine="302"/>
+        <Caret Line="593" Column="14" TopLine="568"/>
       </Position9>
       <Position10>
         <Filename Value="fDXCluster.pas"/>
-        <Caret Line="328" Column="10" TopLine="303"/>
+        <Caret Line="596" Column="14" TopLine="571"/>
       </Position10>
       <Position11>
         <Filename Value="fDXCluster.pas"/>
-        <Caret Line="329" Column="10" TopLine="304"/>
+        <Caret Line="654" Column="1" TopLine="629"/>
       </Position11>
       <Position12>
         <Filename Value="fDXCluster.pas"/>
-        <Caret Line="330" Column="10" TopLine="305"/>
+        <Caret Line="663" Column="1" TopLine="636"/>
       </Position12>
       <Position13>
         <Filename Value="fDXCluster.pas"/>
-        <Caret Line="554" Column="12" TopLine="529"/>
+        <Caret Line="744" Column="12" TopLine="719"/>
       </Position13>
       <Position14>
         <Filename Value="fDXCluster.pas"/>
-        <Caret Line="589" Column="14" TopLine="564"/>
+        <Caret Line="776" Column="10" TopLine="751"/>
       </Position14>
       <Position15>
         <Filename Value="fDXCluster.pas"/>
-        <Caret Line="591" Column="14" TopLine="566"/>
+        <Caret Line="779" Column="111" TopLine="761"/>
       </Position15>
       <Position16>
         <Filename Value="fDXCluster.pas"/>
-        <Caret Line="593" Column="14" TopLine="568"/>
+        <Caret Line="826" Column="20" TopLine="799"/>
       </Position16>
       <Position17>
         <Filename Value="fDXCluster.pas"/>
-        <Caret Line="596" Column="14" TopLine="571"/>
+        <Caret Line="623" Column="3" TopLine="608"/>
       </Position17>
       <Position18>
         <Filename Value="fDXCluster.pas"/>
-        <Caret Line="654" Column="1" TopLine="629"/>
+        <Caret Line="631" Column="23" TopLine="608"/>
       </Position18>
       <Position19>
         <Filename Value="fDXCluster.pas"/>
-        <Caret Line="663" Column="1" TopLine="636"/>
+        <Caret Line="837" Column="38" TopLine="812"/>
       </Position19>
       <Position20>
         <Filename Value="fDXCluster.pas"/>
-        <Caret Line="744" Column="12" TopLine="719"/>
+        <Caret Line="632" Column="3" TopLine="617"/>
       </Position20>
       <Position21>
         <Filename Value="fDXCluster.pas"/>
-        <Caret Line="776" Column="10" TopLine="751"/>
+        <Caret Line="837" Column="1" TopLine="812"/>
       </Position21>
       <Position22>
         <Filename Value="fDXCluster.pas"/>
-        <Caret Line="779" Column="111" TopLine="761"/>
+        <Caret Line="660" Column="19" TopLine="642"/>
       </Position22>
       <Position23>
         <Filename Value="fDXCluster.pas"/>
-        <Caret Line="826" Column="20" TopLine="799"/>
+        <Caret Line="306" Column="1" TopLine="294"/>
       </Position23>
       <Position24>
-        <Filename Value="fDXCluster.pas"/>
-        <Caret Line="623" Column="3" TopLine="608"/>
+        <Filename Value="dData.pas"/>
+        <Caret Line="241" Column="63" TopLine="219"/>
       </Position24>
       <Position25>
-        <Filename Value="fDXCluster.pas"/>
-        <Caret Line="631" Column="23" TopLine="608"/>
+        <Filename Value="dData.pas"/>
+        <Caret Line="1" Column="1" TopLine="1"/>
       </Position25>
       <Position26>
-        <Filename Value="fDXCluster.pas"/>
-        <Caret Line="837" Column="38" TopLine="812"/>
+        <Filename Value="dData.pas"/>
+        <Caret Line="27" Column="10" TopLine="1"/>
       </Position26>
       <Position27>
-        <Filename Value="fDXCluster.pas"/>
-        <Caret Line="632" Column="3" TopLine="617"/>
+        <Filename Value="dData.pas"/>
+        <Caret Line="152" Column="20" TopLine="145"/>
       </Position27>
       <Position28>
-        <Filename Value="fDXCluster.pas"/>
-        <Caret Line="837" Column="1" TopLine="812"/>
+        <Filename Value="dData.pas"/>
+        <Caret Line="154" Column="21" TopLine="145"/>
       </Position28>
       <Position29>
-        <Filename Value="fDXCluster.pas"/>
-        <Caret Line="660" Column="19" TopLine="642"/>
+        <Filename Value="dData.pas"/>
+        <Caret Line="155" Column="23" TopLine="145"/>
       </Position29>
-      <Position30>
-        <Filename Value="fDXCluster.pas"/>
-        <Caret Line="306" Column="1" TopLine="294"/>
-      </Position30>
     </JumpHistory>
   </ProjectOptions>
   <CompilerOptions>
