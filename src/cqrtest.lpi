@@ -42,15 +42,17 @@
         <PackageName Value="LCL"/>
       </Item3>
     </RequiredPackages>
-    <Units Count="40">
+    <Units Count="41">
       <Unit0>
         <Filename Value="cqrtest.lpr"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="cqrtest"/>
+        <EditorIndex Value="2"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
-        <CursorPos X="12" Y="6"/>
+        <CursorPos X="47" Y="20"/>
         <UsageCount Value="157"/>
+        <Loaded Value="True"/>
       </Unit0>
       <Unit1>
         <Filename Value="fmain.pas"/>
@@ -60,8 +62,8 @@
         <UnitName Value="fMain"/>
         <EditorIndex Value="0"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="1"/>
-        <CursorPos X="5" Y="145"/>
+        <TopLine Value="105"/>
+        <CursorPos X="1" Y="125"/>
         <UsageCount Value="157"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -81,8 +83,7 @@
         <ComponentName Value="dmData"/>
         <ResourceBaseClass Value="DataModule"/>
         <UnitName Value="dData"/>
-        <IsVisibleTab Value="True"/>
-        <EditorIndex Value="1"/>
+        <EditorIndex Value="3"/>
         <WindowIndex Value="0"/>
         <TopLine Value="165"/>
         <CursorPos X="11" Y="191"/>
@@ -96,7 +97,7 @@
         <ComponentName Value="dmUtils"/>
         <ResourceBaseClass Value="DataModule"/>
         <UnitName Value="dUtils"/>
-        <EditorIndex Value="9"/>
+        <EditorIndex Value="11"/>
         <WindowIndex Value="0"/>
         <TopLine Value="33"/>
         <CursorPos X="33" Y="33"/>
@@ -110,7 +111,7 @@
         <ComponentName Value="frmCommonLocal"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="fCommonLocal"/>
-        <EditorIndex Value="8"/>
+        <EditorIndex Value="10"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="3" Y="14"/>
@@ -286,7 +287,7 @@
         <ComponentName Value="frmAbout"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="fAbout"/>
-        <EditorIndex Value="6"/>
+        <EditorIndex Value="8"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="52" Y="22"/>
@@ -354,7 +355,7 @@
         <ComponentName Value="dmDXCC"/>
         <ResourceBaseClass Value="DataModule"/>
         <UnitName Value="dDXCC"/>
-        <EditorIndex Value="3"/>
+        <EditorIndex Value="5"/>
         <WindowIndex Value="0"/>
         <TopLine Value="44"/>
         <CursorPos X="24" Y="55"/>
@@ -369,7 +370,7 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="fBandMapRig1VfoA"/>
-        <EditorIndex Value="5"/>
+        <EditorIndex Value="7"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="15" Y="109"/>
@@ -384,7 +385,7 @@
         <Filename Value="jakozememo.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="jakozememo"/>
-        <EditorIndex Value="7"/>
+        <EditorIndex Value="9"/>
         <WindowIndex Value="0"/>
         <TopLine Value="191"/>
         <CursorPos X="1" Y="206"/>
@@ -406,7 +407,7 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="fDXCluster"/>
-        <EditorIndex Value="4"/>
+        <EditorIndex Value="6"/>
         <WindowIndex Value="0"/>
         <TopLine Value="299"/>
         <CursorPos X="22" Y="307"/>
@@ -448,7 +449,7 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="DataModule"/>
         <UnitName Value="dData"/>
-        <EditorIndex Value="2"/>
+        <EditorIndex Value="4"/>
         <WindowIndex Value="0"/>
         <TopLine Value="61"/>
         <CursorPos X="1" Y="61"/>
@@ -468,124 +469,144 @@
         <CursorPos X="34" Y="9"/>
         <UsageCount Value="83"/>
       </Unit39>
+      <Unit40>
+        <Filename Value="fNewQSO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmNewQSO"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="fNewQSO"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="32" Y="20"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit40>
     </Units>
-    <JumpHistory Count="29" HistoryIndex="28">
+    <JumpHistory Count="30" HistoryIndex="29">
       <Position1>
         <Filename Value="fDXCluster.pas"/>
-        <Caret Line="326" Column="10" TopLine="301"/>
+        <Caret Line="328" Column="10" TopLine="303"/>
       </Position1>
       <Position2>
         <Filename Value="fDXCluster.pas"/>
-        <Caret Line="327" Column="10" TopLine="302"/>
+        <Caret Line="329" Column="10" TopLine="304"/>
       </Position2>
       <Position3>
         <Filename Value="fDXCluster.pas"/>
-        <Caret Line="328" Column="10" TopLine="303"/>
+        <Caret Line="330" Column="10" TopLine="305"/>
       </Position3>
       <Position4>
         <Filename Value="fDXCluster.pas"/>
-        <Caret Line="329" Column="10" TopLine="304"/>
+        <Caret Line="554" Column="12" TopLine="529"/>
       </Position4>
       <Position5>
         <Filename Value="fDXCluster.pas"/>
-        <Caret Line="330" Column="10" TopLine="305"/>
+        <Caret Line="589" Column="14" TopLine="564"/>
       </Position5>
       <Position6>
         <Filename Value="fDXCluster.pas"/>
-        <Caret Line="554" Column="12" TopLine="529"/>
+        <Caret Line="591" Column="14" TopLine="566"/>
       </Position6>
       <Position7>
         <Filename Value="fDXCluster.pas"/>
-        <Caret Line="589" Column="14" TopLine="564"/>
+        <Caret Line="593" Column="14" TopLine="568"/>
       </Position7>
       <Position8>
         <Filename Value="fDXCluster.pas"/>
-        <Caret Line="591" Column="14" TopLine="566"/>
+        <Caret Line="596" Column="14" TopLine="571"/>
       </Position8>
       <Position9>
         <Filename Value="fDXCluster.pas"/>
-        <Caret Line="593" Column="14" TopLine="568"/>
+        <Caret Line="654" Column="1" TopLine="629"/>
       </Position9>
       <Position10>
         <Filename Value="fDXCluster.pas"/>
-        <Caret Line="596" Column="14" TopLine="571"/>
+        <Caret Line="663" Column="1" TopLine="636"/>
       </Position10>
       <Position11>
         <Filename Value="fDXCluster.pas"/>
-        <Caret Line="654" Column="1" TopLine="629"/>
+        <Caret Line="744" Column="12" TopLine="719"/>
       </Position11>
       <Position12>
         <Filename Value="fDXCluster.pas"/>
-        <Caret Line="663" Column="1" TopLine="636"/>
+        <Caret Line="776" Column="10" TopLine="751"/>
       </Position12>
       <Position13>
         <Filename Value="fDXCluster.pas"/>
-        <Caret Line="744" Column="12" TopLine="719"/>
+        <Caret Line="779" Column="111" TopLine="761"/>
       </Position13>
       <Position14>
         <Filename Value="fDXCluster.pas"/>
-        <Caret Line="776" Column="10" TopLine="751"/>
+        <Caret Line="826" Column="20" TopLine="799"/>
       </Position14>
       <Position15>
         <Filename Value="fDXCluster.pas"/>
-        <Caret Line="779" Column="111" TopLine="761"/>
+        <Caret Line="623" Column="3" TopLine="608"/>
       </Position15>
       <Position16>
         <Filename Value="fDXCluster.pas"/>
-        <Caret Line="826" Column="20" TopLine="799"/>
+        <Caret Line="631" Column="23" TopLine="608"/>
       </Position16>
       <Position17>
         <Filename Value="fDXCluster.pas"/>
-        <Caret Line="623" Column="3" TopLine="608"/>
+        <Caret Line="837" Column="38" TopLine="812"/>
       </Position17>
       <Position18>
         <Filename Value="fDXCluster.pas"/>
-        <Caret Line="631" Column="23" TopLine="608"/>
+        <Caret Line="632" Column="3" TopLine="617"/>
       </Position18>
       <Position19>
         <Filename Value="fDXCluster.pas"/>
-        <Caret Line="837" Column="38" TopLine="812"/>
+        <Caret Line="837" Column="1" TopLine="812"/>
       </Position19>
       <Position20>
         <Filename Value="fDXCluster.pas"/>
-        <Caret Line="632" Column="3" TopLine="617"/>
+        <Caret Line="660" Column="19" TopLine="642"/>
       </Position20>
       <Position21>
         <Filename Value="fDXCluster.pas"/>
-        <Caret Line="837" Column="1" TopLine="812"/>
+        <Caret Line="306" Column="1" TopLine="294"/>
       </Position21>
       <Position22>
-        <Filename Value="fDXCluster.pas"/>
-        <Caret Line="660" Column="19" TopLine="642"/>
+        <Filename Value="dData.pas"/>
+        <Caret Line="241" Column="63" TopLine="219"/>
       </Position22>
       <Position23>
-        <Filename Value="fDXCluster.pas"/>
-        <Caret Line="306" Column="1" TopLine="294"/>
+        <Filename Value="dData.pas"/>
+        <Caret Line="1" Column="1" TopLine="1"/>
       </Position23>
       <Position24>
         <Filename Value="dData.pas"/>
-        <Caret Line="241" Column="63" TopLine="219"/>
+        <Caret Line="27" Column="10" TopLine="1"/>
       </Position24>
       <Position25>
         <Filename Value="dData.pas"/>
-        <Caret Line="1" Column="1" TopLine="1"/>
+        <Caret Line="152" Column="20" TopLine="145"/>
       </Position25>
       <Position26>
         <Filename Value="dData.pas"/>
-        <Caret Line="27" Column="10" TopLine="1"/>
+        <Caret Line="154" Column="21" TopLine="145"/>
       </Position26>
       <Position27>
         <Filename Value="dData.pas"/>
-        <Caret Line="152" Column="20" TopLine="145"/>
+        <Caret Line="155" Column="23" TopLine="145"/>
       </Position27>
       <Position28>
-        <Filename Value="dData.pas"/>
-        <Caret Line="154" Column="21" TopLine="145"/>
+        <Filename Value="fNewQSO.pas"/>
+        <Caret Line="1" Column="1" TopLine="1"/>
       </Position28>
       <Position29>
-        <Filename Value="dData.pas"/>
-        <Caret Line="155" Column="23" TopLine="145"/>
+        <Filename Value="fmain.pas"/>
+        <Caret Line="102" Column="93" TopLine="87"/>
       </Position29>
+      <Position30>
+        <Filename Value="fmain.pas"/>
+        <Caret Line="87" Column="84" TopLine="57"/>
+      </Position30>
     </JumpHistory>
   </ProjectOptions>
   <CompilerOptions>

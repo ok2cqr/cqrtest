@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, ActnList,
-  Menus, ComCtrls, fCommonLocal, fBandMapRig1VfoA;
+  Menus, ComCtrls, fCommonLocal, fBandMapRig1VfoA, fNewQSO;
 
 type
 
@@ -72,6 +72,8 @@ type
     procedure FormDestroy(Sender: TObject);
     procedure FormShow(Sender: TObject);
   private
+    frmNewQSORadio1 : TfrmNewQSO;
+    frmNewQSORadio2 : TfrmNewQSO;
     procedure UpdateMenu;
   public
   end;
@@ -164,7 +166,7 @@ end;
 
 procedure TfrmMain.acNewQSOWindow1Execute(Sender: TObject);
 begin
-  ShowMessage('Not implemented, yet')
+  frmNewQSORadio1.Show
 end;
 
 procedure TfrmMain.acNewQSOWindow2Execute(Sender: TObject);
@@ -198,12 +200,18 @@ end;
 procedure TfrmMain.FormCreate(Sender: TObject);
 begin
   inherited;
+  frmNewQSORadio1 := TfrmNewQSO.Create(nil);
+  frmNewQSORadio2 := TfrmNewQSO.Create(nil)
 end;
 
 procedure TfrmMain.FormDestroy(Sender: TObject);
 begin
+  frmNewQSORadio1.Close;
+  frmNewQSORadio2.Close;
+  FreeAndNil(frmNewQSORadio1);
+  FreeAndNil(frmNewQSORadio2);
   FreeAndNil(iniLocal);
-  FreeAndNil(iniGlobal)
+  FreeAndNil(iniGlobal);
 end;
 
 procedure TfrmMain.FormShow(Sender: TObject);
