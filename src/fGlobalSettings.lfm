@@ -1,7 +1,7 @@
 inherited frmGlobalSettings: TfrmGlobalSettings
-  Left = 245
+  Left = 316
   Height = 614
-  Top = 94
+  Top = 114
   Width = 776
   Caption = 'Global settings'
   ClientHeight = 614
@@ -66,7 +66,7 @@ inherited frmGlobalSettings: TfrmGlobalSettings
     )
     ItemHeight = 21
     OnClick = lbPreferencesClick
-    ScrollWidth = 156
+    ScrollWidth = 158
     TabOrder = 1
   end
   object pgPreferences: TPageControl[2]
@@ -74,15 +74,15 @@ inherited frmGlobalSettings: TfrmGlobalSettings
     Height = 570
     Top = 0
     Width = 616
-    ActivePage = tabTRXcontrol
+    ActivePage = tabProgram
     Align = alClient
     Anchors = [akLeft, akRight, akBottom]
-    TabIndex = 5
+    TabIndex = 0
     TabOrder = 2
     object tabProgram: TTabSheet
       Caption = 'Program'
-      ClientHeight = 533
-      ClientWidth = 608
+      ClientHeight = 537
+      ClientWidth = 610
       object GroupBox2: TGroupBox
         Left = 14
         Height = 137
@@ -126,28 +126,28 @@ inherited frmGlobalSettings: TfrmGlobalSettings
         end
         object edtProxy: TEdit
           Left = 52
-          Height = 21
+          Height = 25
           Top = 20
           Width = 100
           TabOrder = 0
         end
         object edtPort: TEdit
           Left = 240
-          Height = 21
+          Height = 25
           Top = 20
           Width = 88
           TabOrder = 1
         end
         object edtUser: TEdit
           Left = 52
-          Height = 21
+          Height = 25
           Top = 64
           Width = 100
           TabOrder = 2
         end
         object edtPasswd: TEdit
           Left = 240
-          Height = 21
+          Height = 25
           Top = 64
           Width = 88
           TabOrder = 3
@@ -155,17 +155,17 @@ inherited frmGlobalSettings: TfrmGlobalSettings
       end
       object chkNewDXCCTables: TCheckBox
         Left = 14
-        Height = 26
+        Height = 22
         Top = 152
-        Width = 376
+        Width = 372
         Caption = 'Check for newer version of dxcc tables after program startup'
         TabOrder = 1
       end
     end
     object tabStation: TTabSheet
       Caption = 'Station'
-      ClientHeight = 533
-      ClientWidth = 608
+      ClientHeight = 537
+      ClientWidth = 610
       inline fraStn: TfraStation
         Left = 6
         Top = 12
@@ -173,8 +173,8 @@ inherited frmGlobalSettings: TfrmGlobalSettings
     end
     object tabNewQSO: TTabSheet
       Caption = 'New QSO'
-      ClientHeight = 533
-      ClientWidth = 608
+      ClientHeight = 537
+      ClientWidth = 610
       object chkAutoSearch: TCheckBox
         Left = 12
         Height = 24
@@ -194,8 +194,8 @@ inherited frmGlobalSettings: TfrmGlobalSettings
     end
     object tabVisibleColumns: TTabSheet
       Caption = 'Visible columns'
-      ClientHeight = 533
-      ClientWidth = 608
+      ClientHeight = 537
+      ClientWidth = 610
       inline fraVisibleColumn: TfraVisibleColumns
         Left = 12
         Top = 7
@@ -203,8 +203,8 @@ inherited frmGlobalSettings: TfrmGlobalSettings
     end
     object tabBands: TTabSheet
       Caption = 'Bands'
-      ClientHeight = 533
-      ClientWidth = 608
+      ClientHeight = 537
+      ClientWidth = 610
       inline fraBand: TfraBands
         Left = 12
         Top = 7
@@ -212,15 +212,15 @@ inherited frmGlobalSettings: TfrmGlobalSettings
     end
     object tabTRXcontrol: TTabSheet
       Caption = 'TRX control'
-      ClientHeight = 533
-      ClientWidth = 608
+      ClientHeight = 537
+      ClientWidth = 610
       object GroupBox40: TGroupBox
         Left = 7
         Height = 88
         Top = 3
         Width = 569
         Caption = ' rigctld '
-        ClientHeight = 57
+        ClientHeight = 71
         ClientWidth = 565
         TabOrder = 0
         object Label17: TLabel
@@ -233,7 +233,7 @@ inherited frmGlobalSettings: TfrmGlobalSettings
         end
         object edtRigCtldPath: TEdit
           Left = 5
-          Height = 21
+          Height = 25
           Top = 30
           Width = 503
           TabOrder = 0
@@ -250,15 +250,15 @@ inherited frmGlobalSettings: TfrmGlobalSettings
         TabOrder = 1
         object tabTRX1: TTabSheet
           Caption = 'Radio one'
-          ClientHeight = 355
-          ClientWidth = 559
+          ClientHeight = 359
+          ClientWidth = 561
           object GroupBox3: TGroupBox
             Left = 14
             Height = 333
             Top = 14
             Width = 537
             Caption = ' Radio one, desc.:'
-            ClientHeight = 302
+            ClientHeight = 316
             ClientWidth = 533
             TabOrder = 0
             object Label18: TLabel
@@ -287,38 +287,38 @@ inherited frmGlobalSettings: TfrmGlobalSettings
             end
             object edtR1Device: TEdit
               Left = 117
-              Height = 21
+              Height = 25
               Top = 35
               Width = 205
               TabOrder = 0
             end
             object edtRigID1: TEdit
               Left = 6
-              Height = 21
+              Height = 25
               Top = 35
               Width = 87
               TabOrder = 1
             end
             object edtPoll1: TEdit
               Left = 341
-              Height = 21
+              Height = 25
               Top = 35
               Width = 80
               TabOrder = 2
             end
             object chkR1SendCWR: TCheckBox
               Left = 269
-              Height = 26
+              Height = 22
               Top = 71
-              Width = 164
+              Width = 160
               Caption = 'Use CWR instead of CW '
               TabOrder = 3
             end
             object chkR1RunRigCtld: TCheckBox
               Left = 269
-              Height = 26
+              Height = 22
               Top = 98
-              Width = 213
+              Width = 209
               Caption = 'Run rigctld when program starts'
               TabOrder = 4
             end
@@ -332,7 +332,7 @@ inherited frmGlobalSettings: TfrmGlobalSettings
             end
             object edtR1RigCtldArgs: TEdit
               Left = 6
-              Height = 21
+              Height = 25
               Top = 95
               Width = 255
               TabOrder = 5
@@ -348,7 +348,7 @@ inherited frmGlobalSettings: TfrmGlobalSettings
             end
             object edtR1RigCtldPort: TEdit
               Left = 437
-              Height = 21
+              Height = 25
               Top = 35
               Width = 80
               TabOrder = 6
@@ -364,7 +364,7 @@ inherited frmGlobalSettings: TfrmGlobalSettings
             end
             object edtR1Host: TEdit
               Left = 285
-              Height = 21
+              Height = 25
               Top = -19
               Width = 128
               TabOrder = 8
@@ -376,7 +376,7 @@ inherited frmGlobalSettings: TfrmGlobalSettings
               Top = 140
               Width = 511
               Caption = 'Radio one serial parameters'
-              ClientHeight = 130
+              ClientHeight = 144
               ClientWidth = 507
               TabOrder = 9
               object Label130: TLabel
@@ -421,7 +421,7 @@ inherited frmGlobalSettings: TfrmGlobalSettings
               end
               object cmbHanshakeR1: TComboBox
                 Left = 11
-                Height = 27
+                Height = 29
                 Top = 94
                 Width = 107
                 ItemHeight = 0
@@ -438,7 +438,7 @@ inherited frmGlobalSettings: TfrmGlobalSettings
               end
               object cmbParityR1: TComboBox
                 Left = 357
-                Height = 27
+                Height = 29
                 Top = 33
                 Width = 109
                 ItemHeight = 0
@@ -457,7 +457,7 @@ inherited frmGlobalSettings: TfrmGlobalSettings
               end
               object cmbDataBitsR1: TComboBox
                 Left = 126
-                Height = 27
+                Height = 29
                 Top = 33
                 Width = 107
                 ItemHeight = 0
@@ -476,7 +476,7 @@ inherited frmGlobalSettings: TfrmGlobalSettings
               end
               object cmbStopBitsR1: TComboBox
                 Left = 246
-                Height = 27
+                Height = 29
                 Top = 33
                 Width = 100
                 ItemHeight = 0
@@ -494,7 +494,7 @@ inherited frmGlobalSettings: TfrmGlobalSettings
               end
               object cmbSpeedR1: TComboBox
                 Left = 11
-                Height = 27
+                Height = 29
                 Top = 33
                 Width = 107
                 ItemHeight = 0
@@ -517,7 +517,7 @@ inherited frmGlobalSettings: TfrmGlobalSettings
               end
               object cmbDTRR1: TComboBox
                 Left = 126
-                Height = 27
+                Height = 29
                 Top = 94
                 Width = 107
                 ItemHeight = 0
@@ -542,7 +542,7 @@ inherited frmGlobalSettings: TfrmGlobalSettings
               end
               object cmbRTSR1: TComboBox
                 Left = 246
-                Height = 27
+                Height = 29
                 Top = 94
                 Width = 100
                 ItemHeight = 0
@@ -569,7 +569,7 @@ inherited frmGlobalSettings: TfrmGlobalSettings
           end
           object edtRadio1: TEdit
             Left = 146
-            Height = 21
+            Height = 25
             Top = 11
             Width = 94
             TabOrder = 1
@@ -577,8 +577,8 @@ inherited frmGlobalSettings: TfrmGlobalSettings
         end
         object tabTRX2: TTabSheet
           Caption = 'Radio two'
-          ClientHeight = 355
-          ClientWidth = 559
+          ClientHeight = 359
+          ClientWidth = 561
           object edtRadio2: TEdit
             Left = 146
             Height = 21
@@ -906,8 +906,8 @@ inherited frmGlobalSettings: TfrmGlobalSettings
     end
     object tabCWInterface: TTabSheet
       Caption = 'CW interface'
-      ClientHeight = 533
-      ClientWidth = 608
+      ClientHeight = 537
+      ClientWidth = 610
       object Label83: TLabel
         Left = 15
         Height = 17
@@ -1111,8 +1111,8 @@ inherited frmGlobalSettings: TfrmGlobalSettings
     end
     object tabFldigi1: TTabSheet
       Caption = 'fldigi interface'
-      ClientHeight = 533
-      ClientWidth = 608
+      ClientHeight = 537
+      ClientWidth = 610
       object GroupBox31: TGroupBox
         Left = 12
         Height = 400
@@ -1286,8 +1286,8 @@ inherited frmGlobalSettings: TfrmGlobalSettings
     end
     object tabCallbook: TTabSheet
       Caption = 'Callbook support'
-      ClientHeight = 533
-      ClientWidth = 608
+      ClientHeight = 537
+      ClientWidth = 610
       object GroupBox38: TGroupBox
         Left = 13
         Height = 160
