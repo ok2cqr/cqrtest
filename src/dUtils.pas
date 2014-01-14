@@ -28,6 +28,7 @@ type
     function  MyTrim(text : String) : String;
     function  GetBandFromFreq(freq : string;kHz : Boolean = False): String;
     function  GetModeFromFreq(freq : String;kHz : Boolean = False) : String;
+    function  GetRadioRigCtldCommandLine(radio : Word) : String;
 
     procedure DebugMsg(what : String; Level : Integer=1);
     procedure GetRealCoordinates(lat,long : String; var latitude, longitude: Currency);
@@ -39,7 +40,7 @@ var
 implementation
 
 {$R *.lfm}
-uses dData;
+uses dData, uCfgStorage;
 
 function TdmUtils.GetDateTime(delta : Currency) : TDateTime;
 var
@@ -236,6 +237,110 @@ begin
     d[pos('.',d)] := DecimalSeparator;
   if not TryStrToCurr(d,longitude) then
     longitude := 0
+end;
+
+function TdmUtils.GetRadioRigCtldCommandLine(radio : Word) : String;
+var
+  section  : ShortString='';
+  arg      : String='';
+  set_conf : String = '';
+begin
+  section := 'TRX'+IntToStr(radio);
+
+  if iniLocal.ReadString(section,'model','') = '' then
+  begin
+    Result := '';
+    exit
+  end;
+
+  Result := '-m '+ iniLocal.ReadString(section,'model','') + ' ' +
+            '-r '+ iniLocal.ReadString(section,'device','') + ' ' +
+            '-t '+ iniLocal.ReadString(section,'RigCtldPort','4532') + ' ';
+  Result := Result + iniLocal.ReadString(section,'ExtraRigCtldArgs','') + ' ';
+
+  case iniLocal.ReadInteger(section,'SerialSpeed',0) of
+    0 : arg := '';
+    1 : arg := '-s 1200 ';
+    2 : arg := '-s 2400 ';
+    3 : arg := '-s 4800 ';
+    4 : arg := '-s 9600 ';
+    5 : arg := '-s 144000 ';
+    6 : arg := '-s 19200 ';
+    7 : arg := '-s 38400 ';
+    8 : arg := '-s 57600 ';
+    9 : arg := '-s 115200 '
+    else
+      arg := ''
+  end; //case
+  Result := Result + arg;
+
+  case iniLocal.ReadInteger(section,'DataBits',0) of
+    0 : arg := '';
+    1 : arg := 'data_bits=5';
+    2 : arg := 'data_bits=6';
+    3 : arg := 'data_bits=7';
+    4 : arg := 'data_bits=8';
+    5 : arg := 'data_bits=9'
+    else
+      arg := ''
+  end; //case
+  if arg<>'' then
+    set_conf := set_conf+arg+',';
+
+  if iniLocal.ReadInteger(section,'StopBits',0) > 0 then
+    set_conf := set_conf+'stop_bits='+IntToStr(iniLocal.ReadInteger(section,'StopBits',0)-1)+',';
+
+  case iniLocal.ReadInteger(section,'Parity',0) of
+    0 : arg := '';
+    1 : arg := 'parity=None';
+    2 : arg := 'parity=Odd';
+    3 : arg := 'parity=Even';
+    4 : arg := 'parity=Mark';
+    5 : arg := 'parity=Space'
+    else
+      arg := ''
+  end; //case
+  if arg<>'' then
+    set_conf := set_conf+arg+',';
+
+  case iniLocal.ReadInteger(section,'HandShake',0) of
+    0 : arg := '';
+    1 : arg := 'serial_handshake=None';
+    2 : arg := 'serial_handshake=XONXOFF';
+    3 : arg := 'serial_handshake=Hardware';
+    else
+      arg := ''
+  end; //case
+  if arg<>'' then
+    set_conf := set_conf+arg+',';
+
+  case iniLocal.ReadInteger(section,'DTR',0) of
+    0 : arg := '';
+    1 : arg := 'dtr_state=Unset';
+    2 : arg := 'dtr_state=ON';
+    3 : arg := 'dtr_state=OFF';
+    else
+      arg := ''
+  end; //case
+  if arg<>'' then
+    set_conf := set_conf+arg+',';
+
+  case iniLocal.ReadInteger(section,'RTS',0) of
+    0 : arg := '';
+    1 : arg := 'rts_state=Unset';
+    2 : arg := 'rts_state=ON';
+    3 : arg := 'rts_state=OFF';
+    else
+      arg := ''
+  end; //case
+  if arg<>'' then
+    set_conf := set_conf+arg+',';
+
+  if (set_conf<>'') then
+  begin
+    set_conf := copy(set_conf,1,Length(set_conf)-1);
+    Result   := Result + ' --set-conf='+set_conf
+  end
 end;
 
 end.

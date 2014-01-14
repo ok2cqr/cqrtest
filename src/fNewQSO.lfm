@@ -7,6 +7,7 @@ inherited frmNewQSO: TfrmNewQSO
   Caption = 'New QSO'
   ClientHeight = 123
   ClientWidth = 431
+  OnCloseQuery = FormCloseQuery
   OnShow = FormShow
   object Panel3: TPanel[0]
     Left = 0
@@ -175,7 +176,22 @@ inherited frmNewQSO: TfrmNewQSO
     Panels = <    
       item
         Width = 300
+      end    
+      item
+        Alignment = taRightJustify
+        Text = '14069.03'
+        Width = 80
+      end    
+      item
+        Text = 'CW'
+        Width = 50
       end>
     SimplePanel = False
+  end
+  object tmrRadio: TTimer[6]
+    Enabled = False
+    OnTimer = tmrRadioTimer
+    left = 336
+    top = 56
   end
 end
