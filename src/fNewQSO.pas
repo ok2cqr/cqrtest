@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, StdCtrls,
-  ExtCtrls, ComCtrls, fCommonLocal, uRigControl, uCfgStorage;
+  ExtCtrls, ComCtrls, fCommonLocal, uRigControl, uCfgStorage, uCWKeying;
 
 const
   C_EMPTY_FREQ = '0.00000';
@@ -24,6 +24,7 @@ type
     edtExch2: TEdit;
     edtExch3: TEdit;
     Label1: TLabel;
+    lblCWSpeed: TLabel;
     lblExch1: TLabel;
     lblExch2: TLabel;
     lblExch3: TLabel;
@@ -44,12 +45,14 @@ type
     procedure CheckDXCCInfo;
     procedure ClearAll;
     procedure InicializeRig;
+    procedure InitializeCW;
     //procedure SetMode(mode : String;bandwidth :Integer);
 
     //function  GetActualMode : String;
     //function  GetModeNumber(mode : String) : Cardinal;
   public
-     RadioOperated : TRadio;
+    RadioOperated : TRadio;
+    CWint         : TCWKeying;
   end; 
 
 var
@@ -66,6 +69,7 @@ uses dDXCC, dUtils;
 procedure TfrmNewQSO.FormShow(Sender: TObject);
 begin
   inherited;
+  InitializeCW;
   edtCall.SetFocus
 end;
 
@@ -103,6 +107,11 @@ end;
 
 procedure TfrmNewQSO.FormCloseQuery(Sender: TObject; var CanClose: boolean);
 begin
+  if Assigned(CWint) then
+  begin
+    CWint.Close;
+    FreeAndNil(CWint)
+  end;
   if Assigned(radio) then
     FreeAndNil(radio)
 end;
@@ -167,6 +176,37 @@ begin
     FreeAndNil(radio)
   end
 end;
+
+procedure TfrmNewQSO.InitializeCW;
+begin
+  if Assigned(CWint) then
+    FreeAndNil(CWint);
+
+  dmUtils.DebugMsg('CW init');
+  CWint := TCWKeying.Create;
+  CWint.DebugMode := True;
+  if iniLocal.ReadInteger('CW','Type',0) > 0 then
+  begin
+    if iniLocal.ReadInteger('CW','Type',0) = 1 then
+    begin
+      CWint.KeyType := ktWinKeyer;
+      CWint.Port    := iniLocal.ReadString('CW','wk_port','');
+      CWint.Device  := iniLocal.ReadString('CW','wk_port','');
+      CWint.Open;
+      CWint.SetSpeed(iniLocal.ReadInteger('CW','wk_speed',30));
+      lblCWSpeed.Caption := IntToStr(iniLocal.ReadInteger('CW','wk_speed',30)) + ' WPM'
+    end
+    else begin
+      CWint.KeyType := ktCWdaemon;
+      CWint.Port    := iniLocal.ReadString('CW','cw_port','');
+      CWint.Device  := iniLocal.ReadString('CW','cw_address','');
+      CWint.Open;
+      CWint.SetSpeed(iniLocal.ReadInteger('CW','cw_speed',30));
+      lblCWSpeed.Caption := IntToStr(iniLocal.ReadInteger('CW','cw_speed',30)) + ' WPM'
+    end
+  end
+end;
+
 
 end.
 

@@ -42,12 +42,12 @@
         <PackageName Value="LCL"/>
       </Item3>
     </RequiredPackages>
-    <Units Count="41">
+    <Units Count="42">
       <Unit0>
         <Filename Value="cqrtest.lpr"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="cqrtest"/>
-        <EditorIndex Value="3"/>
+        <EditorIndex Value="4"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="47" Y="20"/>
@@ -62,8 +62,8 @@
         <UnitName Value="fMain"/>
         <EditorIndex Value="0"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="147"/>
-        <CursorPos X="28" Y="149"/>
+        <TopLine Value="74"/>
+        <CursorPos X="9" Y="78"/>
         <UsageCount Value="170"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -83,7 +83,7 @@
         <ComponentName Value="dmData"/>
         <ResourceBaseClass Value="DataModule"/>
         <UnitName Value="dData"/>
-        <EditorIndex Value="4"/>
+        <EditorIndex Value="5"/>
         <WindowIndex Value="0"/>
         <TopLine Value="165"/>
         <CursorPos X="11" Y="191"/>
@@ -111,12 +111,10 @@
         <ComponentName Value="frmCommonLocal"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="fCommonLocal"/>
-        <EditorIndex Value="7"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="3" Y="14"/>
         <UsageCount Value="135"/>
-        <Loaded Value="True"/>
       </Unit5>
       <Unit6>
         <Filename Value="/usr/share/fpcsrc/2.4.4/packages/fcl-base/src/inifiles.pp"/>
@@ -243,10 +241,10 @@
         <ComponentName Value="frmGlobalSettings"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="fGlobalSettings"/>
-        <EditorIndex Value="2"/>
+        <EditorIndex Value="3"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="258"/>
-        <CursorPos X="3" Y="272"/>
+        <TopLine Value="288"/>
+        <CursorPos X="3" Y="306"/>
         <UsageCount Value="123"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -355,7 +353,7 @@
         <ComponentName Value="dmDXCC"/>
         <ResourceBaseClass Value="DataModule"/>
         <UnitName Value="dDXCC"/>
-        <EditorIndex Value="6"/>
+        <EditorIndex Value="7"/>
         <WindowIndex Value="0"/>
         <TopLine Value="48"/>
         <CursorPos X="68" Y="65"/>
@@ -441,7 +439,7 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="DataModule"/>
         <UnitName Value="dData"/>
-        <EditorIndex Value="5"/>
+        <EditorIndex Value="6"/>
         <WindowIndex Value="0"/>
         <TopLine Value="61"/>
         <CursorPos X="1" Y="61"/>
@@ -471,14 +469,24 @@
         <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="1"/>
-        <CursorPos X="48" Y="9"/>
+        <TopLine Value="173"/>
+        <CursorPos X="32" Y="193"/>
         <UsageCount Value="33"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit40>
+      <Unit41>
+        <Filename Value="uCWKeying.pas"/>
+        <UnitName Value="uCWKeying"/>
+        <EditorIndex Value="2"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="22" Y="8"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit41>
     </Units>
-    <JumpHistory Count="18" HistoryIndex="17">
+    <JumpHistory Count="24" HistoryIndex="23">
       <Position1>
         <Filename Value="dData.pas"/>
         <Caret Line="241" Column="63" TopLine="219"/>
@@ -551,6 +559,30 @@
         <Filename Value="fNewQSO.pas"/>
         <Caret Line="36" Column="24" TopLine="20"/>
       </Position18>
+      <Position19>
+        <Filename Value="fmain.pas"/>
+        <Caret Line="78" Column="28" TopLine="51"/>
+      </Position19>
+      <Position20>
+        <Filename Value="fNewQSO.pas"/>
+        <Caret Line="1" Column="48" TopLine="1"/>
+      </Position20>
+      <Position21>
+        <Filename Value="fNewQSO.pas"/>
+        <Caret Line="47" Column="15" TopLine="33"/>
+      </Position21>
+      <Position22>
+        <Filename Value="uCWKeying.pas"/>
+        <Caret Line="1" Column="1" TopLine="1"/>
+      </Position22>
+      <Position23>
+        <Filename Value="fNewQSO.pas"/>
+        <Caret Line="9" Column="72" TopLine="1"/>
+      </Position23>
+      <Position24>
+        <Filename Value="fNewQSO.pas"/>
+        <Caret Line="201" Column="3" TopLine="173"/>
+      </Position24>
     </JumpHistory>
   </ProjectOptions>
   <CompilerOptions>

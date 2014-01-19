@@ -188,7 +188,14 @@ inherited frmNewQSO: TfrmNewQSO
       end>
     SimplePanel = False
   end
-  object tmrRadio: TTimer[6]
+  object lblCWSpeed: TLabel[6]
+    Left = 5
+    Height = 1
+    Top = 85
+    Width = 1
+    ParentColor = False
+  end
+  object tmrRadio: TTimer[7]
     Enabled = False
     OnTimer = tmrRadioTimer
     left = 336
