@@ -70,6 +70,7 @@ procedure TfrmNewQSO.FormShow(Sender: TObject);
 begin
   inherited;
   InitializeCW;
+  InicializeRig;
   edtCall.SetFocus
 end;
 
