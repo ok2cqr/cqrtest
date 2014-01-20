@@ -6,7 +6,8 @@ interface
 
 uses
   Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, StdCtrls,
-  ExtCtrls, ComCtrls, fCommonLocal, uRigControl, uCfgStorage, uCWKeying;
+  ExtCtrls, ComCtrls, fCommonLocal, uRigControl, uCfgStorage, uCWKeying,
+  LCLType;
 
 const
   C_EMPTY_FREQ = '0.00000';
@@ -37,6 +38,7 @@ type
     tmrRadio: TTimer;
     procedure edtCallChange(Sender: TObject);
     procedure FormCloseQuery(Sender: TObject; var CanClose: boolean);
+    procedure FormKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
     procedure FormShow(Sender: TObject);
     procedure tmrRadioTimer(Sender: TObject);
   private
@@ -115,6 +117,25 @@ begin
   end;
   if Assigned(radio) then
     FreeAndNil(radio)
+end;
+
+procedure TfrmNewQSO.FormKeyUp(Sender: TObject; var Key: Word;
+  Shift: TShiftState);
+var
+  speed : Word;
+begin
+  if (key = 33) then //pgup
+  begin
+    speed := CWint.GetSpeed+2;
+    CWint.SetSpeed(speed);
+    lblCWSpeed.Caption := IntToStr(speed)+' WPM'
+  end;
+  if (key = 34) then //pgdwn
+  begin
+    speed := CWint.GetSpeed-2;
+    CWint.SetSpeed(speed);
+    lblCWSpeed.Caption := IntToStr(speed)+' WPM'
+  end
 end;
 
 procedure TfrmNewQSO.CheckDXCCInfo;

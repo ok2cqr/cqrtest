@@ -7,7 +7,9 @@ inherited frmNewQSO: TfrmNewQSO
   Caption = 'New QSO'
   ClientHeight = 123
   ClientWidth = 431
+  KeyPreview = True
   OnCloseQuery = FormCloseQuery
+  OnKeyUp = FormKeyUp
   OnShow = FormShow
   object Panel3: TPanel[0]
     Left = 0
