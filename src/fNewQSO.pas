@@ -200,31 +200,38 @@ begin
 end;
 
 procedure TfrmNewQSO.InitializeCW;
+var
+  Section : String;
 begin
   if Assigned(CWint) then
     FreeAndNil(CWint);
 
+  if RadioOperated = trRadio1 then
+    Section := 'CW1'
+  else
+    Section := 'CW2';
+
   dmUtils.DebugMsg('CW init');
   CWint := TCWKeying.Create;
   CWint.DebugMode := True;
-  if iniLocal.ReadInteger('CW','Type',0) > 0 then
+  if iniLocal.ReadInteger(Section,'Type',0) > 0 then
   begin
-    if iniLocal.ReadInteger('CW','Type',0) = 1 then
+    if iniLocal.ReadInteger(Section,'Type',0) = 1 then
     begin
       CWint.KeyType := ktWinKeyer;
-      CWint.Port    := iniLocal.ReadString('CW','wk_port','');
-      CWint.Device  := iniLocal.ReadString('CW','wk_port','');
+      CWint.Port    := iniLocal.ReadString(Section,'wk_port','');
+      CWint.Device  := iniLocal.ReadString(Section,'wk_port','');
       CWint.Open;
-      CWint.SetSpeed(iniLocal.ReadInteger('CW','wk_speed',30));
-      lblCWSpeed.Caption := IntToStr(iniLocal.ReadInteger('CW','wk_speed',30)) + ' WPM'
+      CWint.SetSpeed(iniLocal.ReadInteger(Section,'wk_speed',30));
+      lblCWSpeed.Caption := IntToStr(iniLocal.ReadInteger(Section,'wk_speed',30)) + ' WPM'
     end
     else begin
       CWint.KeyType := ktCWdaemon;
-      CWint.Port    := iniLocal.ReadString('CW','cw_port','');
-      CWint.Device  := iniLocal.ReadString('CW','cw_address','');
+      CWint.Port    := iniLocal.ReadString(Section,'cw_port','');
+      CWint.Device  := iniLocal.ReadString(Section,'cw_address','');
       CWint.Open;
-      CWint.SetSpeed(iniLocal.ReadInteger('CW','cw_speed',30));
-      lblCWSpeed.Caption := IntToStr(iniLocal.ReadInteger('CW','cw_speed',30)) + ' WPM'
+      CWint.SetSpeed(iniLocal.ReadInteger(Section,'cw_speed',30));
+      lblCWSpeed.Caption := IntToStr(iniLocal.ReadInteger(Section,'cw_speed',30)) + ' WPM'
     end
   end
 end;

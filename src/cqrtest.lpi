@@ -51,7 +51,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="47" Y="20"/>
-        <UsageCount Value="170"/>
+        <UsageCount Value="178"/>
         <Loaded Value="True"/>
       </Unit0>
       <Unit1>
@@ -64,7 +64,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="74"/>
         <CursorPos X="9" Y="78"/>
-        <UsageCount Value="170"/>
+        <UsageCount Value="178"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit1>
@@ -75,7 +75,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="17" Y="1"/>
-        <UsageCount Value="164"/>
+        <UsageCount Value="172"/>
       </Unit2>
       <Unit3>
         <Filename Value="dData.pas"/>
@@ -87,7 +87,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="165"/>
         <CursorPos X="11" Y="191"/>
-        <UsageCount Value="135"/>
+        <UsageCount Value="143"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit3>
@@ -101,7 +101,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="21"/>
         <CursorPos X="24" Y="43"/>
-        <UsageCount Value="135"/>
+        <UsageCount Value="143"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit4>
@@ -114,7 +114,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="3" Y="14"/>
-        <UsageCount Value="135"/>
+        <UsageCount Value="143"/>
       </Unit5>
       <Unit6>
         <Filename Value="/usr/share/fpcsrc/2.4.4/packages/fcl-base/src/inifiles.pp"/>
@@ -122,7 +122,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="125"/>
         <CursorPos X="75" Y="153"/>
-        <UsageCount Value="1"/>
+        <UsageCount Value="0"/>
       </Unit6>
       <Unit7>
         <Filename Value="fCommonGlobal.pas"/>
@@ -133,14 +133,14 @@
         <WindowIndex Value="0"/>
         <TopLine Value="28"/>
         <CursorPos X="26" Y="45"/>
-        <UsageCount Value="130"/>
+        <UsageCount Value="138"/>
       </Unit7>
       <Unit8>
         <Filename Value="fDBConnect.lfm"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="1" Y="1"/>
-        <UsageCount Value="1"/>
+        <UsageCount Value="0"/>
         <DefaultSyntaxHighlighter Value="LFM"/>
       </Unit8>
       <Unit9>
@@ -153,7 +153,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="277"/>
         <CursorPos X="26" Y="286"/>
-        <UsageCount Value="130"/>
+        <UsageCount Value="138"/>
         <Bookmarks Count="1">
           <Item0 X="3" Y="365" ID="2"/>
         </Bookmarks>
@@ -163,14 +163,14 @@
         <WindowIndex Value="0"/>
         <TopLine Value="2093"/>
         <CursorPos X="1" Y="2112"/>
-        <UsageCount Value="2"/>
+        <UsageCount Value="1"/>
       </Unit10>
       <Unit11>
         <Filename Value="mysql/mysql.inc"/>
         <WindowIndex Value="0"/>
         <TopLine Value="290"/>
         <CursorPos X="1" Y="290"/>
-        <UsageCount Value="1"/>
+        <UsageCount Value="0"/>
       </Unit11>
       <Unit12>
         <Filename Value="mysql/mysql55dyn.pp"/>
@@ -178,7 +178,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="7" Y="10"/>
-        <UsageCount Value="1"/>
+        <UsageCount Value="0"/>
       </Unit12>
       <Unit13>
         <Filename Value="mysql/mysql55conn.pas"/>
@@ -186,14 +186,14 @@
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="11" Y="11"/>
-        <UsageCount Value="1"/>
+        <UsageCount Value="0"/>
       </Unit13>
       <Unit14>
         <Filename Value="mysql/mysqlconn.inc"/>
         <WindowIndex Value="0"/>
         <TopLine Value="147"/>
         <CursorPos X="1" Y="147"/>
-        <UsageCount Value="1"/>
+        <UsageCount Value="0"/>
       </Unit14>
       <Unit15>
         <Filename Value="/usr/share/fpcsrc/2.4.4/packages/fcl-process/src/process.pp"/>
@@ -201,28 +201,28 @@
         <WindowIndex Value="0"/>
         <TopLine Value="93"/>
         <CursorPos X="14" Y="110"/>
-        <UsageCount Value="3"/>
+        <UsageCount Value="2"/>
       </Unit15>
       <Unit16>
         <Filename Value="/usr/share/fpcsrc/2.4.4/packages/fcl-process/src/unix/process.inc"/>
         <WindowIndex Value="0"/>
         <TopLine Value="416"/>
         <CursorPos X="3" Y="430"/>
-        <UsageCount Value="2"/>
+        <UsageCount Value="1"/>
       </Unit16>
       <Unit17>
         <Filename Value="/usr/share/fpcsrc/2.4.4/rtl/unix/bunxh.inc"/>
         <WindowIndex Value="0"/>
         <TopLine Value="48"/>
         <CursorPos X="15" Y="65"/>
-        <UsageCount Value="1"/>
+        <UsageCount Value="0"/>
       </Unit17>
       <Unit18>
         <Filename Value="/usr/lib/lazarus/0.9.30.2/lcl/include/control.inc"/>
         <WindowIndex Value="0"/>
         <TopLine Value="2273"/>
         <CursorPos X="67" Y="2291"/>
-        <UsageCount Value="1"/>
+        <UsageCount Value="0"/>
       </Unit18>
       <Unit19>
         <Filename Value="../../cqrlog/src/fPreferences.pas"/>
@@ -233,7 +233,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="2171"/>
         <CursorPos X="60" Y="2173"/>
-        <UsageCount Value="13"/>
+        <UsageCount Value="12"/>
       </Unit19>
       <Unit20>
         <Filename Value="fGlobalSettings.pas"/>
@@ -241,11 +241,12 @@
         <ComponentName Value="frmGlobalSettings"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="fGlobalSettings"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="3"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="288"/>
-        <CursorPos X="3" Y="306"/>
-        <UsageCount Value="123"/>
+        <TopLine Value="351"/>
+        <CursorPos X="3" Y="381"/>
+        <UsageCount Value="131"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit20>
@@ -258,7 +259,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="34"/>
         <CursorPos X="60" Y="56"/>
-        <UsageCount Value="121"/>
+        <UsageCount Value="129"/>
       </Unit21>
       <Unit22>
         <Filename Value="frbands.pas"/>
@@ -269,7 +270,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="1" Y="28"/>
-        <UsageCount Value="120"/>
+        <UsageCount Value="128"/>
       </Unit22>
       <Unit23>
         <Filename Value="frVisibleColumns.pas"/>
@@ -280,7 +281,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="58"/>
         <CursorPos X="59" Y="91"/>
-        <UsageCount Value="119"/>
+        <UsageCount Value="127"/>
       </Unit23>
       <Unit24>
         <Filename Value="fabout.pas"/>
@@ -291,7 +292,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="52" Y="22"/>
-        <UsageCount Value="117"/>
+        <UsageCount Value="125"/>
       </Unit24>
       <Unit25>
         <Filename Value="fGrayline.pas"/>
@@ -303,7 +304,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="41"/>
         <CursorPos X="62" Y="50"/>
-        <UsageCount Value="112"/>
+        <UsageCount Value="120"/>
       </Unit25>
       <Unit26>
         <Filename Value="gline2.pas"/>
@@ -311,7 +312,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="415"/>
         <CursorPos X="1" Y="431"/>
-        <UsageCount Value="4"/>
+        <UsageCount Value="3"/>
       </Unit26>
       <Unit27>
         <Filename Value="fImportProgress.pas"/>
@@ -321,7 +322,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="255"/>
         <CursorPos X="82" Y="285"/>
-        <UsageCount Value="112"/>
+        <UsageCount Value="120"/>
       </Unit27>
       <Unit28>
         <Filename Value="httpsend.pas"/>
@@ -329,7 +330,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="45"/>
         <CursorPos X="3" Y="61"/>
-        <UsageCount Value="4"/>
+        <UsageCount Value="3"/>
       </Unit28>
       <Unit29>
         <Filename Value="blcksock.pas"/>
@@ -337,7 +338,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="76"/>
         <CursorPos X="1" Y="91"/>
-        <UsageCount Value="3"/>
+        <UsageCount Value="2"/>
       </Unit29>
       <Unit30>
         <Filename Value="synsock.pas"/>
@@ -345,7 +346,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="36"/>
         <CursorPos X="6" Y="59"/>
-        <UsageCount Value="3"/>
+        <UsageCount Value="2"/>
       </Unit30>
       <Unit31>
         <Filename Value="dDXCC.pas"/>
@@ -357,7 +358,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="48"/>
         <CursorPos X="68" Y="65"/>
-        <UsageCount Value="109"/>
+        <UsageCount Value="117"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit31>
@@ -371,7 +372,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="15" Y="109"/>
-        <UsageCount Value="103"/>
+        <UsageCount Value="111"/>
         <Bookmarks Count="1">
           <Item0 X="13" Y="478" ID="2"/>
         </Bookmarks>
@@ -383,7 +384,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="191"/>
         <CursorPos X="1" Y="206"/>
-        <UsageCount Value="103"/>
+        <UsageCount Value="111"/>
       </Unit33>
       <Unit34>
         <Filename Value="znacmech.pas"/>
@@ -391,7 +392,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="1" Y="24"/>
-        <UsageCount Value="4"/>
+        <UsageCount Value="3"/>
       </Unit34>
       <Unit35>
         <Filename Value="fDXCluster.pas"/>
@@ -403,7 +404,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="299"/>
         <CursorPos X="22" Y="307"/>
-        <UsageCount Value="100"/>
+        <UsageCount Value="108"/>
         <Bookmarks Count="1">
           <Item0 X="3" Y="348" ID="1"/>
         </Bookmarks>
@@ -418,7 +419,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="120"/>
         <CursorPos X="48" Y="137"/>
-        <UsageCount Value="100"/>
+        <UsageCount Value="108"/>
         <Bookmarks Count="1">
           <Item0 X="3" Y="73" ID="1"/>
         </Bookmarks>
@@ -431,7 +432,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="15"/>
         <CursorPos X="1" Y="45"/>
-        <UsageCount Value="100"/>
+        <UsageCount Value="108"/>
       </Unit37>
       <Unit38>
         <Filename Value="../../cqrlog/src/dData.pas"/>
@@ -443,7 +444,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="61"/>
         <CursorPos X="1" Y="61"/>
-        <UsageCount Value="48"/>
+        <UsageCount Value="52"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit38>
@@ -457,7 +458,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="34" Y="9"/>
-        <UsageCount Value="96"/>
+        <UsageCount Value="104"/>
       </Unit39>
       <Unit40>
         <Filename Value="fNewQSO.pas"/>
@@ -466,12 +467,11 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="fNewQSO"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="173"/>
-        <CursorPos X="32" Y="193"/>
-        <UsageCount Value="33"/>
+        <TopLine Value="207"/>
+        <CursorPos X="51" Y="225"/>
+        <UsageCount Value="41"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit40>
@@ -482,107 +482,131 @@
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="22" Y="8"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="14"/>
         <Loaded Value="True"/>
       </Unit41>
     </Units>
-    <JumpHistory Count="24" HistoryIndex="23">
+    <JumpHistory Count="30" HistoryIndex="29">
       <Position1>
-        <Filename Value="dData.pas"/>
-        <Caret Line="241" Column="63" TopLine="219"/>
+        <Filename Value="fGlobalSettings.pas"/>
+        <Caret Line="305" Column="3" TopLine="287"/>
       </Position1>
       <Position2>
-        <Filename Value="dData.pas"/>
-        <Caret Line="1" Column="1" TopLine="1"/>
+        <Filename Value="fGlobalSettings.pas"/>
+        <Caret Line="304" Column="3" TopLine="286"/>
       </Position2>
       <Position3>
-        <Filename Value="dData.pas"/>
-        <Caret Line="27" Column="10" TopLine="1"/>
+        <Filename Value="fGlobalSettings.pas"/>
+        <Caret Line="303" Column="3" TopLine="285"/>
       </Position3>
       <Position4>
-        <Filename Value="dData.pas"/>
-        <Caret Line="152" Column="20" TopLine="145"/>
+        <Filename Value="fGlobalSettings.pas"/>
+        <Caret Line="302" Column="3" TopLine="284"/>
       </Position4>
       <Position5>
-        <Filename Value="dData.pas"/>
-        <Caret Line="154" Column="21" TopLine="145"/>
+        <Filename Value="fGlobalSettings.pas"/>
+        <Caret Line="301" Column="3" TopLine="283"/>
       </Position5>
       <Position6>
-        <Filename Value="dData.pas"/>
-        <Caret Line="155" Column="23" TopLine="145"/>
+        <Filename Value="fGlobalSettings.pas"/>
+        <Caret Line="300" Column="3" TopLine="282"/>
       </Position6>
       <Position7>
-        <Filename Value="fNewQSO.pas"/>
-        <Caret Line="1" Column="1" TopLine="1"/>
+        <Filename Value="fGlobalSettings.pas"/>
+        <Caret Line="299" Column="3" TopLine="281"/>
       </Position7>
       <Position8>
-        <Filename Value="fmain.pas"/>
-        <Caret Line="102" Column="93" TopLine="87"/>
+        <Filename Value="fGlobalSettings.pas"/>
+        <Caret Line="298" Column="3" TopLine="280"/>
       </Position8>
       <Position9>
-        <Filename Value="fmain.pas"/>
-        <Caret Line="87" Column="84" TopLine="57"/>
+        <Filename Value="fGlobalSettings.pas"/>
+        <Caret Line="297" Column="3" TopLine="279"/>
       </Position9>
       <Position10>
-        <Filename Value="fNewQSO.pas"/>
-        <Caret Line="43" Column="13" TopLine="19"/>
+        <Filename Value="fGlobalSettings.pas"/>
+        <Caret Line="296" Column="3" TopLine="278"/>
       </Position10>
       <Position11>
-        <Filename Value="fNewQSO.pas"/>
-        <Caret Line="45" Column="12" TopLine="27"/>
+        <Filename Value="fGlobalSettings.pas"/>
+        <Caret Line="295" Column="3" TopLine="277"/>
       </Position11>
       <Position12>
-        <Filename Value="fNewQSO.pas"/>
-        <Caret Line="65" Column="46" TopLine="34"/>
+        <Filename Value="fGlobalSettings.pas"/>
+        <Caret Line="294" Column="3" TopLine="276"/>
       </Position12>
       <Position13>
-        <Filename Value="fmain.pas"/>
-        <Caret Line="169" Column="34" TopLine="145"/>
+        <Filename Value="fGlobalSettings.pas"/>
+        <Caret Line="293" Column="3" TopLine="275"/>
       </Position13>
       <Position14>
-        <Filename Value="fNewQSO.pas"/>
-        <Caret Line="134" Column="27" TopLine="95"/>
+        <Filename Value="fGlobalSettings.pas"/>
+        <Caret Line="292" Column="3" TopLine="274"/>
       </Position14>
       <Position15>
-        <Filename Value="dUtils.pas"/>
-        <Caret Line="32" Column="21" TopLine="11"/>
+        <Filename Value="fGlobalSettings.pas"/>
+        <Caret Line="291" Column="3" TopLine="273"/>
       </Position15>
       <Position16>
-        <Filename Value="dUtils.pas"/>
-        <Caret Line="338" Column="16" TopLine="315"/>
+        <Filename Value="fGlobalSettings.pas"/>
+        <Caret Line="290" Column="3" TopLine="272"/>
       </Position16>
       <Position17>
-        <Filename Value="fNewQSO.pas"/>
-        <Caret Line="125" Column="53" TopLine="109"/>
+        <Filename Value="fGlobalSettings.pas"/>
+        <Caret Line="289" Column="3" TopLine="271"/>
       </Position17>
       <Position18>
-        <Filename Value="fNewQSO.pas"/>
-        <Caret Line="36" Column="24" TopLine="20"/>
+        <Filename Value="fGlobalSettings.pas"/>
+        <Caret Line="288" Column="3" TopLine="270"/>
       </Position18>
       <Position19>
-        <Filename Value="fmain.pas"/>
-        <Caret Line="78" Column="28" TopLine="51"/>
+        <Filename Value="fGlobalSettings.pas"/>
+        <Caret Line="287" Column="3" TopLine="269"/>
       </Position19>
       <Position20>
-        <Filename Value="fNewQSO.pas"/>
-        <Caret Line="1" Column="48" TopLine="1"/>
+        <Filename Value="fGlobalSettings.pas"/>
+        <Caret Line="295" Column="3" TopLine="277"/>
       </Position20>
       <Position21>
-        <Filename Value="fNewQSO.pas"/>
-        <Caret Line="47" Column="15" TopLine="33"/>
+        <Filename Value="fGlobalSettings.pas"/>
+        <Caret Line="296" Column="3" TopLine="278"/>
       </Position21>
       <Position22>
-        <Filename Value="uCWKeying.pas"/>
-        <Caret Line="1" Column="1" TopLine="1"/>
+        <Filename Value="fGlobalSettings.pas"/>
+        <Caret Line="297" Column="3" TopLine="279"/>
       </Position22>
       <Position23>
-        <Filename Value="fNewQSO.pas"/>
-        <Caret Line="9" Column="72" TopLine="1"/>
+        <Filename Value="fGlobalSettings.pas"/>
+        <Caret Line="298" Column="3" TopLine="280"/>
       </Position23>
       <Position24>
-        <Filename Value="fNewQSO.pas"/>
-        <Caret Line="201" Column="3" TopLine="173"/>
+        <Filename Value="fGlobalSettings.pas"/>
+        <Caret Line="309" Column="3" TopLine="291"/>
       </Position24>
+      <Position25>
+        <Filename Value="fGlobalSettings.pas"/>
+        <Caret Line="317" Column="3" TopLine="299"/>
+      </Position25>
+      <Position26>
+        <Filename Value="fGlobalSettings.pas"/>
+        <Caret Line="318" Column="3" TopLine="300"/>
+      </Position26>
+      <Position27>
+        <Filename Value="fGlobalSettings.pas"/>
+        <Caret Line="319" Column="3" TopLine="301"/>
+      </Position27>
+      <Position28>
+        <Filename Value="fGlobalSettings.pas"/>
+        <Caret Line="320" Column="3" TopLine="302"/>
+      </Position28>
+      <Position29>
+        <Filename Value="fGlobalSettings.pas"/>
+        <Caret Line="331" Column="3" TopLine="313"/>
+      </Position29>
+      <Position30>
+        <Filename Value="fGlobalSettings.pas"/>
+        <Caret Line="271" Column="121" TopLine="265"/>
+      </Position30>
     </JumpHistory>
   </ProjectOptions>
   <CompilerOptions>
