@@ -9,8 +9,7 @@ cqrtest: src/cqrtest.lpi
 	$(ST) src/cqrtest
 
 clean:
-	rm -f -v src/*.o src/*.ppu src/*.bak src/lnet/lib/*.ppu src/lnet/lib/*.o src/lnet/lib/*.bak src/cqrtest src/cqrtest.compiled debian/cqrtest.* src/ipc/*.o src/ipc/*.ppu src/cqrtest.or
-	rm -f -v src/mysql/*.ppu src/mysq/*.bak src/mysql/*.o
+	rm -f -v src/*.o src/*.ppu src/*.bak src/lnet/lib/*.ppu src/lnet/lib/*.o src/lnet/lib/*.bak src/cqrtest src/cqrtest.compiled debian/cqrtest.*  src/cqrtest.or
 	
 install:
 	install -d -v         $(bindir)
