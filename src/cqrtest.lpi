@@ -51,20 +51,21 @@
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="47" Y="20"/>
-        <UsageCount Value="178"/>
+        <UsageCount Value="181"/>
         <Loaded Value="True"/>
       </Unit0>
       <Unit1>
         <Filename Value="fmain.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="frmMain"/>
+        <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="fMain"/>
         <EditorIndex Value="0"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="74"/>
-        <CursorPos X="9" Y="78"/>
-        <UsageCount Value="178"/>
+        <TopLine Value="158"/>
+        <CursorPos X="1" Y="181"/>
+        <UsageCount Value="181"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit1>
@@ -75,19 +76,20 @@
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="17" Y="1"/>
-        <UsageCount Value="172"/>
+        <UsageCount Value="175"/>
       </Unit2>
       <Unit3>
         <Filename Value="dData.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="dmData"/>
+        <HasResources Value="True"/>
         <ResourceBaseClass Value="DataModule"/>
         <UnitName Value="dData"/>
         <EditorIndex Value="5"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="165"/>
-        <CursorPos X="11" Y="191"/>
-        <UsageCount Value="143"/>
+        <TopLine Value="84"/>
+        <CursorPos X="3" Y="87"/>
+        <UsageCount Value="146"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit3>
@@ -95,13 +97,14 @@
         <Filename Value="dUtils.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="dmUtils"/>
+        <HasResources Value="True"/>
         <ResourceBaseClass Value="DataModule"/>
         <UnitName Value="dUtils"/>
-        <EditorIndex Value="8"/>
+        <EditorIndex Value="9"/>
         <WindowIndex Value="0"/>
         <TopLine Value="21"/>
         <CursorPos X="24" Y="43"/>
-        <UsageCount Value="143"/>
+        <UsageCount Value="146"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit4>
@@ -109,12 +112,13 @@
         <Filename Value="fCommonLocal.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="frmCommonLocal"/>
+        <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="fCommonLocal"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="3" Y="14"/>
-        <UsageCount Value="143"/>
+        <UsageCount Value="146"/>
       </Unit5>
       <Unit6>
         <Filename Value="/usr/share/fpcsrc/2.4.4/packages/fcl-base/src/inifiles.pp"/>
@@ -122,7 +126,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="125"/>
         <CursorPos X="75" Y="153"/>
-        <UsageCount Value="0"/>
+        <UsageCount Value="10"/>
       </Unit6>
       <Unit7>
         <Filename Value="fCommonGlobal.pas"/>
@@ -133,14 +137,14 @@
         <WindowIndex Value="0"/>
         <TopLine Value="28"/>
         <CursorPos X="26" Y="45"/>
-        <UsageCount Value="138"/>
+        <UsageCount Value="141"/>
       </Unit7>
       <Unit8>
         <Filename Value="fDBConnect.lfm"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="1" Y="1"/>
-        <UsageCount Value="0"/>
+        <UsageCount Value="10"/>
         <DefaultSyntaxHighlighter Value="LFM"/>
       </Unit8>
       <Unit9>
@@ -150,13 +154,17 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="fDBConnect"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="6"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="277"/>
-        <CursorPos X="26" Y="286"/>
-        <UsageCount Value="138"/>
+        <TopLine Value="54"/>
+        <CursorPos X="8" Y="64"/>
+        <UsageCount Value="141"/>
         <Bookmarks Count="1">
-          <Item0 X="3" Y="365" ID="2"/>
+          <Item0 X="3" Y="346" ID="2"/>
         </Bookmarks>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
       </Unit9>
       <Unit10>
         <Filename Value="/usr/lib/lazarus/0.9.30.2/lcl/include/customform.inc"/>
@@ -170,7 +178,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="290"/>
         <CursorPos X="1" Y="290"/>
-        <UsageCount Value="0"/>
+        <UsageCount Value="10"/>
       </Unit11>
       <Unit12>
         <Filename Value="mysql/mysql55dyn.pp"/>
@@ -178,7 +186,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="7" Y="10"/>
-        <UsageCount Value="0"/>
+        <UsageCount Value="10"/>
       </Unit12>
       <Unit13>
         <Filename Value="mysql/mysql55conn.pas"/>
@@ -186,14 +194,14 @@
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="11" Y="11"/>
-        <UsageCount Value="0"/>
+        <UsageCount Value="10"/>
       </Unit13>
       <Unit14>
         <Filename Value="mysql/mysqlconn.inc"/>
         <WindowIndex Value="0"/>
         <TopLine Value="147"/>
         <CursorPos X="1" Y="147"/>
-        <UsageCount Value="0"/>
+        <UsageCount Value="10"/>
       </Unit14>
       <Unit15>
         <Filename Value="/usr/share/fpcsrc/2.4.4/packages/fcl-process/src/process.pp"/>
@@ -215,14 +223,14 @@
         <WindowIndex Value="0"/>
         <TopLine Value="48"/>
         <CursorPos X="15" Y="65"/>
-        <UsageCount Value="0"/>
+        <UsageCount Value="10"/>
       </Unit17>
       <Unit18>
         <Filename Value="/usr/lib/lazarus/0.9.30.2/lcl/include/control.inc"/>
         <WindowIndex Value="0"/>
         <TopLine Value="2273"/>
         <CursorPos X="67" Y="2291"/>
-        <UsageCount Value="0"/>
+        <UsageCount Value="10"/>
       </Unit18>
       <Unit19>
         <Filename Value="../../cqrlog/src/fPreferences.pas"/>
@@ -239,14 +247,14 @@
         <Filename Value="fGlobalSettings.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="frmGlobalSettings"/>
+        <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="fGlobalSettings"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="3"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="351"/>
+        <TopLine Value="343"/>
         <CursorPos X="3" Y="381"/>
-        <UsageCount Value="131"/>
+        <UsageCount Value="134"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit20>
@@ -254,34 +262,37 @@
         <Filename Value="frstation.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="fraStation"/>
+        <HasResources Value="True"/>
         <ResourceBaseClass Value="Frame"/>
         <UnitName Value="frStation"/>
         <WindowIndex Value="0"/>
         <TopLine Value="34"/>
         <CursorPos X="60" Y="56"/>
-        <UsageCount Value="129"/>
+        <UsageCount Value="132"/>
       </Unit21>
       <Unit22>
         <Filename Value="frbands.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="fraBands"/>
+        <HasResources Value="True"/>
         <ResourceBaseClass Value="Frame"/>
         <UnitName Value="frBands"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="1" Y="28"/>
-        <UsageCount Value="128"/>
+        <UsageCount Value="131"/>
       </Unit22>
       <Unit23>
         <Filename Value="frVisibleColumns.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="fraVisibleColumns"/>
+        <HasResources Value="True"/>
         <ResourceBaseClass Value="Frame"/>
         <UnitName Value="frVisibleColumns"/>
         <WindowIndex Value="0"/>
         <TopLine Value="58"/>
         <CursorPos X="59" Y="91"/>
-        <UsageCount Value="127"/>
+        <UsageCount Value="130"/>
       </Unit23>
       <Unit24>
         <Filename Value="fabout.pas"/>
@@ -292,7 +303,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="52" Y="22"/>
-        <UsageCount Value="125"/>
+        <UsageCount Value="128"/>
       </Unit24>
       <Unit25>
         <Filename Value="fGrayline.pas"/>
@@ -304,7 +315,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="41"/>
         <CursorPos X="62" Y="50"/>
-        <UsageCount Value="120"/>
+        <UsageCount Value="123"/>
       </Unit25>
       <Unit26>
         <Filename Value="gline2.pas"/>
@@ -322,7 +333,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="255"/>
         <CursorPos X="82" Y="285"/>
-        <UsageCount Value="120"/>
+        <UsageCount Value="123"/>
       </Unit27>
       <Unit28>
         <Filename Value="httpsend.pas"/>
@@ -352,13 +363,14 @@
         <Filename Value="dDXCC.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="dmDXCC"/>
+        <HasResources Value="True"/>
         <ResourceBaseClass Value="DataModule"/>
         <UnitName Value="dDXCC"/>
-        <EditorIndex Value="7"/>
+        <EditorIndex Value="8"/>
         <WindowIndex Value="0"/>
         <TopLine Value="48"/>
         <CursorPos X="68" Y="65"/>
-        <UsageCount Value="117"/>
+        <UsageCount Value="120"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit31>
@@ -372,7 +384,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="15" Y="109"/>
-        <UsageCount Value="111"/>
+        <UsageCount Value="114"/>
         <Bookmarks Count="1">
           <Item0 X="13" Y="478" ID="2"/>
         </Bookmarks>
@@ -384,7 +396,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="191"/>
         <CursorPos X="1" Y="206"/>
-        <UsageCount Value="111"/>
+        <UsageCount Value="114"/>
       </Unit33>
       <Unit34>
         <Filename Value="znacmech.pas"/>
@@ -404,7 +416,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="299"/>
         <CursorPos X="22" Y="307"/>
-        <UsageCount Value="108"/>
+        <UsageCount Value="111"/>
         <Bookmarks Count="1">
           <Item0 X="3" Y="348" ID="1"/>
         </Bookmarks>
@@ -419,7 +431,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="120"/>
         <CursorPos X="48" Y="137"/>
-        <UsageCount Value="108"/>
+        <UsageCount Value="111"/>
         <Bookmarks Count="1">
           <Item0 X="3" Y="73" ID="1"/>
         </Bookmarks>
@@ -432,7 +444,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="15"/>
         <CursorPos X="1" Y="45"/>
-        <UsageCount Value="108"/>
+        <UsageCount Value="111"/>
       </Unit37>
       <Unit38>
         <Filename Value="../../cqrlog/src/dData.pas"/>
@@ -440,11 +452,11 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="DataModule"/>
         <UnitName Value="dData"/>
-        <EditorIndex Value="6"/>
+        <EditorIndex Value="7"/>
         <WindowIndex Value="0"/>
         <TopLine Value="61"/>
         <CursorPos X="1" Y="61"/>
-        <UsageCount Value="52"/>
+        <UsageCount Value="54"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit38>
@@ -458,7 +470,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="34" Y="9"/>
-        <UsageCount Value="104"/>
+        <UsageCount Value="107"/>
       </Unit39>
       <Unit40>
         <Filename Value="fNewQSO.pas"/>
@@ -471,7 +483,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="207"/>
         <CursorPos X="51" Y="225"/>
-        <UsageCount Value="41"/>
+        <UsageCount Value="44"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit40>
@@ -482,135 +494,135 @@
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="22" Y="8"/>
-        <UsageCount Value="14"/>
+        <UsageCount Value="16"/>
         <Loaded Value="True"/>
       </Unit41>
     </Units>
     <JumpHistory Count="30" HistoryIndex="29">
       <Position1>
-        <Filename Value="fGlobalSettings.pas"/>
-        <Caret Line="305" Column="3" TopLine="287"/>
+        <Filename Value="fDBConnect.pas"/>
+        <Caret Line="325" Column="59" TopLine="77"/>
       </Position1>
       <Position2>
-        <Filename Value="fGlobalSettings.pas"/>
-        <Caret Line="304" Column="3" TopLine="286"/>
+        <Filename Value="fDBConnect.pas"/>
+        <Caret Line="297" Column="80" TopLine="269"/>
       </Position2>
       <Position3>
-        <Filename Value="fGlobalSettings.pas"/>
-        <Caret Line="303" Column="3" TopLine="285"/>
+        <Filename Value="fDBConnect.pas"/>
+        <Caret Line="419" Column="42" TopLine="396"/>
       </Position3>
       <Position4>
-        <Filename Value="fGlobalSettings.pas"/>
-        <Caret Line="302" Column="3" TopLine="284"/>
+        <Filename Value="fDBConnect.pas"/>
+        <Caret Line="430" Column="7" TopLine="407"/>
       </Position4>
       <Position5>
-        <Filename Value="fGlobalSettings.pas"/>
-        <Caret Line="301" Column="3" TopLine="283"/>
+        <Filename Value="fDBConnect.pas"/>
+        <Caret Line="463" Column="3" TopLine="460"/>
       </Position5>
       <Position6>
-        <Filename Value="fGlobalSettings.pas"/>
-        <Caret Line="300" Column="3" TopLine="282"/>
+        <Filename Value="fDBConnect.pas"/>
+        <Caret Line="461" Column="1" TopLine="445"/>
       </Position6>
       <Position7>
-        <Filename Value="fGlobalSettings.pas"/>
-        <Caret Line="299" Column="3" TopLine="281"/>
+        <Filename Value="fDBConnect.pas"/>
+        <Caret Line="67" Column="1" TopLine="46"/>
       </Position7>
       <Position8>
-        <Filename Value="fGlobalSettings.pas"/>
-        <Caret Line="298" Column="3" TopLine="280"/>
+        <Filename Value="fDBConnect.pas"/>
+        <Caret Line="425" Column="57" TopLine="412"/>
       </Position8>
       <Position9>
-        <Filename Value="fGlobalSettings.pas"/>
-        <Caret Line="297" Column="3" TopLine="279"/>
+        <Filename Value="fDBConnect.pas"/>
+        <Caret Line="424" Column="57" TopLine="411"/>
       </Position9>
       <Position10>
-        <Filename Value="fGlobalSettings.pas"/>
-        <Caret Line="296" Column="3" TopLine="278"/>
+        <Filename Value="fDBConnect.pas"/>
+        <Caret Line="423" Column="57" TopLine="410"/>
       </Position10>
       <Position11>
-        <Filename Value="fGlobalSettings.pas"/>
-        <Caret Line="295" Column="3" TopLine="277"/>
+        <Filename Value="fDBConnect.pas"/>
+        <Caret Line="422" Column="57" TopLine="409"/>
       </Position11>
       <Position12>
-        <Filename Value="fGlobalSettings.pas"/>
-        <Caret Line="294" Column="3" TopLine="276"/>
+        <Filename Value="fDBConnect.pas"/>
+        <Caret Line="421" Column="57" TopLine="408"/>
       </Position12>
       <Position13>
-        <Filename Value="fGlobalSettings.pas"/>
-        <Caret Line="293" Column="3" TopLine="275"/>
+        <Filename Value="fDBConnect.pas"/>
+        <Caret Line="420" Column="57" TopLine="407"/>
       </Position13>
       <Position14>
-        <Filename Value="fGlobalSettings.pas"/>
-        <Caret Line="292" Column="3" TopLine="274"/>
+        <Filename Value="fDBConnect.pas"/>
+        <Caret Line="419" Column="57" TopLine="406"/>
       </Position14>
       <Position15>
-        <Filename Value="fGlobalSettings.pas"/>
-        <Caret Line="291" Column="3" TopLine="273"/>
+        <Filename Value="fDBConnect.pas"/>
+        <Caret Line="418" Column="57" TopLine="405"/>
       </Position15>
       <Position16>
-        <Filename Value="fGlobalSettings.pas"/>
-        <Caret Line="290" Column="3" TopLine="272"/>
+        <Filename Value="fDBConnect.pas"/>
+        <Caret Line="417" Column="57" TopLine="404"/>
       </Position16>
       <Position17>
-        <Filename Value="fGlobalSettings.pas"/>
-        <Caret Line="289" Column="3" TopLine="271"/>
+        <Filename Value="fDBConnect.pas"/>
+        <Caret Line="416" Column="57" TopLine="403"/>
       </Position17>
       <Position18>
-        <Filename Value="fGlobalSettings.pas"/>
-        <Caret Line="288" Column="3" TopLine="270"/>
+        <Filename Value="fDBConnect.pas"/>
+        <Caret Line="338" Column="1" TopLine="317"/>
       </Position18>
       <Position19>
-        <Filename Value="fGlobalSettings.pas"/>
-        <Caret Line="287" Column="3" TopLine="269"/>
+        <Filename Value="fDBConnect.pas"/>
+        <Caret Line="332" Column="3" TopLine="332"/>
       </Position19>
       <Position20>
-        <Filename Value="fGlobalSettings.pas"/>
-        <Caret Line="295" Column="3" TopLine="277"/>
+        <Filename Value="fDBConnect.pas"/>
+        <Caret Line="64" Column="1" TopLine="24"/>
       </Position20>
       <Position21>
-        <Filename Value="fGlobalSettings.pas"/>
-        <Caret Line="296" Column="3" TopLine="278"/>
+        <Filename Value="fDBConnect.pas"/>
+        <Caret Line="63" Column="1" TopLine="23"/>
       </Position21>
       <Position22>
-        <Filename Value="fGlobalSettings.pas"/>
-        <Caret Line="297" Column="3" TopLine="279"/>
+        <Filename Value="fDBConnect.pas"/>
+        <Caret Line="43" Column="76" TopLine="23"/>
       </Position22>
       <Position23>
-        <Filename Value="fGlobalSettings.pas"/>
-        <Caret Line="298" Column="3" TopLine="280"/>
+        <Filename Value="fmain.pas"/>
+        <Caret Line="78" Column="9" TopLine="74"/>
       </Position23>
       <Position24>
-        <Filename Value="fGlobalSettings.pas"/>
-        <Caret Line="309" Column="3" TopLine="291"/>
+        <Filename Value="fDBConnect.pas"/>
+        <Caret Line="134" Column="105" TopLine="104"/>
       </Position24>
       <Position25>
-        <Filename Value="fGlobalSettings.pas"/>
-        <Caret Line="317" Column="3" TopLine="299"/>
+        <Filename Value="fDBConnect.pas"/>
+        <Caret Line="419" Column="42" TopLine="396"/>
       </Position25>
       <Position26>
-        <Filename Value="fGlobalSettings.pas"/>
-        <Caret Line="318" Column="3" TopLine="300"/>
+        <Filename Value="fDBConnect.pas"/>
+        <Caret Line="430" Column="7" TopLine="407"/>
       </Position26>
       <Position27>
-        <Filename Value="fGlobalSettings.pas"/>
-        <Caret Line="319" Column="3" TopLine="301"/>
+        <Filename Value="fDBConnect.pas"/>
+        <Caret Line="477" Column="9" TopLine="454"/>
       </Position27>
       <Position28>
-        <Filename Value="fGlobalSettings.pas"/>
-        <Caret Line="320" Column="3" TopLine="302"/>
+        <Filename Value="fDBConnect.pas"/>
+        <Caret Line="480" Column="44" TopLine="488"/>
       </Position28>
       <Position29>
-        <Filename Value="fGlobalSettings.pas"/>
-        <Caret Line="331" Column="3" TopLine="313"/>
+        <Filename Value="fDBConnect.pas"/>
+        <Caret Line="232" Column="3" TopLine="230"/>
       </Position29>
       <Position30>
-        <Filename Value="fGlobalSettings.pas"/>
-        <Caret Line="271" Column="121" TopLine="265"/>
+        <Filename Value="fDBConnect.pas"/>
+        <Caret Line="537" Column="61" TopLine="509"/>
       </Position30>
     </JumpHistory>
   </ProjectOptions>
   <CompilerOptions>
-    <Version Value="9"/>
+    <Version Value="11"/>
     <Target>
       <Filename Value="cqrtest"/>
     </Target>
