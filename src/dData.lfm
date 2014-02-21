@@ -7,8 +7,8 @@ object dmData: TdmData
   VerticalOffset = 250
   Width = 471
   object qLogList: TSQLQuery
+    FieldDefs = <>
     Transaction = trLogList
-    ReadOnly = False
     Params = <>
     left = 37
     top = 16
@@ -104,8 +104,8 @@ object dmData: TdmData
     top = 16
   end
   object Q: TSQLQuery
+    FieldDefs = <>
     Transaction = trQ
-    ReadOnly = False
     Params = <>
     ParseSQL = False
     left = 232
@@ -118,8 +118,8 @@ object dmData: TdmData
     top = 80
   end
   object mQ: TSQLQuery
+    FieldDefs = <>
     Transaction = trmQ
-    ReadOnly = False
     Params = <>
     ParseSQL = False
     left = 232
@@ -138,8 +138,8 @@ object dmData: TdmData
     top = 16
   end
   object qDXClusters: TSQLQuery
+    FieldDefs = <>
     Transaction = trDXClusters
-    ReadOnly = False
     Params = <>
     left = 37
     top = 152
@@ -217,8 +217,8 @@ object dmData: TdmData
     top = 16
   end
   object qBands: TSQLQuery
+    FieldDefs = <>
     Transaction = trBands
-    ReadOnly = False
     Params = <>
     left = 352
     top = 80
