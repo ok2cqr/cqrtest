@@ -1,0 +1,9 @@
+*.o
+*.~*~
+*.ppu
+backup/*.bak
+backup
+*.compiled
+*.or
+src/cqrtest
+src/lib
