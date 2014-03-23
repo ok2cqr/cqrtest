@@ -1,51 +1,50 @@
-object frmNewLog: TfrmNewLog
+inherited frmNewLog: TfrmNewLog
   Left = 390
-  Height = 118
+  Height = 210
   Top = 273
-  Width = 303
+  Width = 479
   BorderIcons = [biSystemMenu]
   BorderStyle = bsDialog
   Caption = 'frmNewLog'
-  ClientHeight = 118
-  ClientWidth = 303
+  ClientHeight = 210
+  ClientWidth = 479
   OnClose = FormClose
   OnShow = FormShow
   Position = poMainFormCenter
-  LCLVersion = '0.9.29'
-  object Label1: TLabel
+  object Label1: TLabel[0]
     Left = 16
     Height = 18
     Top = 9
-    Width = 82
+    Width = 80
     Caption = 'Log number:'
     ParentColor = False
   end
-  object edtLogNR: TEdit
+  object edtLogNR: TEdit[1]
     Left = 16
-    Height = 27
+    Height = 25
     Top = 33
     Width = 46
     MaxLength = 3
     TabOrder = 0
   end
-  object Label2: TLabel
+  object Label2: TLabel[2]
     Left = 16
     Height = 18
     Top = 65
-    Width = 69
-    Caption = 'Log name:'
+    Width = 95
+    Caption = 'Contest name:'
     ParentColor = False
   end
-  object edtLogName: TEdit
+  object edtLogName: TEdit[3]
     Left = 16
-    Height = 27
+    Height = 25
     Top = 86
-    Width = 184
+    Width = 264
     MaxLength = 50
     TabOrder = 1
   end
-  object btnOK: TButton
-    Left = 224
+  object btnOK: TButton[4]
+    Left = 392
     Height = 25
     Top = 9
     Width = 75
@@ -53,8 +52,8 @@ object frmNewLog: TfrmNewLog
     OnClick = btnOKClick
     TabOrder = 2
   end
-  object Button2: TButton
-    Left = 224
+  object Button2: TButton[5]
+    Left = 392
     Height = 25
     Top = 42
     Width = 75
@@ -62,5 +61,22 @@ object frmNewLog: TfrmNewLog
     Caption = 'Cancel'
     ModalResult = 2
     TabOrder = 3
+  end
+  object Label3: TLabel[6]
+    Left = 16
+    Height = 18
+    Top = 120
+    Width = 88
+    Caption = 'Contest type:'
+    ParentColor = False
+  end
+  object cmbContestType: TComboBox[7]
+    Left = 16
+    Height = 25
+    Top = 150
+    Width = 264
+    ItemHeight = 0
+    TabOrder = 4
+    Text = 'cmbContestType'
   end
 end

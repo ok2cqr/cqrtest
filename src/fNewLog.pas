@@ -15,15 +15,16 @@ type
   TfrmNewLog = class(TfrmCommonLocal)
     btnOK: TButton;
     Button2: TButton;
+    cmbContestType: TComboBox;
     edtLogName: TEdit;
     edtLogNR: TEdit;
     Label1: TLabel;
     Label2: TLabel;
+    Label3: TLabel;
     procedure btnOKClick(Sender: TObject);
     procedure FormShow(Sender: TObject);
   private
-    { private declarations }
-  public
+    { private declarations }              public
     { public declarations }
   end; 
 

@@ -1,0 +1,54 @@
+object fraContestType: TfraContestType
+  Left = 0
+  Height = 105
+  Top = 0
+  Width = 316
+  ClientHeight = 105
+  ClientWidth = 316
+  TabOrder = 0
+  DesignLeft = 463
+  DesignTop = 233
+  object Label1: TLabel
+    Left = 8
+    Height = 18
+    Top = 8
+    Width = 88
+    Caption = 'Contest type:'
+    ParentColor = False
+  end
+  object cmbContestType: TComboBox
+    Left = 8
+    Height = 27
+    Top = 32
+    Width = 284
+    ItemHeight = 0
+    OnChange = cmbContestTypeChange
+    Style = csDropDownList
+    TabOrder = 0
+  end
+  object btnCopyContestType: TButton
+    Left = 8
+    Height = 25
+    Top = 68
+    Width = 75
+    Caption = 'Copy'
+    OnClick = btnCopyContestTypeClick
+    TabOrder = 1
+  end
+  object btnModifyContestType: TButton
+    Left = 112
+    Height = 25
+    Top = 68
+    Width = 75
+    Caption = 'Modify'
+    TabOrder = 2
+  end
+  object btnDeleteContestType: TButton
+    Left = 217
+    Height = 25
+    Top = 68
+    Width = 75
+    Caption = 'Delete'
+    TabOrder = 3
+  end
+end

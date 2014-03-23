@@ -11,7 +11,8 @@ uses
 const
   cDB_COMN_VER = 1;
   cDB_MAIN_VER = 1;
-
+  cRulesDir    = 'rules';
+  cRulesExt    = 'rul';
 type
 
   { TdmData }
@@ -312,7 +313,9 @@ begin
   if not DirectoryExistsUTF8(fAppHomeDir+'dxcc_data') then
     CreateDirUTF8(fAppHomeDir+'dxcc_data');
   if not DirectoryExistsUTF8(fAppHomeDir+'ctyfiles') then
-    CreateDirUTF8(fAppHomeDir+'ctyfiles')
+    CreateDirUTF8(fAppHomeDir+'ctyfiles');
+  if not DirectoryExistsUTF8(fAppHomeDir+'rules') then
+    CreateDirUTF8(fAppHomeDir+'rules')
 end;
 
 procedure TdmData.PrepareCtyData;

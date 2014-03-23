@@ -42,16 +42,16 @@
         <PackageName Value="LCL"/>
       </Item3>
     </RequiredPackages>
-    <Units Count="42">
+    <Units Count="43">
       <Unit0>
         <Filename Value="cqrtest.lpr"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="cqrtest"/>
-        <EditorIndex Value="4"/>
+        <EditorIndex Value="3"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
-        <CursorPos X="47" Y="20"/>
-        <UsageCount Value="182"/>
+        <CursorPos X="47" Y="21"/>
+        <UsageCount Value="185"/>
         <Loaded Value="True"/>
       </Unit0>
       <Unit1>
@@ -65,7 +65,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="158"/>
         <CursorPos X="1" Y="181"/>
-        <UsageCount Value="182"/>
+        <UsageCount Value="185"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit1>
@@ -76,7 +76,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="17" Y="1"/>
-        <UsageCount Value="176"/>
+        <UsageCount Value="179"/>
       </Unit2>
       <Unit3>
         <Filename Value="dData.pas"/>
@@ -85,12 +85,11 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="DataModule"/>
         <UnitName Value="dData"/>
-        <IsVisibleTab Value="True"/>
-        <EditorIndex Value="5"/>
+        <EditorIndex Value="4"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="349"/>
-        <CursorPos X="62" Y="371"/>
-        <UsageCount Value="147"/>
+        <TopLine Value="692"/>
+        <CursorPos X="3" Y="701"/>
+        <UsageCount Value="150"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit3>
@@ -103,9 +102,9 @@
         <UnitName Value="dUtils"/>
         <EditorIndex Value="10"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="21"/>
-        <CursorPos X="24" Y="43"/>
-        <UsageCount Value="147"/>
+        <TopLine Value="2"/>
+        <CursorPos X="1" Y="3"/>
+        <UsageCount Value="150"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit4>
@@ -119,7 +118,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="3" Y="14"/>
-        <UsageCount Value="147"/>
+        <UsageCount Value="150"/>
       </Unit5>
       <Unit6>
         <Filename Value="/usr/share/fpcsrc/2.4.4/packages/fcl-base/src/inifiles.pp"/>
@@ -138,7 +137,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="28"/>
         <CursorPos X="26" Y="45"/>
-        <UsageCount Value="142"/>
+        <UsageCount Value="145"/>
       </Unit7>
       <Unit8>
         <Filename Value="fDBConnect.lfm"/>
@@ -155,11 +154,11 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="fDBConnect"/>
-        <EditorIndex Value="6"/>
+        <EditorIndex Value="5"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="110"/>
-        <CursorPos X="8" Y="110"/>
-        <UsageCount Value="142"/>
+        <TopLine Value="303"/>
+        <CursorPos X="3" Y="325"/>
+        <UsageCount Value="145"/>
         <Bookmarks Count="1">
           <Item0 X="3" Y="346" ID="2"/>
         </Bookmarks>
@@ -250,11 +249,11 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="fGlobalSettings"/>
-        <EditorIndex Value="3"/>
+        <EditorIndex Value="2"/>
         <WindowIndex Value="0"/>
         <TopLine Value="343"/>
         <CursorPos X="3" Y="381"/>
-        <UsageCount Value="135"/>
+        <UsageCount Value="138"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit20>
@@ -268,7 +267,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="34"/>
         <CursorPos X="60" Y="56"/>
-        <UsageCount Value="133"/>
+        <UsageCount Value="136"/>
       </Unit21>
       <Unit22>
         <Filename Value="frbands.pas"/>
@@ -280,7 +279,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="1" Y="28"/>
-        <UsageCount Value="132"/>
+        <UsageCount Value="135"/>
       </Unit22>
       <Unit23>
         <Filename Value="frVisibleColumns.pas"/>
@@ -292,7 +291,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="58"/>
         <CursorPos X="59" Y="91"/>
-        <UsageCount Value="131"/>
+        <UsageCount Value="134"/>
       </Unit23>
       <Unit24>
         <Filename Value="fabout.pas"/>
@@ -303,7 +302,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="52" Y="22"/>
-        <UsageCount Value="129"/>
+        <UsageCount Value="132"/>
       </Unit24>
       <Unit25>
         <Filename Value="fGrayline.pas"/>
@@ -315,7 +314,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="41"/>
         <CursorPos X="62" Y="50"/>
-        <UsageCount Value="124"/>
+        <UsageCount Value="127"/>
       </Unit25>
       <Unit26>
         <Filename Value="gline2.pas"/>
@@ -330,12 +329,10 @@
         <IsPartOfProject Value="True"/>
         <HasResources Value="True"/>
         <UnitName Value="fImportProgress"/>
-        <EditorIndex Value="7"/>
         <WindowIndex Value="0"/>
         <TopLine Value="134"/>
         <CursorPos X="58" Y="168"/>
-        <UsageCount Value="124"/>
-        <Loaded Value="True"/>
+        <UsageCount Value="127"/>
       </Unit27>
       <Unit28>
         <Filename Value="httpsend.pas"/>
@@ -372,7 +369,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="48"/>
         <CursorPos X="68" Y="65"/>
-        <UsageCount Value="121"/>
+        <UsageCount Value="124"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit31>
@@ -386,7 +383,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="15" Y="109"/>
-        <UsageCount Value="115"/>
+        <UsageCount Value="118"/>
         <Bookmarks Count="1">
           <Item0 X="13" Y="478" ID="2"/>
         </Bookmarks>
@@ -398,7 +395,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="191"/>
         <CursorPos X="1" Y="206"/>
-        <UsageCount Value="115"/>
+        <UsageCount Value="118"/>
       </Unit33>
       <Unit34>
         <Filename Value="znacmech.pas"/>
@@ -418,7 +415,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="299"/>
         <CursorPos X="22" Y="307"/>
-        <UsageCount Value="112"/>
+        <UsageCount Value="115"/>
         <Bookmarks Count="1">
           <Item0 X="3" Y="348" ID="1"/>
         </Bookmarks>
@@ -433,7 +430,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="120"/>
         <CursorPos X="48" Y="137"/>
-        <UsageCount Value="112"/>
+        <UsageCount Value="115"/>
         <Bookmarks Count="1">
           <Item0 X="3" Y="73" ID="1"/>
         </Bookmarks>
@@ -446,7 +443,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="15"/>
         <CursorPos X="1" Y="45"/>
-        <UsageCount Value="112"/>
+        <UsageCount Value="115"/>
       </Unit37>
       <Unit38>
         <Filename Value="../../cqrlog/src/dData.pas"/>
@@ -456,9 +453,9 @@
         <UnitName Value="dData"/>
         <EditorIndex Value="8"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="61"/>
-        <CursorPos X="1" Y="61"/>
-        <UsageCount Value="54"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="55"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit38>
@@ -469,10 +466,13 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="fNewLog"/>
+        <EditorIndex Value="6"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="1"/>
-        <CursorPos X="34" Y="9"/>
-        <UsageCount Value="108"/>
+        <TopLine Value="7"/>
+        <CursorPos X="41" Y="27"/>
+        <UsageCount Value="111"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
       </Unit39>
       <Unit40>
         <Filename Value="fNewQSO.pas"/>
@@ -485,141 +485,158 @@
         <WindowIndex Value="0"/>
         <TopLine Value="207"/>
         <CursorPos X="51" Y="225"/>
-        <UsageCount Value="45"/>
+        <UsageCount Value="48"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit40>
       <Unit41>
         <Filename Value="uCWKeying.pas"/>
         <UnitName Value="uCWKeying"/>
-        <EditorIndex Value="2"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="22" Y="8"/>
         <UsageCount Value="16"/>
-        <Loaded Value="True"/>
       </Unit41>
+      <Unit42>
+        <Filename Value="frContestType.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="fraContestType"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+        <UnitName Value="frContestType"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="7"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="64"/>
+        <CursorPos X="52" Y="105"/>
+        <UsageCount Value="23"/>
+        <Bookmarks Count="1">
+          <Item0 X="1" Y="99" ID="1"/>
+        </Bookmarks>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit42>
     </Units>
     <JumpHistory Count="30" HistoryIndex="29">
       <Position1>
         <Filename Value="fDBConnect.pas"/>
-        <Caret Line="297" Column="80" TopLine="269"/>
+        <Caret Line="332" Column="3" TopLine="332"/>
       </Position1>
       <Position2>
         <Filename Value="fDBConnect.pas"/>
-        <Caret Line="419" Column="42" TopLine="396"/>
+        <Caret Line="64" Column="1" TopLine="24"/>
       </Position2>
       <Position3>
         <Filename Value="fDBConnect.pas"/>
-        <Caret Line="430" Column="7" TopLine="407"/>
+        <Caret Line="63" Column="1" TopLine="23"/>
       </Position3>
       <Position4>
         <Filename Value="fDBConnect.pas"/>
-        <Caret Line="463" Column="3" TopLine="460"/>
+        <Caret Line="43" Column="76" TopLine="23"/>
       </Position4>
       <Position5>
-        <Filename Value="fDBConnect.pas"/>
-        <Caret Line="461" Column="1" TopLine="445"/>
+        <Filename Value="fmain.pas"/>
+        <Caret Line="78" Column="9" TopLine="74"/>
       </Position5>
       <Position6>
         <Filename Value="fDBConnect.pas"/>
-        <Caret Line="67" Column="1" TopLine="46"/>
+        <Caret Line="134" Column="105" TopLine="104"/>
       </Position6>
       <Position7>
         <Filename Value="fDBConnect.pas"/>
-        <Caret Line="425" Column="57" TopLine="412"/>
+        <Caret Line="419" Column="42" TopLine="396"/>
       </Position7>
       <Position8>
         <Filename Value="fDBConnect.pas"/>
-        <Caret Line="424" Column="57" TopLine="411"/>
+        <Caret Line="430" Column="7" TopLine="407"/>
       </Position8>
       <Position9>
         <Filename Value="fDBConnect.pas"/>
-        <Caret Line="423" Column="57" TopLine="410"/>
+        <Caret Line="477" Column="9" TopLine="454"/>
       </Position9>
       <Position10>
         <Filename Value="fDBConnect.pas"/>
-        <Caret Line="422" Column="57" TopLine="409"/>
+        <Caret Line="232" Column="3" TopLine="230"/>
       </Position10>
       <Position11>
         <Filename Value="fDBConnect.pas"/>
-        <Caret Line="421" Column="57" TopLine="408"/>
+        <Caret Line="537" Column="61" TopLine="509"/>
       </Position11>
       <Position12>
         <Filename Value="fDBConnect.pas"/>
-        <Caret Line="420" Column="57" TopLine="407"/>
+        <Caret Line="110" Column="8" TopLine="110"/>
       </Position12>
       <Position13>
         <Filename Value="fDBConnect.pas"/>
-        <Caret Line="419" Column="57" TopLine="406"/>
+        <Caret Line="306" Column="3" TopLine="303"/>
       </Position13>
       <Position14>
-        <Filename Value="fDBConnect.pas"/>
-        <Caret Line="418" Column="57" TopLine="405"/>
+        <Filename Value="fNewLog.pas"/>
+        <Caret Line="25" Column="41" TopLine="7"/>
       </Position14>
       <Position15>
-        <Filename Value="fDBConnect.pas"/>
-        <Caret Line="417" Column="57" TopLine="404"/>
+        <Filename Value="fNewLog.pas"/>
+        <Caret Line="27" Column="41" TopLine="7"/>
       </Position15>
       <Position16>
-        <Filename Value="fDBConnect.pas"/>
-        <Caret Line="416" Column="57" TopLine="403"/>
+        <Filename Value="fNewLog.pas"/>
+        <Caret Line="26" Column="41" TopLine="7"/>
       </Position16>
       <Position17>
-        <Filename Value="fDBConnect.pas"/>
-        <Caret Line="338" Column="1" TopLine="317"/>
+        <Filename Value="frContestType.pas"/>
+        <Caret Line="1" Column="1" TopLine="1"/>
       </Position17>
       <Position18>
-        <Filename Value="fDBConnect.pas"/>
-        <Caret Line="332" Column="3" TopLine="332"/>
+        <Filename Value="frContestType.pas"/>
+        <Caret Line="23" Column="34" TopLine="1"/>
       </Position18>
       <Position19>
-        <Filename Value="fDBConnect.pas"/>
-        <Caret Line="64" Column="1" TopLine="24"/>
+        <Filename Value="dData.pas"/>
+        <Caret Line="371" Column="62" TopLine="241"/>
       </Position19>
       <Position20>
-        <Filename Value="fDBConnect.pas"/>
-        <Caret Line="63" Column="1" TopLine="23"/>
+        <Filename Value="dData.pas"/>
+        <Caret Line="383" Column="26" TopLine="337"/>
       </Position20>
       <Position21>
-        <Filename Value="fDBConnect.pas"/>
-        <Caret Line="43" Column="76" TopLine="23"/>
+        <Filename Value="dData.pas"/>
+        <Caret Line="6" Column="1" TopLine="1"/>
       </Position21>
       <Position22>
-        <Filename Value="fmain.pas"/>
-        <Caret Line="78" Column="9" TopLine="74"/>
+        <Filename Value="dData.pas"/>
+        <Caret Line="719" Column="3" TopLine="689"/>
       </Position22>
       <Position23>
-        <Filename Value="fDBConnect.pas"/>
-        <Caret Line="134" Column="105" TopLine="104"/>
+        <Filename Value="../../cqrlog/src/dData.pas"/>
+        <Caret Line="61" Column="1" TopLine="61"/>
       </Position23>
       <Position24>
-        <Filename Value="fDBConnect.pas"/>
-        <Caret Line="419" Column="42" TopLine="396"/>
+        <Filename Value="dUtils.pas"/>
+        <Caret Line="43" Column="24" TopLine="21"/>
       </Position24>
       <Position25>
-        <Filename Value="fDBConnect.pas"/>
-        <Caret Line="430" Column="7" TopLine="407"/>
+        <Filename Value="dData.pas"/>
+        <Caret Line="324" Column="101" TopLine="301"/>
       </Position25>
       <Position26>
-        <Filename Value="fDBConnect.pas"/>
-        <Caret Line="477" Column="9" TopLine="454"/>
+        <Filename Value="frContestType.pas"/>
+        <Caret Line="51" Column="14" TopLine="13"/>
       </Position26>
       <Position27>
-        <Filename Value="fDBConnect.pas"/>
-        <Caret Line="480" Column="44" TopLine="488"/>
+        <Filename Value="frContestType.pas"/>
+        <Caret Line="69" Column="24" TopLine="38"/>
       </Position27>
       <Position28>
-        <Filename Value="fDBConnect.pas"/>
-        <Caret Line="232" Column="3" TopLine="230"/>
+        <Filename Value="frContestType.pas"/>
+        <Caret Line="87" Column="12" TopLine="47"/>
       </Position28>
       <Position29>
-        <Filename Value="fDBConnect.pas"/>
-        <Caret Line="537" Column="61" TopLine="509"/>
+        <Filename Value="frContestType.pas"/>
+        <Caret Line="72" Column="1" TopLine="51"/>
       </Position29>
       <Position30>
-        <Filename Value="fImportProgress.pas"/>
-        <Caret Line="285" Column="82" TopLine="255"/>
+        <Filename Value="dData.pas"/>
+        <Caret Line="15" Column="24" TopLine="1"/>
       </Position30>
     </JumpHistory>
   </ProjectOptions>
